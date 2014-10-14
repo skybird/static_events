@@ -76,6 +76,46 @@
     <!-- S:Baidu Analytics -->
     <script>var _hmt = _hmt || []; (function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s); })(); </script>
     <!-- E:Baidu Analytics -->
-    
+    <script type="text/javascript">
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+          WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+              WeixinJSBridge.invoke('sendAppMessage', {
+                  "img_url": address+"/img/640.png",
+                  "img_width": "640",
+                  "img_height": "640",
+                  "link": 'http://activity.wallstreetcn.com/activities/07/',
+                  "title": "金正恩40天失踪记，你应该知道的一切",
+                  "desc": "金正恩跟我们捉了40天迷藏，今天“露脸”了。关于他的破纪录缺席期你应该知道的一切……"
+              }, function (res) {
+                
+              })
+          });
+         
+          
+          WeixinJSBridge.on('menu:share:timeline', function (argv) {
+              WeixinJSBridge.invoke('shareTimeline', {
+                  "img_url": address+"/img/640.png",
+                  "img_width": "640",
+                  "img_height": "640",
+                  "link": 'http://activity.wallstreetcn.com/activities/07/',
+                  "desc": "金正恩40天失踪记，你应该知道的一切",
+                  "title": "金正恩跟我们捉了40天迷藏，今天“露脸”了。关于他的破纪录缺席期你应该知道的一切……"
+              }, function (res) {
+                 
+              });
+          });
+
+          WeixinJSBridge.on('menu:share:weibo', function (argv) {
+              WeixinJSBridge.invoke('shareWeibo', {
+                  "img_url": address+"/img/640.png",
+                  "content": "",
+                  "url": location.href,
+              }, function (res) {
+                  
+              });
+          });
+        }, false);
+    </script>
 </body>
 </html>
