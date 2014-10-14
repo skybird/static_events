@@ -40,6 +40,7 @@
     <div id="bg8" class="bg">
         <img src="img/bg_8.png" alt="" class="center" width="285" height="517.5">
         <img src="img/arrow_white.png" data-action="moveout" class="control"></img>
+    </div>   
     <div id="bg9" class="bg">
         <img src="img/bg_9.png" alt="" class="center" width="265.5" height="501.5">
         <img src="img/arrow_white.png" data-action="moveout" class="control"></img>
@@ -81,7 +82,7 @@
 
           WeixinJSBridge.on('menu:share:appmessage', function (argv) {
               WeixinJSBridge.invoke('sendAppMessage', {
-                  "img_url": address+"/img/640.png",
+                  "img_url": "http://activity.wallstreetcn.com/activities/07/img/640.png",
                   "img_width": "640",
                   "img_height": "640",
                   "link": 'http://activity.wallstreetcn.com/activities/07/',
@@ -95,7 +96,7 @@
           
           WeixinJSBridge.on('menu:share:timeline', function (argv) {
               WeixinJSBridge.invoke('shareTimeline', {
-                  "img_url": address+"/img/640.png",
+                  "img_url": "http://activity.wallstreetcn.com/activities/07/img/640.png",
                   "img_width": "640",
                   "img_height": "640",
                   "link": 'http://activity.wallstreetcn.com/activities/07/',
@@ -108,7 +109,7 @@
 
           WeixinJSBridge.on('menu:share:weibo', function (argv) {
               WeixinJSBridge.invoke('shareWeibo', {
-                  "img_url": address+"/img/640.png",
+                  "img_url": "http://activity.wallstreetcn.com/activities/07/img/640.png",
                   "content": "",
                   "url": location.href,
               }, function (res) {
