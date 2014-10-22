@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*reset*/
+@charset "utf-8";
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Tahoma,Arial,Helvetica, "Microsoft Yahei","微软雅黑", sans-serif;
+}
+.col-md-1{
+    height: 384px;
+    margin: 0 auto;
+    min-height: 420px;
+    position: relative;
+    width: 242px;
+}
+.box{
+	background-color: #ffffff;
+	margin: 10px 13px;
+
+	margin: 24px auto 20px;
+	border-style:solid;
+	border-color:#EEEEEE #EEEEEE #0980D2 #EEEEEE;
+	border-width:0px 1px 2px 1px;
+    
+}
+p{font-size: 14px;
+  color: #999999;
+  font-weight:lighter;
+  line-height:150%;
+  letter-spacing:0.8px;font-weight: normal
+}
+p,h4{margin:28px 14px;
+}
+h4{font-size: 16px;
+   line-height:140%;
+}
+.bar{background-color: #ffffff;
+	width: 100%;
+	height:60px;
+    border-bottom-style:solid;
+    border-bottom-color:#DDDDDD;
+    border-width: 1px;
+}
+
+.longbar{height: 72px;background-color: #ffffff}
+ h3{font-size: 16px;
+    color: #555555;}
+ li{color: #111111;
+    height:50px;margin-right: 12px}
+.navbar{margin-bottom: 0px;
+        border-radius: 0px;
+        border: 0px
+}
+.navbar-inverse {
+                 background-color: #0060A5;}
+
+.navbar-collapse {border-top: 0px;}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+     color: #ffffff; 
+     background-color:#00538B;
+     height: 50px;}
+.navbar-inverse .navbar-nav>li>a {
+                                  color:#BAD9F1;}
+.navbar-brand {
+  padding-top: 0px;
+  margin:0px auto;
+  /* background-image:url('../img/logo@2x.png');background-repeat:no-repeat;
+  background-position:10px 9px;
+  background-size:130px 32px; */
+}
+
+.navbar-brand img {
+  width: 130px;
+  height: 32px;
+  margin-top: 9px; 
+}
+
+
+.leftarrow{padding-top: 140px}
+.custom-img2{width: 100%;height: 150px;
+	        background-image:url('../img/act.png');background-repeat:no-repeat;
+	        background-position: center center; }
+.custom-img1{width: 100%;height: 150px;
+	        background-image:url('../img/feinong.png');background-repeat:no-repeat;
+	        background-position: center center ;}
+.custom-img3{width: 100%;height: 150px;
+	        background-image:url('../img/wolf.png');background-repeat:no-repeat;
+	        background-position: center center; }
+.custom-img4{width: 100%;height: 150px;
+	        background-image:url('../img/food.png');background-repeat:no-repeat;
+	        background-position: center center; }
+.bigbanner1{height: 356px;
+	        background-image:url('../img/banner2.jpg');
+	        background-position: center center; }
+.bigbanner2{height: 356px;
+	        background-image:url('../img/banner3.jpg');
+	        background-position: center center; }
+.bigbanner3{height: 356px;
+	        background-image:url('../img/banner4.jpg');
+	        background-position: center center ;}
+
+.phone1{width:900px;height:356px;position: relative;margin: 0 auto;
+	        background-image:url('../img/phone1.png');background-repeat:no-repeat;
+	        background-position: center center ;}
+.phone2{width: 900px;height:356px;position: relative;margin: 0 auto;
+	        background-image:url('../img/phone2.png');background-repeat:no-repeat;
+	        background-position: center center ;}
+.phone3{width: 900px;height:356px;position: relative;margin: 0 auto;
+	        background-image:url('../img/phone3.png');background-repeat:no-repeat;
+	        background-position: center center; }
+
+.btn-lg1{width: 100%;height: 48px;background-color: #DD443E;margin: 18px 0px;}
+
+
+.icon1 {
+    background: url("../img/iphone@2x.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+     display: block;background-position: center center;background-size:100px 30px; 
+    float: left;
+    height:50px ;
+    width: 100%;
+}
+.icon2 {
+    background: url("../img/android@2x.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+     display: block;background-size:100px 30px;
+    float: left;
+    height: 50px;
+    width: 100%;
+}
+
+.btn{border: 0px ;font-size: 23px ;padding-top: 0px}
+.grid{font-size: 17px;color: #bbbbbb;margin:20px auto;display: block;width:180px;background-color: #f8f8f8}
+.link{width: 125px;height: 105px;}
+.androidbtn{margin:15px auto;width: 125px;display: block;}
+#A{position:relative}
+#B{position:absolute;top:203px;right: 20%}
+@media (max-width: 768px) {
+  .facet_sidebar {
+    background-position: -220px;}
+.back{height:360px;
+	        background-image:url('../img/back.jpg');background-repeat:no-repeat;
+	        background-position: center center; }
+.icon{width: 200px;height: 300px;padding-top: 40px;margin:0px auto;
+      background-image:url('../img/icon.png');background-repeat:no-repeat;
+      background-position:0px 130px;
+      background-size:200px 120px;}
+.longbar2{height: 72px;background-color: #f8f8f8}
+
+

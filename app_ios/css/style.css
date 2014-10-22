@@ -1,0 +1,316 @@
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Verdana Tahoma "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+.clearfix:before {
+  display: table;
+  content: '';
+  clear: both;
+}
+.clearfix:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.row {
+  display: block;
+  width: 100%;
+}
+.row:before {
+  display: table;
+  content: '';
+  clear: both;
+}
+.row:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+.row > .span {
+  float: left;
+  display: block;
+}
+.row > .span1 {
+  display: block;
+  float: left;
+  width: 8.333333333333332%;
+}
+.row > .span2 {
+  display: block;
+  float: left;
+  width: 16.666666666666664%;
+}
+.row > .span3 {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.row > .span4 {
+  display: block;
+  float: left;
+  width: 33.33333333333333%;
+}
+.row > .span5 {
+  display: block;
+  float: left;
+  width: 41.66666666666667%;
+}
+.row > .span6 {
+  display: block;
+  float: left;
+  width: 50%;
+}
+.row > .span7 {
+  display: block;
+  float: left;
+  width: 58.333333333333336%;
+}
+.row > .span8 {
+  display: block;
+  float: left;
+  width: 66.66666666666666%;
+}
+.row > .span9 {
+  display: block;
+  float: left;
+  width: 75%;
+}
+.row > .span10 {
+  display: block;
+  float: left;
+  width: 83.33333333333334%;
+}
+.row > .span11 {
+  display: block;
+  float: left;
+  width: 91.66666666666666%;
+}
+.row > .span12 {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.html.head {
+  width: 100%;
+  background-color: #eee;
+  font-size: 20px;
+  line-height: 75px;
+  border-bottom: 4px solid #0050a1;
+}
+.html.head .nav {
+  width: 200px;
+  margin-right: 2px;
+  padding-top: 15px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  position: relative;
+}
+.html.head .nav.title {
+  font-size: 28px;
+  width: 240px;
+  font-size: 28px;
+  text-indent: 75px;
+  text-align: left;
+  background: url(../img/logo.png) 25px 33px no-repeat;
+}
+.html.head .nav.title:hover {
+  background-image: url(../img/logo-active.png);
+}
+.html.head .nav:hover {
+  background-color: #fff;
+  color: #0050a1;
+}
+.html.head .nav.active {
+  background-color: #fff;
+  color: #0050a1;
+  cursor: default;
+}
+.html.head .nav.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+.html.head .nav.disabled:hover {
+  background-color: inherit;
+  color: #888;
+  cursor: default;
+}
+.html.head .nav > .comesoon {
+  display: block;
+  width: 66px;
+  height: 33px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: url(../img/comesoon.png) 0 0 no-repeat;
+}
+.html.content {
+  width: 100%;
+  height: 760px;
+  padding-top: 50px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.html.content .main {
+  background: url(../img/main-content.png) 0 0 no-repeat;
+  width: 988px;
+  height: 760px;
+  position: relative;
+  margin: 0 auto;
+}
+.html.content .main .button {
+  width: 180px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 24px;
+  position: absolute;
+  left: 693px;
+  color: #fff;
+  background-color: #0050a1;
+  border-radius: 10px;
+  display: block;
+}
+.html.content .main .button.apple > .icon {
+  background: url(../img/apple.png) center no-repeat;
+}
+.html.content .main .button.android > .icon {
+  background: url(../img/android.png) center no-repeat;
+}
+.html.content .main .button.web > .icon {
+  background: url(../img/web.png) center no-repeat;
+}
+.html.content .main .button > .icon {
+  display: block;
+  width: 50px;
+  height: 100%;
+  float: left;
+}
+.html.content .main .button > .text {
+  float: right;
+  width: 130px;
+  text-align: center;
+}
+.html.content .main .button > .text > .label {
+  display: block;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 4px;
+}
+.html.content .main .button > .text > .tip {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+}
+.html.content .main .button.apple {
+  bottom: 350px;
+}
+.html.content .main .button.android {
+  bottom: 275px;
+}
+.html.content .main .button.web {
+  bottom: 200px;
+}
+.html.content .main .button.disabled {
+  background-color: #777;
+  cursor: default;
+  pointer-events: none;
+}
+.html.foot {
+  width: 100%;
+  margin: 120px 0;
+  background-color: #fff;
+}
+.html.foot .section {
+  width: 206px;
+  text-align: center;
+  margin: 20px auto;
+}
+.html.foot .section .title {
+  color: #000;
+  font-size: 32px;
+  line-height: 50px;
+}
+.html.foot .section .logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+.html.foot .section .desc {
+  color: #777777;
+  text-align: left;
+  font-size: 20px;
+}
+#main-app .html.content {
+  background: url(../img/main-bg.png);
+}
+#main-app .html.content .main {
+  background-image: url(../img/main-content.png?v1.20);
+}
+#livenews-app .html.content {
+  background: url(../img/livenews-bg.jpg);
+}
+#livenews-app .html.content .main {
+  background-image: url(../img/livenews-content.png?v1.20);
+}
+#livenews-app .html.content .main .button {
+  left: 670px;
+}
+#livenews-app .html.content .main .button.apple {
+  bottom: 320px;
+}
+#livenews-app .html.content .main .button.android {
+  bottom: 240px;
+}
+#livenews-app .html.foot {
+  height: 160px;
+  background: url(../img/livenews-footer.png) center no-repeat;
+}
+#gold-app .html.content {
+  background: url(../img/gold-bg.jpg);
+}
+#gold-app .html.content .main {
+  background-image: url(../img/gold-content.png?v1.20);
+}
+#gold-app .html.content .main .button {
+  left: 645px;
+}
+#gold-app .html.content .main .button.apple {
+  bottom: 365px;
+}
+#gold-app .html.content .main .button.android {
+  bottom: 260px;
+}
