@@ -60,7 +60,7 @@ h4{font-size: 16px;
 .navbar-inverse .navbar-nav>.active>a:focus {
      color: #ffffff; 
      background-color:#00538B;
-     height: 50px;}
+     height: 90px;}
 .navbar-inverse .navbar-nav>li>a {
                                   color:#BAD9F1;}
 .navbar-brand {
@@ -132,7 +132,7 @@ h4{font-size: 16px;
 .btn{border: 0px ;font-size: 23px ;padding-top: 0px}
 .grid{font-size: 17px;color: #bbbbbb;margin:20px auto;display: block;width:180px;background-color: #f8f8f8}
 .link{width: 125px;height: 105px;}
-.androidbtn{margin:15px auto;width: 125px;display: block;}
+.iphonebtn{margin:28px auto;width: 125px;display: block;}
 #A{position:relative}
 #B{position:absolute;top:203px;right: 20%}
 @media (max-width: 768px) {
