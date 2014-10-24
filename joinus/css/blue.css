@@ -1,0 +1,153 @@
+::-moz-selection {
+	background:#0078D2;
+	color:#fff;
+}
+::selection{
+	background:#0078D2;
+	color:#fff;	
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0078D2 !important;
+
+}
+h1.light{
+  color: #0078D2 !important;
+}
+.about i{
+	background:#0078D2;
+}
+.hovicon.effect-1.sub-a:hover {
+	background: #0078D2;
+}
+.hovicon.effect-1 {
+	background: #0078D2;
+}
+.hovicon.effect-1:after {
+	box-shadow: 0 0 0 4px #0078D2;
+}
+.team .col-md-4 .team-image-sec .img-overlay, .entry .overlay{ background:rgba(96, 202, 232, 0.83);}
+.team .col-md-4 .team-image-sec li a{ color:#60cae8;}
+.team-detail-sec h3{ color:#0078D2}
+#filters ul li a:hover h3, #filters ul li a.active h3 {
+	background-color:#0078D2;
+	border: 1px solid #009db5;
+}
+.da-thumbs li  article {
+	background:rgba(96, 202, 232, 0.83);
+}
+#second .fa-twitter{
+	color: #0078D2;
+}
+.testimonials span{
+	color:#0078D2 ;
+}
+.pricing .price span{
+	color:#0078D2;
+}
+.pricing .table.blue-table{
+	background:#0078D2;
+}
+.pricing .table a:hover{
+	background:#0078D2;
+	color:#fff !important;
+}
+.sponsors h1.sponsor{
+	color:#0078D2 !important;
+}
+.pressroom .left-text span.title{
+	color:#0078D2;
+}
+.pressroom .left-text a{
+	color:#0078D2;
+}
+.pressroom .right-text span.title{
+	color:#0078D2;
+}
+.pressroom .right-text a{
+	color:#0078D2;
+}
+.contact .form{
+	background: bottom no-repeat #ffffff;
+	border-top:solid 2px #0078D2;
+}
+.submit_btn {
+	background:#0078D2;
+}
+#fifth{
+	border-bottom:solid 10px #0078D2;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #0078D2;
+}
+.skill-bar-percent {
+	background:#0078D2;
+}
+.QLoader {
+	background-color: #0078D2;
+}
+.skillbar-bar{ background:#0078D2;}
+.picker-off i { color:#0078D2;}
+.caption.big_blue{color: #0078D2;}
+.button:hover{ border-color:#0078D2 !important;}
+.team-sec h4 {
+color: #0078D2 !important;
+}
+.social-icons a:hover{
+	background:#0078D2;
+}
+.team-sec.dark-bg{
+	background:#0078D2;
+}
+.team-sec.dark-bg h4 {
+color: #fff !important;
+}
+.team-sec.dark-bg a{
+	background:#fff !important;
+}
+.team-sec.dark-bg i{
+	color:#333;
+}
+.team-sec.dark-bg a:hover i{
+	color:#0078D2 !important;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  border-bottom: solid 3px #0078D2 !important;  
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #0078D2 !important;
+border-bottom: solid 3px #0078D2 !important;
+}
+}
+
+
+.blog .tags a:hover{
+	border:solid 1px #0078D2;
+	color:#0078D2;
+}
+.blog a.comment{
+	color:#0078D2;
+}
+.blog .comments a.date{
+	margin: 5px 0 0 16px;
+	float: left;
+	color:#0078D2;
+}
+.blog .comments a{
+	color:#0078D2;
+}
+.blog .comment-form input[type=submit]{
+	background: #0078D2;
+}
+.blog .recent-post .post a{
+	color:#07ceee;
+}
+.blog .archive a{
+	color: #07ceee;
+}
