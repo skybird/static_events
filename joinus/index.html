@@ -807,7 +807,7 @@
     //Hr info
     (function ($) {
         $.ajax({
-            url : 'http://api.wallstreetcn.com/v2/posts?type=jobs&order=-sort_order&limit=4',
+            url : 'http://api.wallstreetcn.com/v2/posts?type=jobs&order=-sort_order&limit=10',
             dataType : 'jsonp'
         }).then(function(response) {
             var compiled = _.template($("#jobs").html());
