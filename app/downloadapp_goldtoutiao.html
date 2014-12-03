@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>黄金头条APP下载</title>
+
+    <style type="text/css">
+        #wechat-tip {
+            /*display: none;*/
+            /*width: 416px;*/
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            margin: auto;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        (function(){
+            var href ;
+            var ua = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(ua)) { //ios
+                href = 'https://itunes.apple.com/cn/app/huang-jin-tou-tiao-yong-zi/id906324709?mt=8';
+            } else if (/micromessenger/.test(ua)) { //微信 图片页面，提示用浏览器打开
+                href = null;
+            } else if (/android/.test(ua)) { //安卓
+                href = 'http://activity.wallstreetcn.com/apk/Goldheadline_1.0.2.apk';
+            } else {
+                href = 'http://m.wallstreetcn.com';
+            }
+            if (href) {
+                location.href = href;
+            }
+        })();
+
+    </script>
+
+</head>
+<body>
+
+    <img id="wechat-tip" src="img/gold2.jpg" alt="" />
+    <script type="text/javascript">
+    if (window.is_android_wechat) {
+        document.getElementById('wechat-tip').style.display = 'block';
+    }
+    </script>
+
+</body>
+</html>
