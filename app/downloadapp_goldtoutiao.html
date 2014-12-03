@@ -48,12 +48,10 @@
             var ua = navigator.userAgent.toLowerCase();
             if (/iphone|ipad|ipod/.test(ua)) {
                 href = 'http://mp.weixin.qq.com/mp/redirect?url=https%3A%2F%2Fitunes.apple.com%2Fcn%2Fapp%2Fhuang-jin-tou-tiao-yong-zi%2Fid906324709%3Fmt%3D8'
-                // href = 'https://itunes.apple.com/cn/app/huang-jin-tou-tiao-yong-zi/id906324709?mt=8';
-            } else if (/android/.test(ua)) {
-                href = 'http://mp.weixin.qq.com/mp/redirect?url=http%3A%2F%2Factivity.wallstreetcn.com%2Fapk%2FGoldheadline_1.0.2.apk'
-                // href = 'http://activity.wallstreetcn.com/apk/Goldheadline_1.0.2.apk';
             } else if (/micromessenger/.test(ua)) {
                 href = null;
+            } else if (/android/.test(ua)) {
+                href = 'http://activity.wallstreetcn.com/apk/Goldheadline_1.0.2.apk';
             } else {
                 href = 'http://m.wallstreetcn.com';
             }
