@@ -1485,8 +1485,8 @@ header {
 .page6 .c3 {
         margin: auto;
         margin-top: 0px;
-        width: 93px;
-        height: 50px;
+        width: 170px;
+        height: 65px;
         background-repeat: no-repeat;
 }
 
@@ -1675,7 +1675,7 @@ header {
 }
 
 .page6 .c3 {
-	background-position: 0px -630px;
+	background-position: -335px -560px;
 }
 
 .music .btn {
