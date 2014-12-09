@@ -1641,7 +1641,7 @@ function(t) {
         function() {
             e(l, "bgm1.mp3"),
             e(h, "one_9s.mp3"),
-            e(p, "two-_6s.mp3"),
+            e(p, "two_6s.mp3"),
             e(f, "three_7s.mp3")
         }),
         c("#music").on("touchstart",
@@ -1735,7 +1735,7 @@ function(t) {
     f = new Audio,
     p = new Audio,
     d = -1,
-    m = ["one_9s.mp3", "two-_6s.mp3", "three_7s.mp3"],
+    m = ["one_9s.mp3", "two_6s.mp3", "three_7s.mp3"],
     v = [h, f, p],
     g = [!1, !1, !1],
     y = !1,
