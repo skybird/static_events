@@ -397,7 +397,7 @@ header {
 }
 
 .page1 .c9 {
-        top: 460px;
+        top: 400px;
         left: 110px;
         width: 50px;
         height: 50px;
@@ -462,11 +462,11 @@ header {
 	width: 320px
 }
 
-.page2 .c1,.page2 .c2,.page2 .c3,.page2 .c4,.page2 .c5,.page2 .c6,.page2 .c7,.page2 .c8,.page2 .c9,.page2 .c10 {
+.page2 .c1,.page2 .c2,.page2 .c3,.page2 .c4,.page2 .c5,.page2 .c6,.page2 .c7,.page2 .c8,.page2 .c9,.page2 .c10,.page2 .c11 {
 	position: absolute
 }
 
-.page2 .c1,.page2 .c2,.page2 .c4,.page2 .c5,.page2 .c7,.page2 .c8,.page2 .c9,.page2 .c10 {
+.page2 .c1,.page2 .c2,.page2 .c4,.page2 .c5,.page2 .c7,.page2 .c8,.page2 .c9,.page2 .c10,.page2 .c11 {
 	-webkit-transform: translateY(1000px);
 	transform: translateY(1000px)
 }
@@ -497,7 +497,7 @@ header {
 }
 
 .page2 .c4 {
-        top: 50px;
+        top: 60px;
         left: 79px;
         width: 160px;
         height: 35px;
@@ -522,7 +522,7 @@ header {
 }
 
 .page2 .c7 {
-        top: -20px;
+        top: 0px;
         left: 130px;
         width: 50px;
         height: 50px;
@@ -538,10 +538,10 @@ header {
 }
 
 .page2 .c9 {
-        top: 439px;
-        left: 145px;
+        top: 400px;
+        left: 135px;
         width: 50px;
-        height: 50px;
+        height: 0px;
         background-repeat: no-repeat;
 }
 
@@ -549,6 +549,14 @@ header {
         top: 355px;
         left: 45px;
         width: 230px;
+        height: 50px;
+        background-repeat: no-repeat;
+}
+
+.page2 .c11{
+        top: 400px;
+        left: 135px;
+        width: 50px;
         height: 50px;
         background-repeat: no-repeat;
 }
@@ -603,7 +611,12 @@ header {
 	transition: all 500ms 900ms linear
 }
 
-.page2.cur .c1,.page2.cur .c2,.page2.cur .c4,.page2.cur .c5,.page2.cur .c7,.page2.cur .c8,.page2.cur .c9,.page2.cur .c10 {
+.page2.cur .c11 {
+        -webkit-transition: all 500ms 900ms linear;
+	transition: all 500ms 900ms linear
+}
+
+.page2.cur .c1,.page2.cur .c2,.page2.cur .c4,.page2.cur .c5,.page2.cur .c7,.page2.cur .c8,.page2.cur .c9,.page2.cur .c10,.page2.cur .c11 {
 	-webkit-transform: translateY(0);
 	transform: translateY(0)
 }
@@ -1100,7 +1113,7 @@ header {
 	width: 320px
 }
 
-.page5 .c1,.page5 .c6,.page5 .c7,.page5 .c8,.page5 .c9,.page5 .c10 {
+.page5 .c1,.page5 .c6,.page5 .c7,.page5 .c8,.page5 .c9,.page5 .c10,.page5 .c11 {
 	position: absolute
 }
 
@@ -1108,24 +1121,24 @@ header {
         top: 0;
         left: 129px;
         width: 60px;
-        height: 50px;
+        height: 0px;
         -webkit-transform: translateY(1000px);
         transform: translateY(1000px);
         background-repeat: no-repeat;
 }
 
 .page5 .c6 {
-        top: 55px;
+        top: 75px;
         left: 42.5px;
         width: 235px;
-        height: 30px;
+        height: 0px;
         -webkit-transform: translateY(1000px);
         transform: translateY(1000px);
         background-repeat: no-repeat;
 }
 
 .page5 .c7 {
-        top: 365px;
+        top: 347px;
         left: 70px;
         width: 180px;
         height: 50px;
@@ -1135,23 +1148,23 @@ header {
 }
 
 .page5 .c8 {
-	top: 359px;
-	left: 47px;
-	width: 177px;
-	height: 0px;
-	-webkit-transform: translateY(1000px);
-	transform: translateY(1000px);
-	background-repeat: no-repeat;
+        top: 20px;
+        left: 129px;
+        width: 60px;
+        height: 50px;
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        background-repeat: no-repeat;
 }
 
 .page5 .c9 {
-	top: 400px;
-	left: 109px;
-	width: 162px;
-	height: 0px;
-	-webkit-transform: translateY(1000px);
-	transform: translateY(1000px);
-	background-repeat: no-repeat;
+        top: 75px;
+        left: 42.5px;
+        width: 235px;
+        height: 30px;
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        background-repeat: no-repeat;
 }
 
 .page5 .c10 {
@@ -1163,6 +1176,14 @@ header {
 	background-size: 100% 100%;
 	-webkit-transform: translateY(1000px);
 	transform: translateY(1000px)
+}
+
+.page5 .c11{
+        top: 400px;
+        left: 135px;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
 }
 
 .page5 .cont-wp {
@@ -1319,7 +1340,7 @@ header {
 	width: 134px
 }
 
-.page5.cur .c1,.page5.cur .c6,.page5.cur .c7,.page5.cur .c8,.page5.cur .c9,.page5.cur .c10 {
+.page5.cur .c1,.page5.cur .c6,.page5.cur .c7,.page5.cur .c8,.page5.cur .c9,.page5.cur .c10,.page5.cur .c11 {
 	-webkit-transform: translateY(0);
 	transform: translateY(0)
 }
@@ -1345,6 +1366,11 @@ header {
 }
 
 .page5.cur .c9 {
+	-webkit-transition: all 500ms linear 400ms;
+	transition: all 500ms linear 400ms
+}
+
+.page5.cur .c11 {
 	-webkit-transition: all 500ms linear 400ms;
 	transition: all 500ms linear 400ms
 }
@@ -1655,7 +1681,7 @@ header {
 }
 
 .page5 .c8 {
-	background-position: -389px -485.5px
+	background-position: -505px -97px;
 }
 
 .page4 .c1 {
@@ -1734,8 +1760,16 @@ header {
 	background-position: -220px -320px;
 }
 
+.page2 .c11{
+        background-position: -45px -253px;
+}
+
 .page5 .c9 {
-	background-position: -295px -546.5px
+	background-position: -485px -155px
+}
+
+.page5 .c11{
+        background-position: -45px -253px;
 }
 
 .page1 .c6 {
@@ -1752,7 +1786,7 @@ header {
 	background-image: url(bg_s.png)
 }
 
-.page4 .c11,.page5 .c8,.page4 .c1,.page2 .c7,.page1 .c9,.page3 .c3,.page6 .c3,.music .btn,.page2 .c5,.page3 .c7,.page1 .c7,.page5 .c6,.page2 .c9,.page4 .c13,.page1 .c3,.page3 .c4,.page4 .c10,.page4 .c12,.page5 .c7,.page3 .c6,.page2 .c10,.page5 .c9,.page1 .c6,.page1 .start b,.page7 .c1,.page7 .c2,.page7 .c3,.page7 .c4,.page7 .c5,.page7 .c6,.page7 .c7,.page7 .c8,.page7 .c9,.page7 .c10,.page8 .c1,.page8 .c2,.page8 .c3,.page8 .c4,.page8 .c5,.page8 .c6,.page8 .c7,.page8 .c8,.page8 .c9,.page8 .c10 {
+.page4 .c11,.page5 .c8,.page4 .c1,.page2 .c7,.page1 .c9,.page3 .c3,.page6 .c3,.music .btn,.page2 .c5,.page3 .c7,.page1 .c7,.page5 .c6,.page2 .c9,.page4 .c13,.page1 .c3,.page3 .c4,.page4 .c10,.page4 .c12,.page5 .c7,.page3 .c6,.page2 .c10,.page2 .c11,.page5 .c9,.page5 .c11,.page1 .c6,.page1 .start b,.page7 .c1,.page7 .c2,.page7 .c3,.page7 .c4,.page7 .c5,.page7 .c6,.page7 .c7,.page7 .c8,.page7 .c9,.page7 .c10,.page8 .c1,.page8 .c2,.page8 .c3,.page8 .c4,.page8 .c5,.page8 .c6,.page8 .c7,.page8 .c8,.page8 .c9,.page8 .c10 {
 	background-size: 1000px 1000px;
 	background-image: url(bg_s.png)
 }
@@ -1800,7 +1834,7 @@ header {
 }
 
 .page7 .c4 {
-        top: 50px;
+        top: 60px;
         left: 59px;
         width: 200px;
         height: 35px;
@@ -1825,7 +1859,7 @@ header {
 }
 
 .page7 .c7 {
-        top: -20px;
+        top: 0px;
         left: 130px;
         width: 55px;
         height: 50px;
@@ -1841,7 +1875,7 @@ header {
 }
 
 .page7 .c9 {
-        top: 439px;
+        top: 400px;
         left: 133px;
         width: 50px;
         height: 50px;
@@ -1924,7 +1958,7 @@ header {
 }
 
 .page7 .c3 {
-        background-position: -465px -205px;
+        background-position: -463px -205px;
 }
 
 .page7 .c4 {
@@ -1999,7 +2033,7 @@ header {
 }
 
 .page8 .c4 {
-        top: 50px;
+        top: 60px;
         left: 69px;
         width: 180px;
         height: 35px;
@@ -2024,7 +2058,7 @@ header {
 }
 
 .page8 .c7 {
-        top: -20px;
+        top: 0px;
         left: 134px;
         width: 55px;
         height: 50px;
@@ -2040,7 +2074,7 @@ header {
 }
 
 .page8 .c9 {
-        top: 439px;
+        top: 400px;
         left: 133px;
         width: 50px;
         height: 50px;

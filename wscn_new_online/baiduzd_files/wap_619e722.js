@@ -1628,13 +1628,13 @@ function(t) {
         c(".audio").eq(t).removeClass("play")
     }
     function r() {
-        return y ? 0 : (w || e(l, "bgm1.mp3"), l.play(), y = !0, c("#music-btn").addClass("play"), void c("#music-text").text("开启"))
+        return y ? 0 : (w || e(l, "bgm1.mp3"), l.play(), y = !0, c("#music-btn").addClass("play"), void c("#music-text").text("关闭"))
     }
     function o() {
         l.pause(),
         y = !1,
         c("#music-btn").removeClass("play"),
-        c("#music-text").text("关闭")
+        c("#music-text").text("开启")
     }
     function a() {
         c("body").one("touchstart",
