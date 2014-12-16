@@ -93,13 +93,28 @@ h4{font-size: 16px;
 	        background-position: center center; }
 .bigbanner1{height: 356px;
 	        background-image:url('../img/banner2.jpg');
-	        background-position: center center; }
+	        background-position: center center;
+          background-repeat:no-repeat;
+          width: auto;
+          background-size: cover; }
 .bigbanner2{height: 356px;
 	        background-image:url('../img/banner3.jpg');
-	        background-position: center center; }
+	        background-position: center center;
+          background-repeat:no-repeat;
+          width: auto;
+          background-size: cover; }
 .bigbanner3{height: 356px;
 	        background-image:url('../img/banner4.jpg');
-	        background-position: center center ;}
+	        background-position: center center;
+          background-repeat:no-repeat;
+          width: auto;
+          background-size: cover;}
+.bigbanner4{height: 356px;
+          background-image:url('../img/new-app.png');
+          background-position: center center;
+          background-repeat:no-repeat;
+          width: auto;
+          background-size: cover;}
 
 .phone1{width:900px;height:356px;position: relative;margin: 0 auto;
 	        background-image:url('../img/phone1.png');background-repeat:no-repeat;
