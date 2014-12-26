@@ -250,7 +250,7 @@
 
 
     function init_scroll(event, delta) {
-        deltaOfInterest = delta;
+        deltaOfInterest = event.deltaY;
         var timeNow = new Date().getTime();
         // Cancel scroll if currently animating or within quiet period
         if(timeNow - lastAnimation < quietPeriod + settings.animationTime) {
@@ -260,7 +260,7 @@
 
         if (deltaOfInterest < 0) {
           el.moveDown()
-        } else {
+        } else if(deltaOfInterest>0) {
           el.moveUp()
         }
         lastAnimation = timeNow;
