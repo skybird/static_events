@@ -21,8 +21,9 @@
       margin: auto;
       left: 0;
       right: 0;
-      top: 0;
+      top: -10%;
       bottom: 0;
+      height: 80%;
     }
     .p-img4-1{
       position: absolute;
@@ -40,7 +41,6 @@
          -moz-animation-duration: 1s;
           -ms-animation-duration: 1s;
               animation-duration: 1s;
-              animation-delay:0.5s;
     }
     .page2,.page3 ,.page4 ,.page5 ,.page6,.page7  { background-color: #b8def5;}
     .page2:focus,.page3:focus ,.page4:focus ,.page5:focus ,.page6:focus,.page7:focus{
@@ -52,9 +52,10 @@
                -moz-animation-name: fadeInTop;
                 -ms-animation-name: fadeInTop;
                     animation-name: fadeInTop;
-                    
-                    margin:110px auto 0px;
+                    animation-delay:0.5s;
+                    margin:auto;
                     position: absolute;
+                    top:10%;
                     left: 0px;
                     right: 0px;
     }
@@ -96,13 +97,16 @@
     }
     .p2-left{
       position: absolute;
-      top:50%;
+      top:45%;
       left: 50%;
       margin-left: -445px;
       display: none;
     }
-    .p2-left-animate{
+    .animatedEnd{
       display: block;
+    }
+    .p2-left-animate{
+      
       -webkit-animation-name: fadeInLeft;
          -moz-animation-name: fadeInLeft;
           -ms-animation-name: fadeInLeft;
@@ -146,13 +150,12 @@
     }
     .p2-right{
       position: absolute;
-      top:50%;
+      top:45%;
       right: 50%;
       margin-right: -445px;
       display: none;
     }
     .p2-right-animate{
-      display: block;
       -webkit-animation-name: fadeInRight;
          -moz-animation-name: fadeInRight;
           -ms-animation-name: fadeInRight;
@@ -164,7 +167,7 @@
         -webkit-transform: translate3d(1000px,0, 0);
                 transform: translate3d(1000px,0, 0);
       }
-      1000 {
+      100% {
         opacity: 1;
         -webkit-transform: none;
                transform: none;
@@ -176,7 +179,7 @@
         -moz-transform: translate3d(1000px,0, 0);
                 transform: translate3d(1000px,0, 0);
       }
-      1000 {
+      100% {
         opacity: 1;
         -moz-transform: none;
                transform: none;
@@ -198,7 +201,14 @@
       font-size: 12px;
     }
     .logo-img7{
-      margin-top: 250px;
+      top: 15%;
+    }
+    .p7-title{
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0px;
     }
     
     </style>
@@ -244,7 +254,7 @@
         </div>
         <div class="page page7" data-num='7' tabindex='7'>
            <img class='logo-img logo-img7 animated' src="img/logo.png">
-          <img class="p-img" src="img/part7.png">
+           <img class='p7-title' src="img/part7.png">
         </div>
       </div>
 
@@ -312,8 +322,8 @@
             break;
             case 2:        
               $('.page2').focus();
-              $('.p2-left').addClass('p2-left-animate');
-              $('.p2-right').addClass('p2-right-animate');
+              $('.p2-left').addClass('p2-left-animate').show();
+              $('.p2-right').addClass('p2-right-animate').show();
             break;
             case 3:        
               $('.page3').focus();
