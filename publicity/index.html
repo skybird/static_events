@@ -45,6 +45,9 @@
               animation-delay:0.5s;
     }
     .page2,.page3 ,.page4 ,.page5 ,.page6,.page7  { background-color: #b8def5;}
+    .page2:focus,.page3:focus ,.page4:focus ,.page5:focus ,.page6:focus,.page7:focus{
+      outline: none;
+    }
     p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color: #fff; text-align: center;}
     .logo-img{
             -webkit-animation-name: fadeInTop;
@@ -281,7 +284,7 @@
             that.find('.p-img').eq(0).fadeIn();
             $('.main').moveTo(+currentNum+1);
           }
-        }else{
+        }else if((e.deltaY==1)||(e.which==37)){
           console.log(index);
           stopMousewheel(e);
           --index;
