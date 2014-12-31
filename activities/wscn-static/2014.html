@@ -3,15 +3,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>我用白拿的10万元穿越去2014年,取得了可观的收入,你也来试试吧</title>
+    <title>万万没想到的2014年</title>
     <link href="main.css" rel="stylesheet" type="text/css">
     <link href="animate.min.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
-
+    <div class="hidden">
     <audio id="bgm" preload="auto" style="display: none">
     </audio>
+    </div>
     <div class="first-page">
         <div class="first-cover">
             <div class="countdown-popup">
@@ -96,8 +96,10 @@
                 $html.addClass('animated zoomIn');
                 setTimeout(function(){
                     countDownPopup.empty();
-                    if(num==1){
+                    if(num==2){
                         playBgm();
+                    }
+                    if(num==1){
                         $('.first-cover').addClass('hidden');
                         $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
                         setTimeout(function(){
