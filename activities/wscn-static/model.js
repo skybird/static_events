@@ -40,7 +40,7 @@ function getProfitLevel(profit){
     }
     if(profit>700){
         return {
-            title:'轻松碾压余额宝，这舒爽，简直停不下来~  马云：说不出的囧'
+            title:'轻松碾压余额宝，这舒爽，简直停不下来.'
         }
     }
     if(profit>=330){
@@ -50,12 +50,12 @@ function getProfitLevel(profit){
     }
     if(profit>=0){
         return {
-            title:'你和金钱的关系太纯洁，骚年，不装逼还是朋友~，让爷教你如何扑倒它！'
+            title:'你和金钱的关系太纯洁，骚年，不装逼还是朋友，让爷教你如何扑倒它！'
         }
     }
     if(profit > -2100){
         return {
-            title:"心塞塞的，辣条都吃不上的节奏。命理大师说2015年是屌丝逆袭年……不拼不形了！"
+            title:"心塞塞的，辣条都吃不上的节奏。命理大师说2015年是屌丝逆袭年……不拼不行了！"
         }
     }
     if(profit > -4500){
@@ -71,7 +71,7 @@ function getProfitLevel(profit){
     }
     if(profit <6600){
         return {
-            title:'刚为你申请了一项吉尼斯世界记录——世界上最蠢萌的投资大脑，去领奖，不谢。不做广告不行：你绝对要下载华尔街见闻App！'
+            title:'刚为你申请了一项吉尼斯世界记录——世界上最蠢萌的投资大脑，不谢。不做广告不行：你绝对要下载华尔街见闻App！'
         }
     }
 }

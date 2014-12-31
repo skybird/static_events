@@ -94,11 +94,10 @@
                 var $html = $(html);
                 countDownPopup.html($html);
                 $html.addClass('animated zoomIn');
+                playBgm();
                 setTimeout(function(){
                     countDownPopup.empty();
-                    if(num==2){
-                        playBgm();
-                    }
+
                     if(num==1){
                         $('.first-cover').addClass('hidden');
                         $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
@@ -113,7 +112,7 @@
                     }
                 },1200)
             }
-            countDownAnimate(3)
+            countDownAnimate(3);
             $('#start-btn').on(touch_start,function(){
                 $('.first-page').addClass('hidden');
                 $('.pages-cover').removeClass('hidden');
