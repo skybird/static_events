@@ -8,6 +8,14 @@
     <link href="animate.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf('android')!=-1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone')!=-1){
+        }
+        else{
+            window.location.href='2014_pc.html'
+        }
+    </script>
     <div class="hidden">
     <audio id="bgm" preload="auto" style="display: none">
     </audio>

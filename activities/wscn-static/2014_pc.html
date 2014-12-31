@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>万万没想到的2014年</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="animate.min.css" rel="stylesheet" type="text/css">
+</head>
+<body style="height: 900px">
+
+    <div class="hidden">
+    <audio id="bgm" preload="auto" style="display: none">
+    </audio>
+    </div>
+    <div class="first-page">
+        <div class="first-cover">
+            <div class="countdown-popup">
+                <div id="count-down">3</div>
+            </div>
+        </div>
+        <img src="img/logo.png" style="display: block;width: 113px;margin:0 auto;padding:50px 0 10px;">
+        <div class="act-title">脑补2014</div>
+        <div class="sub-act-title">测测我的投资技能值</div>
+        <div class="first-circle hidden">
+            <div class="first-circle-img invisible">
+                <img src="img/1_3.png" style="width: 100%">
+            </div>
+        </div>
+        <div style="text-align: center" id="div-start" class="hidden">
+            <div style="color:#ce541f;margin-bottom: 10px;">赏你<span id="your-money">100,000</span>本金去花吧</div>
+            <div style="width:202px;margin: 0 auto;">
+                <img src="img/ewm.png" style="width: 100%">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jquery.min.js"></script>
+    <script src="model.js"></script>
+    <script>
+        function playBgm(){
+            var music = document.getElementById('bgm');
+            music.src='http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
+            music.play();
+        }
+        var touch_start = 'click';
+//        if('ontouchstart' in window){
+//            touch_start = 'touchstart';
+//        }
+        var transform='webkitTransform';
+        //transition_end = 'webkitTransitionEnd';
+        if(typeof document.body.style.transform==='string'){
+            transform = 'transform';
+            //transition_end='transitionend'
+        }
+        ;function firstScreen(){
+            var countDownPopup = $('.countdown-popup');
+            function countDownAnimate(num){
+                var html = '<div style="position: absolute;top:120px;left:155px;font-size: 36px;color:#97dee2;font-weight: bold">'+num+'</div>'
+                var $html = $(html);
+                countDownPopup.html($html);
+                $html.addClass('animated zoomIn');
+                playBgm();
+                setTimeout(function(){
+                    countDownPopup.empty();
+
+                    if(num==1){
+                        $('.first-cover').addClass('hidden');
+                        $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
+                        setTimeout(function(){
+                            $('.first-circle-img').removeClass('invisible').addClass('animated bounceInDown');
+                        },600)
+                        setTimeout(function(){
+                            $('#div-start').removeClass('hidden').addClass('animated fadeIn');
+                        },1800)
+                    }else{
+                        countDownAnimate(--num);
+                    }
+                },1200)
+            }
+            countDownAnimate(3);
+        }
+        //$('.first-page').addClass('hidden');
+        //$('.pages-cover').removeClass('hidden');
+        firstScreen();
+
+
+    </script>
+</body>
+</html>
