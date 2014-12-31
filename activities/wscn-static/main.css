@@ -10,6 +10,9 @@ html,body{
     height: 100%;
     font-family: "Helvetica Neue",'Heiti SC','华文黑体', '黑体';
 }
+body,.pages-cover,.wscn-pages,.wscn-page{
+    min-height: 480px;
+}
 .pages-cover{
     height: 100%;
     width: 100%;
