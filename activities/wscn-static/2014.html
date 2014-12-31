@@ -227,6 +227,9 @@
 //            var max = 156.16,
 //                    mix = -126.12;
             var percent = Math.round( (profit+126.12)*100/(156.16+126.12) );
+            if(percent>=99){
+                percent = 99;
+            }
             var shareMsg = '我用白拿的10万元穿越去2014年，取得'+profit+'%的收益，打败全球'+percent+'%的人。你也去试试吧。'
             $('title').text(shareMsg);
             var data = {
