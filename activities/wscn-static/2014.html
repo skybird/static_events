@@ -185,12 +185,28 @@
             }
             $('.result-box').html(html)
 //            $('')
-            $('.profit-money').text(numberWithCommas(Math.abs(totalMoney))).textillate({in:{
-                effect:'fadeInLeftBig'
-            }});
-            setTimeout(function(){
-                $('#share2friends').fadeIn();
-            },1500)
+            var finalNum = Math.abs(totalMoney);
+            var step = Math.round(finalNum/15);
+            var moneyDom = $('.profit-money');
+            var moneyChangeNum=1;
+            moneyDom.text(numberWithCommas(step))
+            var interHandler = setInterval(function(){
+                moneyChangeNum++;
+                if(moneyChangeNum==15){
+                    moneyDom.text(numberWithCommas(finalNum))
+                    clearInterval(interHandler);
+                    $('#share2friends').fadeIn();
+                    return;
+                }
+                moneyDom.text(step*moneyChangeNum);
+            },1000/15)
+
+//                    .textillate({in:{
+//                effect:'fadeInLeftBig'
+//            }});
+//            setTimeout(function(){
+//                $('#share2friends').fadeIn();
+//            },1500)
             $('.profit-percent').text(totalProfit+'%');
             if(totalProfit<0){
                 $('.profit-money').css({color:'#52b54f'})
@@ -203,7 +219,7 @@
 //            var max = 156.16,
 //                    mix = -126.12;
             var percent = Math.round( (profit+126.12)*100/(156.16+126.12) );
-            var shareMsg = '我用白拿的10万元穿越去2014年，（以自己的投资天赋）取得'+profit+'%的收益，打败全球'+percent+'%的人。（万万没想到的2014年，）你也去试试。'
+            var shareMsg = '我用白拿的10万元穿越去2014年，取得'+profit+'%的收益，打败全球'+percent+'%的人。你也去试试吧。'
             $('title').text(shareMsg);
             var data = {
                 app: '',
