@@ -3,6 +3,9 @@
     padding:0;
     box-sizing: border-box;
 }
+img{
+    border:0;
+}
 html,body{
     height: 100%;
     font-family: "Helvetica Neue",'Heiti SC','华文黑体', '黑体';
@@ -84,7 +87,6 @@ html,body{
     font-size: 36px;
     color:#fc611f;
     text-align: center;
-    padding-top:80px;
     font-weight: bold;
 }
 .sub-act-title{
@@ -225,7 +227,7 @@ html,body{
     background: url(img/result/replay.png) no-repeat center;
     background-size: 100%;
 }
-.share2friends{
+#share2friends{
     width:75px;
     height: 54px;
     margin-top: 6px;
