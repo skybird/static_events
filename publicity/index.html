@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>华尔街见闻品牌介绍</title>
+    <link rel="stylesheet" href="css/onepage-scroll.css" />
+    <link rel="stylesheet" href="css/tipsy.css" />
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/jquery.onepage-scroll.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    
+    <style>
+    .p1-img{
+      width: 100%;
+      height: 100%;
+    }
+    .p-img{
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: -10%;
+      bottom: 0;
+      height: 80%;
+    }
+    .p-img4-1{
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    .hide{
+      display: none;
+    }
+    .animated{
+      -webkit-animation-duration: 1s;
+         -moz-animation-duration: 1s;
+          -ms-animation-duration: 1s;
+              animation-duration: 1s;
+    }
+    .page2,.page3 ,.page4 ,.page5 ,.page6,.page7  { background-color: #b8def5;}
+    .page2:focus,.page3:focus ,.page4:focus ,.page5:focus ,.page6:focus,.page7:focus{
+      outline: none;
+    }
+    p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color: #fff; text-align: center;}
+    .logo-img{
+            -webkit-animation-name: fadeInTop;
+               -moz-animation-name: fadeInTop;
+                -ms-animation-name: fadeInTop;
+                    animation-name: fadeInTop;
+                    animation-delay:0.5s;
+                    margin:auto;
+                    position: absolute;
+                    top:10%;
+                    left: 0px;
+                    right: 0px;
+    }
+    @-webkit-keyframes fadeInTop {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-600px, 0);
+                transform: translate3d(0,-600px, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+               transform: none;
+      }
+    }
+    @-moz-keyframes fadeInTop {
+      0% {
+        opacity: 0;
+        -moz-transform: translate3d(0,-600px, 0);
+                transform: translate3d(0,-600px, 0);
+      }
+      100% {
+        opacity: 1;
+        -moz-transform: none;
+               transform: none;
+      }
+    }
+    @keyframes fadeInTop {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+                transform: translate3d(-2000px, 0, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none;
+      }
+    }
+    .p2-left{
+      position: absolute;
+      top:45%;
+      left: 50%;
+      margin-left: -445px;
+      display: none;
+    }
+    .animatedEnd{
+      display: block;
+    }
+    .p2-left-animate{
+      
+      -webkit-animation-name: fadeInLeft;
+         -moz-animation-name: fadeInLeft;
+          -ms-animation-name: fadeInLeft;
+              animation-name: fadeInLeft;
+    }
+    @-webkit-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1000px,0, 0);
+                transform: translate3d(-1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+               transform: none;
+      }
+    }
+    @-moz-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -moz-transform: translate3d(-1000px,0, 0);
+                transform: translate3d(-1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -moz-transform: none;
+               transform: none;
+      }
+    }
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1000px,0, 0);
+                transform: translate3d(-1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none;
+      }
+    }
+    .p2-right{
+      position: absolute;
+      top:45%;
+      right: 50%;
+      margin-right: -445px;
+      display: none;
+    }
+    .p2-right-animate{
+      -webkit-animation-name: fadeInRight;
+         -moz-animation-name: fadeInRight;
+          -ms-animation-name: fadeInRight;
+              animation-name: fadeInRight;
+    }
+    @-webkit-keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(1000px,0, 0);
+                transform: translate3d(1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+               transform: none;
+      }
+    }
+    @-moz-keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        -moz-transform: translate3d(1000px,0, 0);
+                transform: translate3d(1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -moz-transform: none;
+               transform: none;
+      }
+    }
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(1000px,0, 0);
+                transform: translate3d(1000px,0, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none;
+      }
+    }
+    .nav-title{
+      font-size: 12px;
+    }
+    .logo-img7{
+      top: 15%;
+    }
+    .p7-title{
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      right: 0px;
+    }
+    
+    </style>
+  </head>
+  <body>
+      <div class="main" >
+        <div class="page page1" data-num='1' tabindex='1' >
+          <img class='logo-img animated' src="img/logo.png">
+          <img class="p1-img" src="img/part1.jpg">
+        </div>
+        <div class="page page2" data-num='2' tabindex='2'>
+          <img class='p2-left animated' src="img/p2-left.png">
+          <img class='p2-right animated' src="img/p2-right.png">
+          <img class="p-img" src="img/part2.png">
+        </div>
+        <div class="page page3" data-num='3' tabindex='3'>
+          <div class="main3">
+            <img class="p-img" src="img/part3_1.png">
+            <img class="p-img hide" src="img/part3_2.png">
+            <img class="p-img hide" src="img/part3_3.png">
+            <img class="p-img hide" src="img/part3_4.png">
+            <img class="p-img hide" src="img/part3_5.png">
+            <img class="p-img hide" src="img/part3_6.png">
+          </div>
+        </div>
+        <div class="page page4" data-num='4' tabindex='4'>
+          <div class="main4">
+            <img class="p-img" src="img/part4_1.png">
+            <img class="p-img hide" src="img/part4_2.png">
+            <img class="p-img hide" src="img/part4_3.png">
+            <img class="p-img hide" src="img/part4_4.png">
+          </div>
+        </div>
+        <div class="page page5" data-num='5' tabindex='5'>
+          <div class="main5">
+            <img class="p-img" src="img/part5_1.png">
+            <img class="p-img hide" src="img/part5_2.png">
+            <img class="p-img hide" src="img/part5_3.png">
+          </div>
+        </div>
+        <div class="page page6" data-num='6' tabindex='6'>
+          <img class="p-img" src="img/part6.png">
+        </div>
+        <div class="page page7" data-num='7' tabindex='7'>
+           <img class='logo-img logo-img7 animated' src="img/logo.png">
+           <img class='p7-title' src="img/part7.png">
+        </div>
+      </div>
+
+
+  <script>
+  $(function(e){
+    //禁止事件
+    function stopMousewheel(e){
+        e = e || window.event;
+        if (e.stopPropagation) e.stopPropagation();
+        else e.cancelBubble = true;
+        if (e.preventDefault) e.preventDefault();
+        else e.returnValue = false;
+    }
+    //一个part内的内容切换
+    function slidePart(e,that){
+       console.log(index);
+      var now = +new Date();
+      var currentNum=that.attr('data-num');
+      var partLenght=that.find('.p-img').length;
+      //保证每次滚动只触发一次
+      if (now - evTimeStamp < 500) {
+          stopMousewheel(e);
+          return;
+      }
+      //判断是否为向下滚，deltaY=-1为向下不然就为向上
+        if((e.deltaY==-1)||(e.which==39)){
+          ++index;
+          that.find('.p-img').eq(index).fadeIn().siblings().fadeOut();
+          stopMousewheel(e);
+          if(index>=partLenght){
+             // index=partLenght-1;
+             index=0;
+            that.find('.p-img').siblings().fadeOut("100");
+            that.find('.p-img').eq(0).fadeIn();
+            $('.main').moveTo(+currentNum+1);
+          }
+        }else if((e.deltaY==1)||(e.which==37)){
+          console.log(index);
+          stopMousewheel(e);
+          --index;
+          console.log(index);
+          that.find('.p-img').eq(index).fadeIn().siblings().fadeOut();
+          if(index<=-1){
+            index=0;
+            that.find('.p-img').eq(0).fadeIn().siblings().fadeOut();
+            $('.main').moveTo(+currentNum-1);
+          }
+        }
+        evTimeStamp = now;
+    }
+    //启用onepage_scroll
+    $('.main').onepage_scroll({
+      sectionContainer: '.page',
+      direction: 'horizontal',
+      easing: "ease",
+      loop: false,
+      updateURL:false,
+      afterMove: function(index) {
+        switch(index) {
+            case 1:        
+              $('.page1').focus();
+              $('img').removeClass('animated');
+
+            break;
+            case 2:        
+              $('.page2').focus();
+              $('.p2-left').addClass('p2-left-animate').show();
+              $('.p2-right').addClass('p2-right-animate').show();
+            break;
+            case 3:        
+              $('.page3').focus();
+            break;
+            case 4:
+             $('.page4').focus();
+            break;
+            case 5:
+              $('.page5').focus();
+            break;
+            case 6:        
+              $('.page6').focus();
+            break;
+            case 7:        
+              $('.page7').focus();
+            break;
+            default: return;
+          }
+      }
+    });
+
+    var index=0;
+    var evTimeStamp = 0;
+    $('.page3').on('mousewheel', function(e) {
+      var that=$(this);
+      slidePart(e,that);
+    });
+    $('.page4').on('mousewheel', function(e) {
+      var that=$(this);
+      slidePart(e,that);
+    });
+    $('.page5').on('mousewheel', function(e) {
+      var that=$(this);
+      slidePart(e,that);
+    });
+    $('.page3').on('keydown',function(e){
+      if(e.which==39||37){
+        var that=$(this);
+        slidePart(e,that);
+      }
+    })
+    $('.page4').on('keydown',function(e){
+        if(e.which==39||37){
+        var that=$(this);
+        slidePart(e,that);
+      }
+    })
+    $('.page5').on('keydown',function(e){
+        if(e.which==39||37){
+        var that=$(this);
+        slidePart(e,that);
+      }
+    })
+    $('.onepage-pagination').on('click',function(){
+      index=0;
+    })
+
+       $('a[data-index=1]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>首页</div></div>")
+       $('a[data-index=2]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>四大平台</div></div>")
+       $('a[data-index=3]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>立体投放渠道</div></div>")
+       $('a[data-index=4]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>核心竞争力</div></div>")
+       $('a[data-index=5]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>用户画像</div></div>")
+       $('a[data-index=6]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>合作伙伴</div></div>")
+       $('a[data-index=7]').html("<div class='tipsy tipsy-s'><div class='tipsy-arrow tipsy-arrow-s'></div><div class='tipsy-inner'>携手共赢</div></div>")
+   });
+  </script>
+  </body>
+</html>

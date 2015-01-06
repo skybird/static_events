@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>万万没想到的2014年</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="animate.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf('android')!=-1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone')!=-1){
+        }
+        else{
+            window.location.href='2014_pc.html'
+        }
+    </script>
+    <div class="hidden">
+    <audio id="bgm" preload="auto" style="display: none">
+    </audio>
+    </div>
+    <div class="first-page">
+        <div class="first-cover">
+            <div class="countdown-popup">
+                <div id="count-down">3</div>
+            </div>
+        </div>
+        <img src="img/logo.png" style="display: block;width: 113px;margin:0 auto;padding:50px 0 10px;">
+        <div class="act-title">脑补2014</div>
+        <div class="sub-act-title">测测我的投资技能值</div>
+        <div class="first-circle hidden">
+            <div class="first-circle-img invisible">
+                <img src="img/1_3.png" style="width: 100%">
+            </div>
+        </div>
+        <div style="text-align: center" id="div-start" class="hidden">
+            <div style="color:#ce541f;margin-bottom: 10px;">赏你<span id="your-money">100,000</span>本金去花吧</div>
+            <div id="start-btn">START</div>
+        </div>
+    </div>
+    <div class="pages-cover hidden">
+        <div class="wscn-pages">
+
+        </div>
+    </div>
+
+    <div class="result-page hidden">
+        <div class="result-header">
+            <div class="replay"></div>
+            <div id='share2friends'class="share2friends" style="display: none"></div>
+        </div>
+        <div class="result-tip">以上投资机会都真实发生在2014年</div>
+        <div class="result-msg">
+            <img id='result-msg-img' src="img/result/result-msg-earn.png" >
+        </div>
+        <div style="width: 255px;margin:0 auto 10px;">
+            <div class="app-pic"></div>
+            <div class="result-detail" style="">
+                <div style="text-align: center">
+                    <span class="profit-money" style="font-size: 45px;color:#f86234">??</span>元
+                </div>
+
+                <div style="text-align: center;" style="font-size: 13px;">
+                    折合年化收益率 <span class="profit-percent" style="color:#f86234"></span>
+                </div>
+            </div>
+        </div>
+        <div class="result-box">
+            <img src="img/result/result_1.png" width="132" height="105">
+        </div>
+        <div class="result-bottom" style="margin-top:30px;line-height: 16px;font-size:13px;color:#61cefc;position: relative;text-align:center;">
+            <div>下载<span style="color:#f6643b"> 华尔街见闻App </span>查看</div>
+            <div>正确答案</div>
+            <div style="color:#c2c2c2;font-size:12px;">各大应用商店搜索【华尔街见闻】</div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="model.js"></script>
+    <script src="wechat.min.js"></script>
+    <script>
+        function playBgm(){
+            var music = document.getElementById('bgm');
+            music.src='http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
+            music.play();
+        }
+        var touch_start = 'click';
+//        if('ontouchstart' in window){
+//            touch_start = 'touchstart';
+//        }
+        var transform='webkitTransform';
+        //transition_end = 'webkitTransitionEnd';
+        if(typeof document.body.style.transform==='string'){
+            transform = 'transform';
+            //transition_end='transitionend'
+        }
+        ;function firstScreen(){
+            var countDownPopup = $('.countdown-popup');
+            function countDownAnimate(num){
+                var html = '<div style="position: absolute;top:120px;left:155px;font-size: 36px;color:#97dee2;font-weight: bold">'+num+'</div>'
+                var $html = $(html);
+                countDownPopup.html($html);
+                $html.addClass('animated zoomIn');
+                playBgm();
+                setTimeout(function(){
+                    countDownPopup.empty();
+
+                    if(num==1){
+                        $('.first-cover').addClass('hidden');
+                        $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
+                        setTimeout(function(){
+                            $('.first-circle-img').removeClass('invisible').addClass('animated bounceInDown');
+                        },600)
+                        setTimeout(function(){
+                            $('#div-start').removeClass('hidden').addClass('animated fadeIn');
+                        },1800)
+                    }else{
+                        countDownAnimate(--num);
+                    }
+                },1200)
+            }
+            countDownAnimate(3);
+            $('#start-btn').on(touch_start,function(){
+                $('.first-page').addClass('hidden');
+                $('.pages-cover').removeClass('hidden');
+            })
+        }
+        //$('.first-page').addClass('hidden');
+        //$('.pages-cover').removeClass('hidden');
+        firstScreen();
+
+        var pagesColor=['000','4c4c4c','b5a69c','d8c9b3','e4e2df','08233e','ffdcc5','fd8042','a5cc62','67a2cf','ec3b27']
+        var pageNum = models.length;
+        var pagesDom = $('.wscn-pages').css({width:pageNum*100+'%'});
+        var pageWidth = 100/pageNum;
+        var imgIndex = 2;
+        for(var i=0;i<models.length;i++){
+            var model = models[i]
+            var html =  '<div class="wscn-page" style="width:'+pageWidth+'%;background:#'+pagesColor[i]+';" data-page-index="'+i+'">'
+                    +       '<img class="question-img" src="img/'+imgIndex+'.png">'
+                    +       '<div class="choices">'
+                    +           '<div class="btn-choice btn-choice-1" data-q-index="1">A '+model.qText1+'</div>'
+                    +           '<div class="btn-choice btn-choice-2" data-q-index="2">B '+model.qText2+'</div>'
+                    +       '</div>'
+            pagesDom.append(html);
+            imgIndex++;
+        }
+
+        var curIndex = 0;
+        function moveNext(){
+            var tranlateX = 'translateX(-'+ pageWidth*(++curIndex) +'%)';
+            pagesDom.css(transform,tranlateX);
+        }
+//        $('.wscn-pages').on(touch_start,'.btn-choice',function(){
+//            $(this).toggleClass('btn-choice-select')
+//        })
+        $('.wscn-pages').on(touch_start,'.btn-choice',function(){
+            $(this).addClass('btn-choice-select')
+            var model = models[curIndex];
+            var qIndex = $(this).attr('data-q-index');
+            var profit=0;
+            if(qIndex=='1'){
+                profit= model.profit4choice1;
+            }else{
+                profit= model.profit4choice2;
+            }
+            stat.profit[curIndex] = profit;
+            if(profit>0){
+                stat.scoreGroup[model.type].score+=(model.score*1);
+            }
+            if(curIndex>=pageNum-1){
+                $('.pages-cover').addClass('hidden');
+                $('.result-page').removeClass('hidden');
+                preResult();
+            }
+            moveNext();
+        })
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        function preResult(){
+            var totalProfit = 0;
+            for(var i =0;i<stat.profit.length;i++){
+                totalProfit+=stat.profit[i];
+            }
+            var profitLevel = getProfitLevel(totalProfit);
+            var totalMoney = totalProfit*10;
+            totalProfit = totalProfit/100;
+            var html='你打败了全球<span style="font-size: 18px;font-weight: bold"> '+overPercent(totalProfit)+'% </span>的人<br/>';
+            html+=profitLevel.title;
+            if(profitLevel.img){
+                html+='<img src="img/result/'+profitLevel.img+'" width='+profitLevel.width+' height:'+profitLevel.height+'>'
+            }
+            $('.result-box').html(html)
+//            $('')
+            var finalNum = Math.abs(totalMoney);
+            var step = Math.round(finalNum/15);
+            var moneyDom = $('.profit-money');
+            var moneyChangeNum=1;
+            moneyDom.text(numberWithCommas(step))
+            var interHandler = setInterval(function(){
+                moneyChangeNum++;
+                if(moneyChangeNum==15){
+                    moneyDom.text(numberWithCommas(finalNum))
+                    clearInterval(interHandler);
+                    $('#share2friends').fadeIn();
+                    return;
+                }
+                moneyDom.text(step*moneyChangeNum);
+            },1000/15)
+
+//                    .textillate({in:{
+//                effect:'fadeInLeftBig'
+//            }});
+//            setTimeout(function(){
+//                $('#share2friends').fadeIn();
+//            },1500)
+            $('.profit-percent').text(totalProfit+'%');
+            if(totalProfit<0){
+                $('.profit-money').css({color:'#52b54f'})
+                $('.profit-percent').css({color:'#52b54f'})
+                $('#result-msg-img').attr({src:'img/result/result-msg-loss.png'})
+            }
+        }
+
+        function overPercent(profit){
+//            var max = 156.16,
+//                    mix = -126.12;
+            var percent = Math.round( (profit+126.12)*100/(156.16+126.12) );
+            if(percent>=99){
+                percent = 99;
+            }
+            var shareMsg = '我用白拿的10万元穿越去2014年，取得'+profit+'%的收益，打败全球'+percent+'%的人。你也去试试吧。'
+            $('title').text(shareMsg);
+            var data = {
+                app: '',
+                img: 'http://activity.wallstreetcn.com/activities/wscn-static/img/wx-share.png',
+                link: window.location.href,
+                desc: shareMsg,
+                title: '万万没想到的2014年'
+            };
+            wechat('friend',data,function(){})
+            wechat('timeline',data,function(){})
+            return percent;
+        }
+
+        $('.replay').click(function(){
+            window.location.reload()
+        })
+        setInterval(function(){
+            $('#share2friends').removeClass().addClass('animated swing').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass();
+            });
+        },1500)
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-19303398-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+img{
+    border:0;
+}
+html,body{
+    height: 100%;
+    font-family: "Helvetica Neue",'Heiti SC','华文黑体', '黑体';
+}
+body,.pages-cover,.wscn-pages,.wscn-page{
+    min-height: 480px;
+}
+.pages-cover{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.hidden{
+    display: none !important;
+}
+.invisible{
+    visibility: hidden;
+}
+.wscn-pages{
+    /*transform: translateX(-9.09%);*/
+    -webkit-transition:all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    height: 100%;
+}
+.wscn-page{
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+}
+.choices{
+    padding: 0 18px;
+    margin-top: 15px;
+}
+.btn-choice{
+    width: 205px;
+    height: 34px;
+    font-size: 18px;
+    color:#fff;
+    border-radius: 4px;
+    padding: 5px 0 0 16px;
+    background: #67bdfd;
+}
+/*.btn-choice-1{*/
+    /*background: #0078d2;*/
+/*}*/
+.btn-choice-select{
+    background: #0078d2
+}
+.btn-choice-2{
+    margin-top: 6px;
+}
+.question-img{
+    display: block;
+    margin:0 auto;
+    width:320px;
+    /*max-height: 360px;*/
+}
+
+.first-page{
+    height: 100%;
+    background: url(img/1-bg.png) repeat;
+}
+.first-cover{
+    position: fixed;
+    top:0;left:0;bottom: 0;
+    right: 0;
+    background: RGBA(0,0,0,0.6);
+}
+.first-cover .countdown-popup{
+    width:281px;
+    height: 201px;
+    position: absolute;
+    top:50%;margin-top:-140px;
+    left:50%;margin-left:-140px;
+    background: url(img/1-popup-bg.png) no-repeat center;
+    background-size: 100%;
+}
+.act-title{
+    font-size: 36px;
+    color:#fc611f;
+    text-align: center;
+    font-weight: bold;
+}
+.sub-act-title{
+    font-size: 20px;
+    color:#a09fa0;
+    text-align:center;
+}
+.first-circle{
+    width: 184px;
+    height: 184px;
+    border-radius: 80%;
+    background: #97dee2;
+    margin:20px auto 8px;
+    position: relative;
+    /*top:50%;left:50%;*/
+    /*margin-top:-92px;*/
+    /*margin-left:-92px;*/
+}
+.first-circle-img{
+    position: absolute;
+    background: url(img/1_3.png) no-repeat center;
+    background-size: 100%;
+    width:265px;height: 114px;
+    left:-35px;
+    top:35px;
+}
+#start-btn{
+    width:150px;height: 40px;
+    background: #fc611f;
+    color:#fff;
+    font-size: 24px;
+    margin:0 auto;
+    text-align: center;
+    border-radius: 8px;
+    padding-top: 6px;
+    font-weight: bold;
+}
+.result-tip{
+    font-size: 12px;
+    color:#fd7a52;
+    margin-top: 10px;
+}
+.result-msg img{
+    width:268px;
+    height: 66px;
+    display: block;
+    margin:10px auto;
+}
+.result-box{
+    border:2px dashed #fb9144;
+    position:relative;
+    color:#666;
+    background: #fff;
+    width:237px;
+    height: 123px;
+    margin:0 auto;
+    padding: 10px;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.result-box img{
+    position:absolute;
+    bottom: -30px;
+    right: -30px;
+}
+
+.result-page{
+    background: #002f58;
+    text-align: center;
+    height:100%;
+}
+.profit-money{
+    font-size: 15px;
+}
+.result-detail{
+    color:#fff;
+    margin-left: 45px;
+}
+.great-field{
+    width: 251px;
+    height: 230px;
+    background: url(img/result/result-2-bg.png) no-repeat center;
+    background-size: 100%;
+    margin:10px auto 20px;
+    position: relative;
+}
+.result-page-2 img{
+    width:100%;
+}
+#svg{
+    position: absolute;
+    top:60px;
+    left:62px;
+}
+.field-score{
+    position: absolute;
+    font-size: 13px;
+}
+#stock-score{
+    left:100px;
+    top:40px;
+    color:#faa531;
+}
+#bulk-score{
+    color:#c5a248;
+    left:93px;
+    bottom: -13px;
+}
+#foreign-score{
+    color:#21d8de;
+    right: 12px;
+    top: 140px;
+}
+#bond-score{
+    color:#ff7a4d;
+    top:140px;
+    left:18px;
+}
+.app-pic{
+    background: url(img/phone.png);
+    width: 40px;
+    height: 66px;
+    background-size: 100%;
+    float:left;
+    margin-top:5px;
+}
+.result-header{
+    height: 60px;
+    width:320px;
+    margin:0 auto;
+}
+.replay{
+    width:71px;
+    height: 28px;
+    float:left;
+    margin:20px 0 0 10px;
+    background: url(img/result/replay.png) no-repeat center;
+    background-size: 100%;
+}
+#share2friends{
+    width:75px;
+    height: 54px;
+    margin-top: 6px;
+    float: right;
+    margin-right: 10px;
+    background: url(img/result/share-to-friends.png) no-repeat center;
+    background-size: 100%;
+}
