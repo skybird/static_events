@@ -196,11 +196,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="new/js/bootstrap.min.js"></script>
 
+
     <script type="text/javascript">
-        var ua = navigator.userAgent.toLowerCase();
-        if (/micromessenger/.test(ua)) {
-            $('#wechat-tip').fadeIn();
-        }
+      var ua = navigator.userAgent.toLowerCase();
+      $(".icon1").click(function(){
+          if (/micromessenger/.test(ua)) {
+               $("#wechat-tip").fadeIn()
+          };
+      });
     </script>
 
     <script>
