@@ -198,14 +198,19 @@
 
 
     <script type="text/javascript">
-
-var ua = navigator.userAgent.toLowerCase();
+      var ua = navigator.userAgent.toLowerCase();
+      
       $(".icon1").click(function(){
           if (/micromessenger/.test(ua)) {
                $("#wechat-tip").fadeIn()
           };
       });
 
+      $(".icon2").click(function(){
+          if (/micromessenger/.test(ua)) {
+               $("#wechat-tip").fadeIn()
+          };
+      });
 
     </script>
 
