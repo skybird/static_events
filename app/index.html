@@ -24,6 +24,14 @@
         max-width: 100%;
         float: right;
       }
+      #C{
+        position: absolute;
+        top: 170px;
+        right: 43%;
+      }
+      .carousel-caption{
+        padding-bottom: 0px;
+      }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -79,13 +87,6 @@
   <!-- Wrapper for slides -->
   <div  id="A" class="carousel-inner" role="listbox">
     <div class="item active">
-      <div class="bigbanner4"><div class="phone4 facet_sidebar">
-      </div></div>
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-    <div class="item ">
       <div   class="bigbanner1"><div  class="phone1 facet_sidebar">
       <div id="B"class="link hidden-xs"><a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
        <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a> </div>
@@ -116,6 +117,15 @@
 
       </div>
     </div>
+    <div class="item">
+      <div class="bigbanner4"><div class="phone4 facet_sidebar">
+        <div id="C"class="link hidden-xs"><a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
+       <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a> </div>
+      </div></div>
+      <div class="carousel-caption">
+
+      </div>
+    </div>
 
     
   </div>
@@ -133,10 +143,10 @@
 
 
  <div class="longbar container visible-xs-block">
-    <a href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8" class="btn btn-primary btn-lg1 " role="button">
+    <a href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8" class="btn btn-primary btn-lg1 moblie-app " role="button">
       <div class="icon1"></div>
       </a>
-    <a href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk" class="btn btn-primary btn-lg2 " role="button">
+    <a href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk" class="btn btn-primary btn-lg2 moblie-android " role="button">
       <div class="icon2"></div>
       </a>
 
@@ -242,6 +252,19 @@
     <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253878554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253878554%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
     </script>
     </p>
-
+    <script>
+        function fBrowserRedirect(){
+         var sUserAgent = navigator.userAgent.toLowerCase();
+         var isIphone = sUserAgent.match(/iphone/i) == "iphone";
+         var isAndroid = sUserAgent.match(/android/i) == "android";
+         if(isIphone){ 
+              $('moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+           }
+         if(isAndroid){
+              $('moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+          }
+        }
+        fBrowserRedirect();
+</script>
   </body>
 </html>
