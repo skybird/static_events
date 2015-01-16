@@ -14,11 +14,13 @@
 	}
 
     if(!in_array($form_id, $id_whitelist)) {
-        dd('"error":"表格ID错误", "code":"401"');
+        echo '{"error":"表格ID错误", "code":"401"}';
+        exit();
     }
 
     if((!$postFields)) {
-        dd('{"error":"推送数据为空", "code":"402"}');
+        echo '{"error":"推送数据为空", "code":"402"}';
+        exit();
     }
 
     $postFields = substr($postFields, 0, strlen($postFields)-1);
