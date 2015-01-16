@@ -21,6 +21,7 @@
             appearance: none;
             padding:0 10px;
             border:1px solid #999;
+            font-size:14px;
         }
         .btn{
             height: 32px;
@@ -44,7 +45,7 @@
         <input class="input" type="number" id="phone-num"><br/>
         <button class="btn">提交抢话费</button>
     </div>
-    <p class="intro">fuck</p>
+    <p class="intro">介绍</p>
 
     <script>
         var formId='8PN3GF'
@@ -56,11 +57,13 @@
                 return;
             }
             $.ajax({
-                url:'http://activity.wallstreetcn.com/app/form.php',
+//                url:'http://activity.wallstreetcn.com/app/form.php',
+                url:'http://localhost:63343/static_events/app/form.php',
                 data:{
                     field_1:phoneVal,
                     form_id:formId
                 },
+                dataType:'json',
                 success:function(e){
                     if(e && e.error){
                         if(e.error=='bad_request'){
