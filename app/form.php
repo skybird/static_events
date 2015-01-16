@@ -1,6 +1,9 @@
 <?php
-//	$form_id = $_GET['form_id'];
-	$form_id = '8PN3GF';
+    header("Content-type: text/html; charset=utf-8");
+	$form_id = $_GET['form_id'];
+	$id_whitelist = array(
+        '8PN3GF',
+    );
 
     $postFields = '';
 
@@ -9,6 +12,14 @@
             $postFields .= "$key=$value&";
         }
 	}
+
+    if(!in_array($form_id, $id_whitelist)) {
+        dd('"error":"表格ID错误", "code":"401"');
+    }
+
+    if((!$postFields)) {
+        dd('{"error":"推送数据为空", "code":"402"}');
+    }
 
     $postFields = substr($postFields, 0, strlen($postFields)-1);
 
@@ -23,15 +34,16 @@
 	curl_setopt($ch, CURLOPT_POST,true);
 	curl_setopt($ch, CURLOPT_USERPWD, $auth_name.':'.$auth_pass);
 	curl_setopt($ch, CURLOPT_POSTFIELDS,$postFields);
-	curl_exec($ch);
+//    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	$result = curl_exec($ch);
 
 	curl_close($ch);
 
 
-    function startWith($str, $needle) {
-        return strpos($str, $needle) === 0;
-    }
 
+    function startWith($str, $subStr) {
+        return strpos($str, $subStr) === 0;
+    }
 
 	function p($r)
 	{
