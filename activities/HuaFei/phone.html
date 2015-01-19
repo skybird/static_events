@@ -8,44 +8,77 @@
         *{
             margin:0;
             padding:0;
+            box-sizing: border-box;
+        }
+        img{
+            vertical-align: middle;
         }
         .intro{
-            padding: 0 10px;
+            text-align: center;
+            margin-top: 20px;
         }
         .input{
             height: 30px;
             border-radius: 4px;
-            width:150px;
+            width:260px;
             margin:20px 0;
             -webkit-appearance: none;
             appearance: none;
             padding:0 10px;
             border:1px solid #999;
             font-size:14px;
+            background: #aeb0b9;
         }
         .btn{
             height: 32px;
             border: none;
             border-radius:4px;
-            background: #0af;
-            width:120px;
+            background: #00a4ff;
+            width:260px;
             color:#fff;
             font-size: 16px;
         }
         .title{
-            color:#ff5c00;
-            font-size: 20px;
             text-align: center;
+            margin:48px 0 35px;
+            line-height: 45px;
+        }
+        body{
+            background: url(img/bg.jpg) no-repeat center;
+            background-size: 100%;
+        }
+        .logo{
+            width:45px; height: 45px;
+            margin-top: -10px;
+        }
+        .act-title{
+            color:#00a4ff;
+            font-size: 36px;
+        }
+        .rule{
+            width:281px;
+            /*background:transparent url(img/rule.png) no-repeat center;*/
+            /*background-size: 100%;*/
+            height: 200px;
+            margin:0 auto;
         }
     </style>
 </head>
 <body>
-    <div class="title">抢话费</div>
+    <div class="title">
+        <img class="logo" src="img/logo.png">
+        <span class="act-title">下载赢话费</span>
+    </div>
+    <div class="rule">
+        <img src="img/rule.png" style="width: 100%">
+    </div>
     <div style="text-align: center">
-        <input class="input" type="number" id="phone-num"><br/>
+        <input class="input" type="number" id="phone-num" placeholder="请输入手机号码"><br/>
         <button class="btn">提交抢话费</button>
     </div>
-    <p class="intro">介绍</p>
+    <div class="intro">
+        <img src="img/footer.png" style="width: 174px">
+    </div>
 
     <script>
         var formId='8PN3GF'
@@ -57,8 +90,8 @@
                 return;
             }
             $.ajax({
-//                url:'http://activity.wallstreetcn.com/app/form.php',
-                url:'http://localhost:63343/static_events/app/form.php',
+                url:'http://activity.wallstreetcn.com/app/form.php',
+                //url:'http://localhost:63343/static_events/app/form.php',
                 data:{
                     field_1:phoneVal,
                     form_id:formId
