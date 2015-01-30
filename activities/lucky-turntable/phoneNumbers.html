@@ -29,14 +29,15 @@
 		font-size: 15px;
 		border-radius: 3px;
 		border: 1px solid #4ba5d6;
-		height: 46px;
-		width: 268px;
-		line-height: 46px;
+		height: 40px;
+		width: 264px;
+		line-height: 40px;
 		margin: 0 auto;
 		left: 0;
 		right: 0;
 		margin-top:194px;
-		text-indent: 4px;
+		text-indent: 6px;
+		font-family:"Microsoft YaHei"; 
 	}
 	.phoneNum:focus{
 		outline:none;
@@ -44,6 +45,7 @@
 	.phoneNum::-webkit-input-placeholder{
 		color: #FF5529;
 		opacity:0.6;
+		font-family:"Microsoft YaHei"; 
 	}
 	.submit-button{
 		width: 108px;
@@ -61,6 +63,7 @@
 		right: 0;
 		border: none;
 		font-weight: bold;
+		font-family:"Microsoft YaHei"; 
 	}
 	p{
 		font-size: 12px;
@@ -81,7 +84,7 @@
 	<img class="bg-cover" src="img/bg-cover.jpg">
 	<div class="phoneNumInput-wraper">
 		<p>请正确填写以下信息（以便我们快速的发放奖品，感谢您对华尔街见闻的支持）</p>
-		<form>
+		<form role="form" action="/operation/lottery" method="post">
 			<input type="text" placeholder="手机号码：" class="phoneNum">
 			<button type="submit" class="submit-button">提交</button>
 		</form>

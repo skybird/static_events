@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="animate.min.css" rel="stylesheet" type="text/css">
 <title></title>
 <style>
 	body,html{
@@ -63,10 +64,11 @@
 	}
 	.page{
 		float: left;
+		position: relative;
 	}
 	.pages{
-		-webkit-transition:all 1.2s;
-    	transition: all 1.2s;
+		/*-webkit-transition:all 1.2s;
+    	transition: all 1.2s;*/
 	}
 	.clearfix:after {
 		content: ".";
@@ -78,6 +80,77 @@
 	.hidden{
 		display: none !important;
 	}
+	.bg-cover{
+		width: 100%;
+		position: absolute;
+	}
+	.prize{
+		width: 298px;
+		height: 362px;
+		position: relative;
+		margin: 0 auto;
+		top: 102px;
+		background-size: 100%;
+	}
+	.firstPrize{
+		background-image: url(img/firstPrize.png);
+	}
+	.secondPrize{
+		background-image: url(img/secondPrize.png);
+	}
+	.thirdPrize{
+		background-image: url(img/thirdPrize.png);
+	}
+	.noPrize{
+		background-image: url(img/noPrize.png);
+		width: 266px;
+		height: 428px;
+		position: relative;
+		margin: 0 auto;
+		top: 56px;
+		background-size: 100%;
+	}
+	.noChance{
+		background-image: url(img/noChance.png);
+		width: 262px;
+		height: 262px;
+		position: relative;
+		margin: 0 auto;
+		top: 205px;
+		background-size: 100%;
+	}
+	.submit-button{
+		width: 108px;
+		height: 40px;
+		background: #fe5629;
+		border-radius: 5px;
+		font-size: 18px;
+		color: #f2f2f2;
+		text-align: center;
+		line-height: 40px;
+		position: absolute;
+		top: 276px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		border: none;
+		font-family:"Microsoft YaHei"; 
+	}
+	.noChance>.submit-button{
+		top: 196px;
+	}
+	.submit-button:focus{
+		outline: none;
+	}
+	.closeBtn{
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		right: 0px;
+		top:200px;
+		display: block;
+	}
+
 	
 </style>
 
@@ -92,23 +165,34 @@
 	</div>
 	<div class="pages clearfix hidden">
 		<div class="page" data-page-index='1'>
-			
+			<img class="bg-cover" src="img/bg-cover.jpg">
+			<div class="prize firstPrize">
+				<button type="submit" class="submit-button">提交</button>
+			</div>
 		</div>
 		<div class="page" data-page-index='2'>
-			<div class="div2" style="background:red;width:100px;height:100px;"></div>
-			2
+			<img class="bg-cover" src="img/bg-cover.jpg">
+			<div class="prize secondPrize">
+				<button type="submit" class="submit-button">提交</button>
+			</div>
 		</div>
 		<div class="page" data-page-index='3'>
-			<div class="div3" style="background:blue;width:100px;height:100px;"></div>
-			3
+			<img class="bg-cover" src="img/bg-cover.jpg">
+			<div class="prize thirdPrize">
+				<button type="submit" class="submit-button">提交</button>
+			</div>
 		</div>
 		<div class="page" data-page-index='4'>
-			<div class="div4" style="background:green;width:100px;height:100px;"></div>
-			4
+			<img class="bg-cover" src="img/bg-cover.jpg">
+			<div class="prize noPrize">
+				<img class="closeBtn" src="img/closeBtn.png">
+			</div>
 		</div>
 		<div class="page" data-page-index='5'>
-			<div class="div5" style="background:black;width:100px;height:100px;"></div>
-			5
+			<img class="bg-cover" src="img/bg-cover.jpg">
+			<div class="noChance">
+				<button type="submit" class="submit-button">OK</button>
+			</div>
 		</div>
 	</div>
 		
@@ -139,36 +223,46 @@
 							break;
 							case "2":
 							  rotateDeg=240;
+							  targetIndex=2;
 							break;
 							case "3":
 							  rotateDeg=120;
+							  targetIndex=3;
 							break;
 							case "0":
 							  rotateDeg=305;
-							  targetIndex=2;
+							  targetIndex=4;
 							break;
 							case "-1":
 							  rotateDeg=305;
+							  targetIndex=5;
 							break;
 							default:
 							  rotateDeg=305;
+							  targetIndex=4;
+							break;
 						}
 						$(".turntable").rotate({
-						 	duration:800,
+						 	duration:6000,
 						 	angle: 0, 
 	            			animateTo:3600+rotateDeg,
 							easing: $.easing.easeOutSine,
 							callback: function(){
-								$('.pages').removeClass('hidden');
-								$('.first-page').addClass('hidden');
 								setTimeout(function(){
+									$('.pages').removeClass('hidden');
+									$('.first-page').addClass('hidden');
 									movePage(targetIndex);
-								},100)
+									$(".page[data-page-index="+targetIndex+"] .prize").addClass('animated bounceInRight');
+								},800)
 								
 							}
 					 	});
 					}else{
-						return;
+						targetIndex=5;
+						$('.pages').removeClass('hidden');
+						$('.first-page').addClass('hidden');
+						movePage(targetIndex);
+						$('.noChance').addClass('animated rubberBand')
 					}
 					 
 				}
@@ -176,11 +270,17 @@
 		});
 		function movePage(targetIndex){
             var tranlateX = 'translateX(-'+ pageWidth*(targetIndex-1) +'%)';
-            $('.pages').css('transform',tranlateX).css('background', 'pink');;
+            $('.pages').css('transform',tranlateX);
         }
 		// function randomDeg(min,max){
 		// 	Math.floor(Math.random()*(max-min))+min+1;
 		// }
+
+		$('.pages').on('click', '.submit-button,.closeBtn ', function(event) {
+			event.preventDefault();
+			$('.first-page').removeClass('hidden');
+			$('.pages').addClass('hidden');
+		});
 	});
 </script>
 </html>
