@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>下载赢话费 华尔街见闻</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        img{
+            vertical-align: middle;
+            width:100%;
+        }
+        .center{
+            text-align: center;
+        }
+        .input{
+            border-radius: 4px;
+            border:none;
+        }
+        .btn-submit{
+            background: #fe6920;
+            width: 130px;
+            color:#fff;
+            height: 26px;
+        }
+        .input-predict-value{
+            width:180px;
+            height: 26px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        .row{
+            position: relative;
+            padding:10px 0;
+        }
+        .hide{
+            display: none;;
+        }
+        .fix-bg{
+            position: fixed;
+            z-index: 1;
+            top:0;left:0;bottom:0;right: 0;
+            background: RGBA(0,0,0,0.6);
+        }
+        .popup{
+            z-index: 10;;
+            padding: 10px;
+            width:320px;
+            position: fixed;
+            left:50%;
+            margin-left: -160px;
+            top:50px;
+        }
+        .popup-content{
+            width: 300px;
+        }
+        .popup-title{
+            text-align: center;
+            background: #787777;
+            height: 40px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        .popup-input{
+            width:234px;
+            height: 32px;
+            border:1px solid #c1c1c1;
+            padding:0 10px;
+        }
+        .popup-body{
+            height: 188px;
+            background: #dcdcdc;
+            padding:23px 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .btn-final{
+            background: #fe6920;
+            width: 130px;
+            color:#fff;
+            height: 26px;
+        }
+        .rule{
+            color:#fc6c6c;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 100%;">
+        <img src="img/top.png" style="margin-bottom:-1px;">
+        <div class="center" style="background:#00011f;">
+            <div class="row" style="color:#fff;">
+                <input class="input input-predict-value" type="number"> 万
+            </div>
+            <div class="row">
+                <button type="button" class="input btn-submit">提交</button>
+            </div>
+            <div>
+                <a class="rule" href="#rule">竞猜规则及奖品设置》</a>
+            </div>
+            <div style="font-size: 12px;color:#a8a8ab">猜中及最接近的前200名用户，</div>
+            <div style="font-size: 12px;color:#a8a8ab">将在7个工作日内获得相应的话费充值</div>
+        </div>
+    </div>
+    <div id="rule" style="padding-top: 15px;background:#00011f;">
+        <img src="img/bottom.png" style="margin-top:-1px;">
+    </div>
+
+    <div class="popup hide" id="popup-mobile">
+        <div class="popup-content">
+            <div class="popup-title">
+                <img src="img/popup-title.png" style="margin-top:8px;width: 109px;height: 24px;">
+            </div>
+            <div class="popup-body">
+                <div class="center">
+                    <input class="popup-input" id="input-username" style="border-bottom: none;" placeholder="姓名">
+                </div>
+                <div class="center">
+                    <input class="popup-input" id="phone-num" type="number" placeholder="手机号码">
+                </div>
+                <div class="center" style="color: #9e9e9e;font-size: 12px;margin:6px 0;">
+                    *中奖将通过该号码确认，号码不实不能获得中奖资格
+                </div>
+                <div class="center" style="margin-top:20px">
+                    <button class="input btn-final">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup hide" id="popup-already">
+        <div class="popup-content">
+            <div class="popup-title">
+                <img src="img/popup-title.png" style="margin-top:8px;width: 109px;height: 24px;">
+            </div>
+            <div class="popup-body center">
+                <img src="img/popup-bg.png" style="width: 200px;height: 110px;">
+            </div>
+        </div>
+    </div>
+    <div class="fix-bg hide">
+
+    </div>
+    <script>
+        $('.fix-bg').click(function(){
+            $(this).addClass('hide');
+            $('.popup').addClass('hide');
+        })
+        var formId='d7vq7C'
+        $('.btn-submit').click(function(){
+            var guess = $('.input-predict-value').val();
+            if(guess==''|| isNaN(guess)){
+                alert('请输入预测的数值')
+                return;
+            }
+            $('.fix-bg').removeClass('hide');
+
+            if(alreadyGuess()){
+                $('#popup-already').removeClass('hide');
+            }else{
+                $('#popup-mobile').removeClass('hide')
+            }
+        })
+        $('.btn-final').click(function(){
+            var n = /^1[34578][0-9]{9}$/;
+            var phoneVal = $('#phone-num').val();
+            if(!n.test(phoneVal)){
+                alert('手机号错误')
+                return;
+            }
+            var username = $('#input-username').val();
+            var guess = $('.input-predict-value').val();
+            $.ajax({
+                //url:'http://activity.wallstreetcn.com/app/form.php',
+                url:'http://localhost:63343/static_events/app/form.php',
+                data:{
+                    field_3:phoneVal,
+                    field_2:username,
+                    field_1:guess,
+                    form_id:formId
+                },
+                dataType:'json',
+                success:function(e){
+                    save();
+                    alert('提交成功');
+                }
+            })
+        })
+        function save(){
+            $('.popup').addClass('hide');
+            $('.fix-bg').addClass('hide');
+            $.cookie('_guess_201502','1')
+            try{
+                localStorage.setItem('_guess_201502','1');
+            }catch(e){
+
+            }
+        }
+        function alreadyGuess(){
+            if($.cookie('_guess_201502')){
+                return true;
+            }
+            try{
+                if(localStorage.getItem("_guess_201502")){
+                    return true;
+                }
+            }catch(e){
+
+            }
+            return false;
+        }
+</script>
+
+    <script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-19303398-2', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
