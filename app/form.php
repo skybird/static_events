@@ -3,6 +3,7 @@
 	$form_id = $_GET['form_id'];
 	$id_whitelist = array(
         '8PN3GF',
+        'd7vq7C',
     );
 
     $postFields = '';
