@@ -75,6 +75,11 @@
             <div style="color:#c2c2c2;font-size:12px;">各大应用商店搜索【华尔街见闻】</div>
         </div>
     </div>
+    <div id="download-bottom" style="position: fixed;bottom: 0;left:0;right: 0;display: none;">
+        <a style="width:100%;" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721">
+            <img src="img/download-bottom.png"  style="width:100%;vertical-align: middle;">
+        </a>
+    </div>
     <script src="jquery.min.js"></script>
     <script src="model.js"></script>
     <script src="wechat.min.js"></script>
@@ -209,12 +214,7 @@
                 moneyDom.text(step*moneyChangeNum);
             },1000/15)
 
-//                    .textillate({in:{
-//                effect:'fadeInLeftBig'
-//            }});
-//            setTimeout(function(){
-//                $('#share2friends').fadeIn();
-//            },1500)
+            $('#download-bottom').show();
             $('.profit-percent').text(totalProfit+'%');
             if(totalProfit<0){
                 $('.profit-money').css({color:'#52b54f'})
