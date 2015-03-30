@@ -90,7 +90,7 @@ body,.pages-cover,.wscn-pages,.wscn-page{
     position: absolute;
     top:50%;margin-top:-140px;
     left:50%;margin-left:-140px;
-    background: url(img/1-popup-bg.png) no-repeat center;
+    background: url(images/1-popup-bg.png) no-repeat center;
     background-size: 100%;
 }
 .act-title{
@@ -261,4 +261,28 @@ body,.pages-cover,.wscn-pages,.wscn-page{
     margin-right: 10px;
     background: url(images/share-to-friends.png) no-repeat center;
     background-size: 100%;
+}
+
+.blood{
+    width:30px;
+    position: absolute;
+    right:0;
+    top:0;
+    width:30px;
+    bottom:0;
+}
+.blood span{
+    display: block;
+    background: green;
+    width:100%;
+    border-top:1px solid #ddd;
+
+}
+
+#share-icon{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -1000px;
+    z-index: -1;
 }

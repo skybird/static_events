@@ -8,269 +8,312 @@
     <link href="animate.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.indexOf('android')!=-1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone')!=-1){
+    }
+    else{
+        window.location.href='2015_pc.html'
+    }
+</script>
+<img id="share-icon" alt="" src="img/share.png">
 <div class="hidden">
     <audio id="bgm" preload="auto" style="display: none">
     </audio>
 </div>
-    <div class="first-page">
-        <div class="first-cover">
-            <div class="countdown-popup">
-                <div id="count-down">3</div>
-            </div>
-        </div>
-
-        <img src="images/logo.png" style="display: block;width: 190px;margin:0 auto;padding:50px 0 10px;">
-
-        <div class="first-circle hidden">
-            <div class="first-circle-img invisible">
-                <img src="images/avatar.png" style="width: 125px">
-            </div>
-            <div class="item-1 invisible">
-                <img src="images/r.png" style="width:87px"/>
-            </div>
-            <div class="item-2 invisible">
-                <img src="images/p.png" style="width:125px"/>
-            </div>
-        </div>
-        <div style="text-align: center" id="div-start" class="hidden">
-            <p>够胆够聪明就来!</p>
-            <div id="start-btn"></div>
-        </div>
-    </div>
-    <div class="pages-cover hidden">
-        <div class="wscn-pages">
-
+<div class="first-page">
+    <div class="first-cover">
+        <div class="countdown-popup">
+            <div id="count-down">3</div>
         </div>
     </div>
 
-    <div class="result-page hidden">
-        <div class="result-header">
-            <div class="replay"></div>
-            <div id='share2friends'class="share2friends" style="display: none"></div>
+    <img src="images/logo.png" style="display: block;width: 329px;margin:0 auto;padding:50px 0 10px;">
+
+    <div class="first-circle hidden">
+        <div class="first-circle-img invisible">
+            <img src="images/avatar.png" style="width: 125px">
         </div>
-        <div class="result-tip">以上的题目千真万确都是小学数学题</div>
-        <div class="result-msg">
-            <img id='result-msg-img' src="images/result-msg-earn.png" >
+        <div class="item-1 invisible">
+            <img src="images/r.png" style="width:87px"/>
         </div>
-        <div style="width: 255px;margin:0 auto 18px;">
-            <div class="app-pic"></div>
-            <div class="result-detail" style="">
-                <div style="text-align: center">
-                    <span class="profit-money" style="font-size: 50px;color:#fd7a52">??</span>
-                </div>
+        <div class="item-2 invisible">
+            <img src="images/p.png" style="width:125px"/>
+        </div>
+    </div>
+    <div style="text-align: center" id="div-start" class="hidden">
+        <p>够胆够聪明就来!</p>
+
+        <div id="start-btn"></div>
+    </div>
+</div>
+<div class="pages-cover hidden">
+    <div class="wscn-pages">
+
+    </div>
+    <!--<div class="blood">-->
+        <!--<span class="invisible"></span>-->
+        <!--<span class="invisible"></span>-->
+        <!--<span class="invisible"></span>-->
+        <!--<span class="invisible"></span>-->
+        <!--<span class="invisible"></span>-->
+        <!--<span class="invisible"></span>-->
+    <!--</div>-->
+</div>
+
+<div class="result-page hidden">
+    <div class="result-header">
+        <div class="replay"></div>
+        <div id='share2friends' class="share2friends" style="display: none"></div>
+    </div>
+    <div class="result-tip">以上的题目千真万确都是小学数学题</div>
+    <div class="result-msg">
+        <img id='result-msg-img' src="images/result-msg-earn.png">
+    </div>
+    <div style="width: 255px;margin:0 auto 18px;">
+        <div class="app-pic"></div>
+        <div class="result-detail" style="">
+            <div style="text-align: center">
+                <span class="profit-money" style="font-size: 50px;color:#fd7a52">??</span>
             </div>
         </div>
-        <div class="result-box">
-
-        </div>
-        <div class="result-bottom" style="margin-top: 12px">
-            <img src="images/result-bottom.png" style="width:100%;"/>
-        </div>
     </div>
-    <div id="download-bottom" style="position: fixed;bottom: 0;left:0;right: 0;display: none;">
-        <a style="width:100%;" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721">
-            <img src="images/download.png"  style="width:100%;vertical-align: middle;">
-        </a>
+    <div class="result-box">
+
     </div>
-    <script src="jquery.min.js"></script>
-    <script src="model.js"></script>
-    <script src="wechat.min.js"></script>
-    <script>
-        function playBgm(){
-            var music = document.getElementById('bgm');
-            music.src='http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
-            music.play();
-        }
+    <div class="result-bottom" style="margin-top: 12px">
+        <img src="images/result-bottom.png" style="width:100%;"/>
+    </div>
+</div>
+<div id="download-bottom" style="position: fixed;bottom: 0;left:0;right: 0;display: none;">
+    <a style="width:100%;" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721">
+        <img src="images/download.png" style="width:100%;vertical-align: middle;">
+    </a>
+</div>
+<script src="jquery.min.js"></script>
+<script src="model.js"></script>
+<script src="wechat.min.js"></script>
+<script>
+    function playBgm() {
+//        var music = document.getElementById('bgm');
+//        music.src = 'http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
+//        music.play();
+    }
 
-        var touch_start = 'click';
+    var touch_start = 'click';
 
-        var transform='webkitTransform';
-        if(typeof document.body.style.transform==='string'){
-            transform = 'transform';
-        }
-        ;function firstScreen(){
-            var countDownPopup = $('.countdown-popup');
-            function countDownAnimate(num){
-                var html = '<div style="position: absolute;top:120px;left:155px;font-size: 36px;color:#97dee2;font-weight: bold">'+num+'</div>'
-                var $html = $(html);
-                countDownPopup.html($html);
-                $html.addClass('animated zoomIn');
-                playBgm();
-                setTimeout(function(){
-                    countDownPopup.empty();
+    var transform = 'webkitTransform';
+    if (typeof document.body.style.transform === 'string') {
+        transform = 'transform';
+    }
+    ;
+    function firstScreen() {
+        var countDownPopup = $('.countdown-popup');
 
-                    if(num==1){
-                        $('.first-cover').addClass('hidden');
-                        $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
-                        setTimeout(function(){
-                            $('.first-circle-img').removeClass('invisible').addClass('animated bounceInDown');
-                        },600)
-                        setTimeout(function(){
-                            $('.item-1').removeClass('invisible').addClass('animated bounceInDown');
-                        },650)
-                        setTimeout(function(){
-                            $('.item-2').removeClass('invisible').addClass('animated bounceInDown');
-                        },800)
-                        setTimeout(function(){
-                            $('#div-start').removeClass('hidden').addClass('animated fadeIn');
-                        },1800)
-                    }else{
-                        countDownAnimate(--num);
-                    }
-                },1200)
-            }
-            countDownAnimate(3);
-            $('#start-btn').on(touch_start,function(){
-                $('.first-page').addClass('hidden');
-                $('.pages-cover').removeClass('hidden');
-            })
-        }
-        //$('.first-page').addClass('hidden');
-        //$('.pages-cover').removeClass('hidden');
-        firstScreen();
+        function countDownAnimate(num) {
+            var html = '<div style="position: absolute;top:120px;left:145px;font-size: 36px;color:#a75858;font-weight: bold">' + num + '</div>'
+            var $html = $(html);
+            countDownPopup.html($html);
+            $html.addClass('animated zoomIn');
+            playBgm();
+            setTimeout(function () {
+                countDownPopup.empty();
 
-        var pageNum = models.length;
-        var pagesDom = $('.wscn-pages').css({width:pageNum*100+'%'});
-        var pageWidth = 100/pageNum;
-        var imgIndex = 0;
-        for(var i=0;i<models.length;i++){
-            var model = models[i]
-            var html =  '<div class="wscn-page" style="width:'+pageWidth+'%;background:#'+model.bg+';" data-page-index="'+i+'">'
-                    +       '<img class="question-img" src="images/'+imgIndex+'.png">'
-                    +       '<div class="choices">'
-                    +           '<div class="btn-choice btn-choice-1" data-q-index="1">A '+model.qText1+'</div>'
-                    +           '<div class="btn-choice btn-choice-2" data-q-index="2">B '+model.qText2+'</div>'
-                    +           '<div class="btn-choice btn-choice-3" data-q-index="3">C '+model.qText3+'</div>'
-                    +           '<div class="btn-choice btn-choice-4" data-q-index="4">D '+model.qText4+'</div>'
-                    +       '</div>'
-            pagesDom.append(html);
-            imgIndex++;
-        }
-
-        var curIndex = 0;
-
-        function moveNext(){
-            var tranlateX = 'translateX(-'+ pageWidth*(++curIndex) +'%)';
-            pagesDom.css(transform,tranlateX);
-        }
-
-        $('.wscn-pages').on(touch_start,'.btn-choice',function(){
-            $(this).addClass('btn-choice-select')
-            var model = models[curIndex];
-            var qIndex = $(this).attr('data-q-index');
-
-            var profit = model['profit4choice' + qIndex];
-
-            stat.profit[curIndex] = profit;
-
-            if(curIndex>=pageNum-1){
-                $('.pages-cover').addClass('hidden');
-                $('.result-page').removeClass('hidden');
-
-                preResult();
-            }
-            moveNext();
-        })
-        function numberWithCommas(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-        function preResult(){
-
-
-            var totalProfit = 0;
-            for(var i =0;i<stat.profit.length;i++){
-                totalProfit+=stat.profit[i];
-            }
-
-            var profitLevel = getProfitLevel(totalProfit);
-
-            var totalMoney = profitLevel.iq;
-
-            var html='你的智商打败了全球<span style="font-size: 18px;font-weight: bold"> '+overPercent(profitLevel)+'% </span>的人，<br/>';
-            html+=profitLevel.title;
-            html+=' <img src="images/xiaochou.png" width="54px">';
-
-            $('.result-box').html(html)
-
-            var finalNum = Math.abs(totalMoney);
-            var step = Math.round(finalNum/15);
-            var moneyDom = $('.profit-money');
-            var moneyChangeNum=1;
-            moneyDom.text(numberWithCommas(step))
-            var interHandler = setInterval(function(){
-                moneyChangeNum++;
-                if(moneyChangeNum==15){
-                    moneyDom.text(numberWithCommas(finalNum))
-                    clearInterval(interHandler);
-                    $('#share2friends').fadeIn();
-                    return;
+                if (num == 1) {
+                    $('.first-cover').addClass('hidden');
+                    $('.first-circle').removeClass('hidden').addClass('animated zoomIn');
+                    setTimeout(function () {
+                        $('.first-circle-img').removeClass('invisible').addClass('animated bounceInDown');
+                    }, 600)
+                    setTimeout(function () {
+                        $('.item-1').removeClass('invisible').addClass('animated bounceInDown');
+                    }, 650)
+                    setTimeout(function () {
+                        $('.item-2').removeClass('invisible').addClass('animated bounceInDown');
+                    }, 800)
+                    setTimeout(function () {
+                        $('#div-start').removeClass('hidden').addClass('animated fadeIn');
+                    }, 1800)
+                } else {
+                    countDownAnimate(--num);
                 }
-                moneyDom.text(step*moneyChangeNum);
-            },1000/15)
-
-            $('#download-bottom').show();
-            $('.profit-percent').text(totalProfit+'%');
-            if(totalProfit<0){
-                $('.profit-money').css({color:'#52b54f'})
-                $('.profit-percent').css({color:'#52b54f'})
-                $('#result-msg-img').attr({src:'images/result-msg-loss.png'})
-            }
+            }, 1200)
         }
 
-        function overPercent(profit){
-
-            var percent = profit.p
-
-            var shareMsg = '你的智商打败了全球'+percent+'%的人,' + profit.shareMsg;
-
-            $('title').text(shareMsg);
-
-            var data = {
-                app: '',
-                img: 'http://activity.wallstreetcn.com/activities/wscn-static/img/wx-share.png',
-                link: window.location.href,
-                desc: shareMsg,
-                title: '据说90%的人都会答错，你敢试试吗?'
-            };
-            wechat('friend',data,function(){});
-            wechat('timeline',data,function(){});
-            return percent;
-        }
-
-        $('.replay').click(function(){
-            window.location.reload()
+        countDownAnimate(3);
+        $('#start-btn').on(touch_start, function () {
+            $('.first-page').addClass('hidden');
+            $('.pages-cover').removeClass('hidden');
         })
-        setInterval(function(){
-            $('#share2friends').removeClass().addClass('animated swing').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                $(this).removeClass();
-            });
-        },1500)
-    </script>
+    }
+    //$('.first-page').addClass('hidden');
+    //$('.pages-cover').removeClass('hidden');
+    firstScreen();
 
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-19303398-2', 'auto');
-        ga('send', 'pageview');
-    </script>
+    var pageNum = models.length;
+    var pagesDom = $('.wscn-pages').css({width: pageNum * 100 + '%'});
+    var pageWidth = 100 / pageNum;
+    var imgIndex = 0;
+    for (var i = 0; i < models.length; i++) {
+        var model = models[i]
+        var html = '<div class="wscn-page" style="width:' + pageWidth + '%;background:#' + model.bg + ';" data-page-index="' + i + '">'
+                + '<img class="question-img" src="images/' + imgIndex + '.png">'
+                + '<div class="choices">'
+                + '<div class="btn-choice btn-choice-1" data-q-index="1">A ' + model.qText1 + '</div>'
+                + '<div class="btn-choice btn-choice-2" data-q-index="2">B ' + model.qText2 + '</div>'
+                + '<div class="btn-choice btn-choice-3" data-q-index="3">C ' + model.qText3 + '</div>'
+                + '<div class="btn-choice btn-choice-4" data-q-index="4">D ' + model.qText4 + '</div>'
+                + '</div>'
+        pagesDom.append(html);
+        imgIndex++;
+    }
+
+//    var bloodCount = $('.blood span').length;
+//
+//    // - border-top
+//    $('.blood span').height(($(window).height() - 6) / 6);
+
+    var curIndex = 0;
+
+    function moveNext() {
+        var tranlateX = 'translateX(-' + pageWidth * (++curIndex) + '%)';
+        pagesDom.css(transform, tranlateX);
+    }
+
+    $('.wscn-pages').on(touch_start, '.btn-choice', function () {
+        $(this).addClass('btn-choice-select')
+        var model = models[curIndex];
+        var qIndex = $(this).attr('data-q-index');
+
+        var profit = model['profit4choice' + qIndex];
+
+        stat.profit[curIndex] = profit;
+
+
+//        var stat20Count = 0;
+//        var statProfit = stat.profit;
+//
+//        for (var i = 0; i < statProfit.length; i++) {
+//            if (statProfit[i] == 20) {
+//                stat20Count++;
+//            }
+//        }
+//
+//        if (profit == 20) {
+//            $('.blood span').eq(6 - stat20Count).addClass('animated slideInUp').removeClass('invisible');
+//        }
+
+
+        if (curIndex >= pageNum - 1) {
+            $('.pages-cover').addClass('hidden');
+            $('.result-page').removeClass('hidden');
+
+            preResult();
+        }
+        moveNext();
+    })
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    function preResult() {
+
+
+        var totalProfit = 0;
+        for (var i = 0; i < stat.profit.length; i++) {
+            totalProfit += stat.profit[i];
+        }
+
+        var profitLevel = getProfitLevel(totalProfit);
+
+        var totalMoney = profitLevel.iq;
+
+        var html = '你的智商打败了全球<span style="font-size: 18px;font-weight: bold"> ' + overPercent(profitLevel) + '% </span>的人，';
+        html += profitLevel.title;
+        html += ' <img src="images/xiaochou.png" width="54px">';
+
+        $('.result-box').html(html)
+
+        var finalNum = Math.abs(totalMoney);
+        var step = Math.round(finalNum / 15);
+        var moneyDom = $('.profit-money');
+        var moneyChangeNum = 1;
+        moneyDom.text(numberWithCommas(step))
+        var interHandler = setInterval(function () {
+            moneyChangeNum++;
+            if (moneyChangeNum == 15) {
+                moneyDom.text(numberWithCommas(finalNum))
+                clearInterval(interHandler);
+                $('#share2friends').fadeIn();
+                return;
+            }
+            moneyDom.text(step * moneyChangeNum);
+        }, 1000 / 15)
+
+        $('#download-bottom').show();
+        $('.profit-percent').text(totalProfit + '%');
+        if (totalProfit < 0) {
+            $('.profit-money').css({color: '#52b54f'})
+            $('.profit-percent').css({color: '#52b54f'})
+            $('#result-msg-img').attr({src: 'images/result-msg-loss.png'})
+        }
+    }
+
+    function overPercent(profit) {
+
+        var percent = profit.p
+
+        var shareMsg = '你的智商打败了全球' + percent + '%的人,' + profit.shareMsg;
+
+        $('title').text(shareMsg);
+//
+//        var data = {
+//            app: '',
+//            img: 'http://activity.wallstreetcn.com/activities/wscn-static/img/wx-share.png',
+//            link: window.location.href,
+//            desc: shareMsg,
+//            title: '据说90%的人都会答错，你敢试试吗?'
+//        };
+//        wechat('friend', data, function () {
+//        });
+//        wechat('timeline', data, function () {
+//        });
+        return percent;
+    }
+
+    $('.replay').click(function () {
+        window.location.reload()
+    })
+    setInterval(function () {
+        $('#share2friends').removeClass().addClass('animated swing').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $(this).removeClass();
+        });
+    }, 1500)
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-19303398-2', 'auto');
+    ga('send', 'pageview');
+</script>
 
 </body>
 </html>
