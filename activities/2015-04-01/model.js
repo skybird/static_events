@@ -1,11 +1,11 @@
 var models = [
+    {bg:'487f9b',profit4choice1:0,profit4choice2:20,profit4choice3:0,profit4choice4:20,qText1:'现得1000元现金',qText2:'丢骰子，出6时得1万2',qText3:'抛硬币，猜正确赢三千',qText4:'果断选择离职'},
+
     {bg:'db6c6c',profit4choice1:0,profit4choice2:0,profit4choice3:20,profit4choice4:20,qText1:'小明那里',qText2:'爸妈其中一人手里',qText3:'根本没有这10块钱',qText4:'反正不在我这里'},
 
     {bg:'535353',profit4choice1:0,profit4choice2:0,profit4choice3:20,profit4choice4:20,qText1:'37瓶',qText2:'39瓶',qText3:'40瓶',qText4:'小明是要喝水自杀吗?'},
 
     {bg:'da7d54',profit4choice1:20,profit4choice2:0,profit4choice3:0,profit4choice4:20,qText1:'赚了3块',qText2:'亏了3块',qText3:'赔了4块',qText4:'又把鸡买回来了'},
-
-    {bg:'487f9b',profit4choice1:0,profit4choice2:20,profit4choice3:0,profit4choice4:20,qText1:'现得1000元现金',qText2:'丢骰子，出6时得1万2',qText3:'抛硬币，猜正确赢三千',qText4:'果断选择离职'},
 
     {bg:'02816d',profit4choice1:0,profit4choice2:20,profit4choice3:0,profit4choice4:20,qText1:'14人',qText2:'15人',qText3:'16人',qText4:'管他又多少人，先抢!'},
 
