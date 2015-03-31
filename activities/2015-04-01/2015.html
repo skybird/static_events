@@ -10,21 +10,27 @@
 <body>
 <script>
     var ua = navigator.userAgent.toLowerCase();
-    if(ua.indexOf('android')!=-1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone')!=-1){
+    if (ua.indexOf('android') != -1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone') != -1) {
     }
-    else{
-        window.location.href='2015_pc.html'
+    else {
+        window.location.href = '2015_pc.html'
     }
 </script>
 <img id="share-icon" width="250px" height="250px" src="images/share.png">
+
 <div class="hidden">
-    <audio id="bgm" preload="auto" style="display: none">
+    <audio id="bgm" preload="auto" src="./audio/right.mp3" style="display: none">
     </audio>
+    <audio id="right" preload="auto" src="./audio/right.mp3" style="display: none">
+    </audio>
+    <audio id="error" preload="auto" src="./audio/error.mp3" style="display: none">
+    </audio>
+
 </div>
 <div class="first-page">
     <div class="first-cover">
         <div class="countdown-popup">
-            <div id="count-down">3</div>
+            <div id="count-down"></div>
         </div>
     </div>
 
@@ -52,12 +58,12 @@
 
     </div>
     <!--<div class="blood">-->
-        <!--<span class="invisible"></span>-->
-        <!--<span class="invisible"></span>-->
-        <!--<span class="invisible"></span>-->
-        <!--<span class="invisible"></span>-->
-        <!--<span class="invisible"></span>-->
-        <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
+    <!--<span class="invisible"></span>-->
     <!--</div>-->
 </div>
 
@@ -90,13 +96,37 @@
         <img src="images/download.png" style="width:100%;vertical-align: middle;">
     </a>
 </div>
+<div id="layer" style="z-index:10;position: absolute;top:0;left:0;right:0;bottom:0" class="hidden">
+
+</div>
 <script src="jquery.min.js"></script>
 <script src="model.js"></script>
 <script>
+
+    function stop(){
+        document.getElementById('bgm').pause();
+        document.getElementById('right').pause();
+        document.getElementById('error').pause();
+    }
+
     function playBgm() {
-//        var music = document.getElementById('bgm');
-//        music.src = 'http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
-//        music.play();
+        stop();
+        var music = document.getElementById('bgm');
+        //music.src = 'http://activity.wallstreetcn.com/activities/wscn-static/audio/4449.mp3';
+        music.play();
+    }
+
+    function playRight() {
+        stop();
+        var music = document.getElementById('right');
+        music.play();
+    }
+
+    function playError() {
+        stop();
+        var music = document.getElementById('error');
+        //music.src = './audio/error.mp3';
+        music.play();
     }
 
     var touch_start = 'click';
@@ -114,7 +144,7 @@
             var $html = $(html);
             countDownPopup.html($html);
             $html.addClass('animated zoomIn');
-            playBgm();
+            //playBgm();
             setTimeout(function () {
                 countDownPopup.empty();
 
@@ -167,10 +197,10 @@
         imgIndex++;
     }
 
-//    var bloodCount = $('.blood span').length;
-//
-//    // - border-top
-//    $('.blood span').height(($(window).height() - 6) / 6);
+    //    var bloodCount = $('.blood span').length;
+    //
+    //    // - border-top
+    //    $('.blood span').height(($(window).height() - 6) / 6);
 
     var curIndex = 0;
 
@@ -180,6 +210,9 @@
     }
 
     $('.wscn-pages').on(touch_start, '.btn-choice', function () {
+
+       $('#layer').removeClass('hidden');
+
         $(this).addClass('btn-choice-select')
         var model = models[curIndex];
         var qIndex = $(this).attr('data-q-index');
@@ -189,27 +222,32 @@
         stat.profit[curIndex] = profit;
 
 
-//        var stat20Count = 0;
-//        var statProfit = stat.profit;
-//
-//        for (var i = 0; i < statProfit.length; i++) {
-//            if (statProfit[i] == 20) {
-//                stat20Count++;
-//            }
-//        }
-//
-//        if (profit == 20) {
-//            $('.blood span').eq(6 - stat20Count).addClass('animated slideInUp').removeClass('invisible');
-//        }
-
-
-        if (curIndex >= pageNum - 1) {
-            $('.pages-cover').addClass('hidden');
-            $('.result-page').removeClass('hidden');
-
-            preResult();
+        if (profit == 20) {
+            playRight();
+        } else {
+            playError();
         }
-        moveNext();
+
+
+
+        setTimeout(function(){
+            moveNext();
+
+            $('#layer').addClass('hidden');
+
+            if (curIndex >= pageNum - 1) {
+                $('.pages-cover').addClass('hidden');
+                $('.result-page').removeClass('hidden');
+
+                preResult();
+            }
+
+        },2000);
+
+
+
+
+
     })
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
