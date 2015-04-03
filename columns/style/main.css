@@ -1,0 +1,103 @@
+html{
+    height: 100%;
+}
+body{
+    color:#fff;
+    font-size: 14px;
+}
+.body-img-wrapper{
+    height: 100%;
+    /*background: url('../img/bg.jpg') #002a80 center  no-repeat;*/
+    /*background-size: 100%;*/
+    width:100%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    min-height:1300px ;
+}
+.bg-img{
+    width:100%;
+    height: 100%;
+}
+.container{
+    width:1170px;
+    margin:0 auto;
+    padding:100px 0;
+}
+.left-part{
+    float:left;
+    margin-right:30px;
+}
+.right-part{
+    float: left;
+    width: 450px;
+}
+
+.field{
+    margin:25px 0;
+}
+
+.field_title{
+    color:#fff;
+}
+
+.field_content{
+    margin:10px 0 20px;
+}
+
+input,textarea{
+    background: RGBA(255,255,255,.3);
+    border-radius: 3px;
+    border:none;
+}
+textarea{
+    resize: none;
+    width: 400px;
+    height: 95px;
+}
+.extra-info{
+    font-size: 12px;
+    color:#ed7984;
+}
+.dropdown{
+    display: inline-block;
+}
+.tc{
+  text-align: center;
+}
+.submit{
+    color:#ccc;
+    width: 100px;
+    height: 40px;
+    background: RGBA(255,255,255,.5);
+
+}
+
+.controls input{
+    width: 230px;
+    height: 32px;
+    padding:0 10px; ;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: RGBA(255,255,255,.5) url('../img/select-bg.png')  95% center no-repeat;
+    padding: 0 10px;
+    margin-right: 8px;
+    height: 25px;
+    line-height: 25px;
+    min-width: 80px;
+}
+option{
+    text-align: center;
+}
+
+input[type=radio]{
+    width: auto;
+    height: auto;
+}
+.radio.inline{
+    margin-right: 10px;
+}
