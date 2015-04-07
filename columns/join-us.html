@@ -35,7 +35,7 @@
                         <div class="field_content">
 
                             <div class="controls">
-                                <input id="entry_field_1" name="entry[field_1]" type="text" value="">
+                                <input id="entry_field_1" name="entry[field_1]" type="text" value="" required>
                             </div>
 
                         </div>
@@ -120,7 +120,7 @@
                     <div class="field_content">
 
                         <div class="controls">
-                            <input id="entry_field_3" name="entry[field_3]" type="text" value="">
+                            <input id="entry_field_3" name="entry[field_3]" type="text" value="" required>
                         </div>
 
                     </div>
@@ -139,7 +139,7 @@
                     <div class="field_content">
 
                         <div class="controls">
-                            <input id="entry_field_4" name="entry[field_4]" type="text" value="">
+                            <input id="entry_field_4" name="entry[field_4]" type="text" value="" required>
                         </div>
 
                     </div>
@@ -190,7 +190,7 @@
                     <div class="field_content">
 
                         <div class="controls">
-                            <input id="entry_field_6" name="entry[field_6]" type="tel" value="">
+                            <input id="entry_field_6" name="entry[field_6]" type="tel" value="" required>
 
                         </div>
 
@@ -209,7 +209,7 @@
                     </label>
                     <div class="field_content">
                         <div class="controls">
-                            <input id="entry_field_7" name="entry[field_7]" type="email">
+                            <input id="entry_field_7" name="entry[field_7]" type="email" required>
                         </div>
 
                     </div>
@@ -274,12 +274,46 @@
     </div>
 
     <script>
-        $('#new_entry').submit(function(){
+        function arrToObj(arr){
+            var obj = {};
+            if(arr.length==1){
+                obj[arr[0]] = '';
+            }
+            else if(arr.length>1){
+                var key = arr[0];
+                arr.splice(0,1)
+                obj[key] = arr.join(' ')
+            }
+            return obj;
+        }
+
+        function processFormData(data){
+            var dataGroup={}
+            for(var i in data){
+                var key='';
+                data[i].name.replace(/\[(field_\d+)]/,function(match,txt){
+                    key = txt;
+                });
+                if(key=='')continue;
+                dataGroup[key] = dataGroup[key]||[];
+                dataGroup[key].push(data[i].value);
+            }
+            dataGroup['form_id'] = [$('[name=form_id]').val()];
+            var formData={};
+            for(var i in dataGroup){
+                formData[i] = dataGroup[i].join(' ');
+            }
+            return formData
+        }
+
+        $('#new_entry').submit(function(e){
             var $this = $(this);
             var url = $this.attr('action');
+            e.preventDefault();
+            var formData = processFormData($this.serializeArray());
             $.ajax({
                 url:url,
-                data:$this.serialize(),
+                data:formData,
                 success:function(e){
                     alert('报名成功')
                 }

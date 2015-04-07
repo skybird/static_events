@@ -130,4 +130,34 @@
             }, e
         }()
     })
-}).call(this)
+}).call(this);
+
+var l = function(e, t) {
+    return t == null && (t = {}), _.template(e.toLocaleString(), t)
+};
+
+(function() {
+    window.GoldenData || (window.GoldenData = {}), $(function() {
+        var e;
+        return e = function(e, t) {
+            var n, r, i, s, o, u, a, f, c;
+            s = e.find("option:selected"), t.html("<option value=''>" + l("请选择") + "</option>"), f = (a = s.data("choices")) != null ? a : [];
+            for (o = 0, u = f.length; o < u; o++)
+                n = f[o], typeof n == "object" ? (r = n.name, i = (c = n.value) != null ? c : r) : (r = n, i = n), t.append("<option value='" + i + "'>" + r + "</option>");
+            t.val(t.data("value"));
+            if ($.mobile)
+                return t.selectmenu("refresh", !0)
+        }, GoldenData.initCascadeSelector = function(t) {
+            var n, r, i, s, o, u;
+            o = $(t).find("[data-role=cascade]"), u = [];
+            for (i = 0, s = o.length; i < s; i++)
+                n = o[i], r = $(n).find("[data-role=level_1]"), e(r, $(n).find("[data-role=level_2]")), u.push(r.on("change", function() {
+                    var t;
+                    return t = $(this).parents("[data-role=cascade]").find("[data-role=level_2]"), e($(this), t)
+                }));
+            return u
+        }, $(document).on("ready page:load ajax:complete", function() {
+            return GoldenData.initCascadeSelector(document)
+        })
+    })
+}).call(this);
