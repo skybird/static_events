@@ -5,7 +5,6 @@
         '8PN3GF',
         'd7vq7C',
 		'tEZB6h',
-		'tEZB6h',
     );
 
     $postFields = '';
