@@ -274,6 +274,7 @@
     </div>
 
     <script>
+        //arr的第一个是key，其他的是value(简单的拼接就可以)
         function arrToObj(arr){
             var obj = {};
             if(arr.length==1){
@@ -301,7 +302,7 @@
             dataGroup['form_id'] = [$('[name=form_id]').val()];
             var formData={};
             for(var i in dataGroup){
-                formData[i] = dataGroup[i].join(' ');
+                formData[i] = dataGroup[i].join('');
             }
             return formData
         }
@@ -314,8 +315,13 @@
             $.ajax({
                 url:url,
                 data:formData,
+                dataType:'json',
                 success:function(e){
-                    alert('报名成功')
+                    if(e && e.error){
+                        alert('报名失败，请确认您填写的数据是否正确。系统信息：'+ e.error_description)
+                    }else{
+                        alert('报名成功')
+                    }
                 }
 
             })
