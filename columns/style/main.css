@@ -92,6 +92,8 @@ select{
 }
 option{
     text-align: center;
+    background: #fff;
+    color:#333;
 }
 
 input[type=radio]{
