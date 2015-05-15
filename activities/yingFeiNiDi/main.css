@@ -1,0 +1,39 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    vertical-align: middle;
+}
+img{
+    width: 100%;
+}
+
+html,body{
+    height: 100%;
+}
+#page-1{
+    background: #000;
+    height: 100%;
+    position: relative;
+}
+.start-btn{
+    width: 130px;
+    height: 40px;
+    border:1px solid #fff;
+    margin:0 auto;
+}
+.st-text{
+    width: 36px;
+    height: 17px;
+    margin:8px auto 0;
+}
+.car{
+    width: 158px;
+    height: 210px;
+    position: absolute;
+    left:50%;
+    margin-left:-79px;
+    top:30%;
+}
