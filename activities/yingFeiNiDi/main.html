@@ -3,13 +3,38 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>愚人节让小学数学题来摧残你的智商，不服来战 </title>
+    <title>英菲尼迪</title>
     <link href="main.css" rel="stylesheet" type="text/css">
-    <link href="animate.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="animate.min.css" rel="stylesheet" type="text/css">-->
 </head>
 <body>
 
-<div id="page-1">
+
+<div id="loading-page" class="page">
+    <div id="key-rotate">
+        <div id="car-key-bg">
+            <img src="img/car-key-bg.jpg">
+        </div>
+        <div id="lunzi">
+            <img src="img/lunzi.png">
+        </div>
+        <div id="lunzi-key">
+            <img src="img/key.png">
+        </div>
+    </div>
+    <div class="loading-bar-container">
+        <div id="loading-black" class="loading-bar">
+
+        </div>
+        <div id="loading-white" class="loading-bar">
+            <div class="loading-car">
+                <img src="img/loading-car.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page-1" class="page">
     <div class="">
         <img src="img/1-1.jpg">
     </div>
@@ -19,13 +44,13 @@
     <div>
         <img src="img/1-2.jpg">
     </div>
-    <div>
-        <div class="start-btn">
-            <div id='setOff' class="st-text">
-                <img src="img/start.png">
-            </div>
+
+    <div id='setOff'  class="start-btn">
+        <div class="st-text">
+            <img src="img/start.png">
         </div>
     </div>
+
 </div>
 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -43,6 +68,12 @@
             easing:'easeInQuad'
         })
     })
+    var loadingBar = $('#loading-white')
+//    setInterval(function(){
+//        loadingBar.css({
+//            width:'+=20'
+//        })
+//    },60)
 </script>
 
 <script>
