@@ -43,8 +43,9 @@
                 <div class="slide4-img"></div>
                 <div class="m1818"></div>
                 <div class="residue-num">剩余名额：<span id='num'>999<span></div>
-                <form role="form" action="/operation/lottery/result" method="get" id='l-form'>
-                    <input type="number" name="mobile" id="mobile" placeholder="填写手机号" class="phoneNum">
+                <form role="form" action="../../app/form.php" method="post" id='new_entry'>
+                    <input type="hidden" name="form_id" value="YOYOW3">
+                    <input type="number" name="entry[field_1]" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
                 </form>
             </div>
             <ul class="nav">
@@ -61,7 +62,15 @@
             <div class="detail">
                 <div class="closeBtn"></div>
             </div>
-            <div class="success"></div>
+            <div class="success-container">
+                <div class="closeBtn2"></div>
+                <div class="success-title"></div>
+                <div class="success-title2"></div>
+                <div class="success-btn">
+                    <div class="back-btn"></div>
+                    <div class="join-btn"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -103,24 +112,55 @@ $(document).ready(function() {
     $('.closeBtn').on(tap_event, function(event) {
         $('.detail').addClass('zoomOut').removeClass('zoomInDown');
     });
-
-     $(document).on(tap_event,'.try-btn', function(event) {
+     $('.closeBtn2').on(tap_event, function(event) {
+        $('.success-container').addClass('bounceOutLeft');
+    });
+    $(document).on(tap_event,'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
             $('.try-btn').addClass('last')
        
     });
 
+    $('.back-btn').on(tap_event,function(event) {
+            $('#fullpage').fullpage.silentMoveTo(0, 0);
+    });
+
     $(document).on(tap_event,'.last', function(event) {
         
         var n = /^1[34578][0-9]{9}$/;
-        var phoneNum=$('#mobile').val();
+        var phoneNum=$('#entry_field_1').val();
         if(!n.test(phoneNum)){
-            $('#mobile').val('');
-            $('#mobile').attr('placeholder', '手机号错误');
+            $('#entry_field_1').val('');
+            $('#entry_field_1').attr('placeholder', '手机号错误');
             event.preventDefault();
             return false;
         }
+        postForm()
     });
+
+
+    function postForm() {
+        // e.preventDefault();
+
+        var data = {};
+        var url=$('#new_entry').attr('action');
+
+        //提交具有name属性的元素内容
+        $('form').find('[name]').each(function() {
+            data[$(this).attr('name')] = $(this).val();
+        });
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: data,
+            success: function() {
+                console.log('a')
+            },
+            error: function() {
+                $('.success-container').addClass("rubberBand");
+            }
+        })
+    }
 });
 </script>
 // <script>
