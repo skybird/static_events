@@ -16,33 +16,33 @@
     <div id="fullpage">
         <div class="section " id="section0">
             <div class="slide " id="slide0">
-                <div class="slide0-title"></div>
-                <div class="egg">
+                <div class="slide0-title bounceInDown"></div>
+                <div class="egg slideInDown">
                     <div class="egg-head swing"></div>
                     <div class="egg-body"></div>
                 </div>
-                <div class="slide0-title2"></div>
+                <div class="slide0-title2 slideInUp"></div>
             </div>
             <div class="slide" id="slide1">
-                <div class="slide1-img"></div>
-                <div class="minutes5"></div>
-                <div class="their"></div>
+                <div class="slide1-img fly4r"></div>
+                <div class="minutes5 fly4r"></div>
+                <div class="their fly4l"></div>
             </div>
             <div class="slide" id="slide2">
-                <div class="slide2-img"></div>
-                <div class="b100"></div>
-                <div class="their2"></div>
+                <div class="slide2-img fly4r"></div>
+                <div class="b100 fly4r"></div>
+                <div class="their2 fly4l"></div>
             </div>
             <div class="slide" id="slide3">
-                <div class="slide3-img"></div>
-                <div class="jihe"></div>
+                <div class="slide3-img fly4r"></div>
+                <div class="jihe fly4r"></div>
                 <div class="slideImg"></div>
-                <div class="their3"></div>
+                <div class="their3 fly4l"></div>
             </div>
             <div class="slide" id="slide4">
                 <div class="slide4-img"></div>
                 <div class="m1818"></div>
-                <div class="residue-num">剩余名额：<span id='num'>999<span></div>
+                <div class="residue-num">剩余名额：<span id='num'>99<span></div>
                 <form role="form" action="../../app/form.php" method="post" id='new_entry'>
                     <input type="hidden" name="form_id" value="YOYOW3">
                     <input type="number" name="entry[field_1]" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
@@ -68,7 +68,14 @@
                 <div class="success-title2"></div>
                 <div class="success-btn">
                     <div class="back-btn"></div>
-                    <div class="join-btn"></div>
+                    <div class="join-btn">
+                        <div class="smallEgg swing"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tooLate">
+                <div class="join-btn">
+                    <div class="smallEgg swing"></div>
                 </div>
             </div>
         </div>
@@ -86,8 +93,12 @@ $(document).ready(function() {
         loopHorizontal:false,
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
             var loadedSlide = $(this);
-
-            //first slide of the second sections
+            console.log(loadedSlide)
+            loadedSlide .find('.fly4r').addClass('zoomInRight');
+             setTimeout(function(){   
+                        loadedSlide .find('.fly4l').addClass('zoomInLeft');
+                    },800)
+            // loadedSlide .find('.fly4l').addClass('zoomInLeft');
             var a = $('.nav-item')[slideIndex];
             $('.nav-item').eq(slideIndex).addClass('active').siblings().removeClass('active');
             console.log(slideIndex)
@@ -99,6 +110,29 @@ $(document).ready(function() {
             }
         }
     });
+
+    // var hasChanceUrl='http://wallstreetcn.com/operation/counter/get/10'
+    //  function hasChance(){
+    //         // get data
+    //         $.ajax({
+    //             url: hasChanceUrl,
+    //             type:'get',
+    //             success: function (data) {
+    //                 console.log(data)
+    //             },
+    //             error: function (xhr, textStatus) {
+    //                 // 
+    //             }
+    //         })
+    //     }
+        
+    //     ;(function judgeChance() {
+    //             hasChance()
+    //     })();
+
+
+
+
 
     var tap_event='click';
     if('ontouchstart' in window){
@@ -117,12 +151,14 @@ $(document).ready(function() {
     });
     $(document).on(tap_event,'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
-            $('.try-btn').addClass('last')
+            $('.try-btn').addClass('last');
+             $('.nav-item').eq(4).addClass('active').siblings().removeClass('active');
        
     });
 
     $('.back-btn').on(tap_event,function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 0);
+            $('.success-container').hide();
     });
 
     $(document).on(tap_event,'.last', function(event) {
@@ -135,7 +171,11 @@ $(document).ready(function() {
             event.preventDefault();
             return false;
         }
-        postForm()
+        postForm();
+        if($('#num').text()==0){
+            $('.tooLate').show();
+            return false;
+        }
     });
 
 
