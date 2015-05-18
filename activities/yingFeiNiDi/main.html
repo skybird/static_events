@@ -7,73 +7,278 @@
     <link href="main.css" rel="stylesheet" type="text/css">
     <!--<link href="animate.min.css" rel="stylesheet" type="text/css">-->
 </head>
-<body>
+<body style="overflow:hidden;">
 
+<div id="all-page" style="height: 600%;">
+    <div id="loading-page" class="page">
+        <div id="key-rotate">
+            <div id="car-key-bg">
+                <img src="img/car-key-bg.jpg">
+            </div>
+            <div id="lunzi">
+                <img src="img/lunzi.png">
+            </div>
+            <div id="lunzi-key">
+                <img src="img/key.png">
+            </div>
+        </div>
+        <div class="loading-bar-container">
+            <div id="loading-black" class="loading-bar">
 
-<div id="loading-page" class="page">
-    <div id="key-rotate">
-        <div id="car-key-bg">
-            <img src="img/car-key-bg.jpg">
-        </div>
-        <div id="lunzi">
-            <img src="img/lunzi.png">
-        </div>
-        <div id="lunzi-key">
-            <img src="img/key.png">
-        </div>
-    </div>
-    <div class="loading-bar-container">
-        <div id="loading-black" class="loading-bar">
-
-        </div>
-        <div id="loading-white" class="loading-bar">
-            <div class="loading-car">
-                <img src="img/loading-car.png">
+            </div>
+            <div id="loading-white" class="loading-bar">
+                <div class="loading-car">
+                    <img src="img/loading-car.png">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="page-1" class="page">
-    <div class="">
-        <img src="img/1-1.jpg">
-    </div>
-    <div class="car" id="car">
-        <img src="img/car.png">
-    </div>
-    <div>
-        <img src="img/1-2.jpg">
+    <div id="page-1" class="page">
+        <div class="">
+            <img src="img/1-1.jpg">
+        </div>
+        <div class="car" id="car">
+            <img src="img/car.png">
+        </div>
+        <div>
+            <img src="img/1-2.jpg">
+        </div>
+
+        <div id='setOff'  class="set-off">
+            <div class="st-text">
+                <img src="img/start.png">
+
+            </div>
+        </div>
+
     </div>
 
-    <div id='setOff'  class="start-btn">
-        <div class="st-text">
-            <img src="img/start.png">
+    <div id="page-car-inner" class="page">
+        <div class="inner-container" id="inner-container">
+            <div id="inner-1" class="inner">
+                <img src="img/car-inner-bg.jpg">
+                <!--<div class="arrow arrow-left-white" data-arrow-to="1"></div>-->
+                <div class="arrow arrow-right-white" data-arrow-to="1"></div>
+                <div class="page-2-text">
+                    <img src="img/page-2-text.png">
+                    <div id="double-down" class="double-down">
+                        <img src="img/double-down.png">
+                    </div>
+                </div>
+                <div class="page-2-text-big hide">
+                    <img src="img/page-2-text-big.png">
+                </div>
+            </div>
+            <div id="inner-2" class="inner">
+                <img src="img/inner-2-bg.jpg">
+                <div class="arrow arrow-left-white" data-arrow-to="0"></div>
+                <div class="page-2-2-text">
+                    <img src="img/page-2-2-text.png">
+                </div>
+                <!--<div class="arrow arrow-right-black" data-arrow-to="0"></div>-->
+            </div>
+        </div>
+        <div class="start-btn" id="page-3-start-btn">
+            <img src="img/start-btn.png">
         </div>
     </div>
 
-</div>
 
+    <div class="page" id="page-4">
+        <img src="img/page-4-bg.jpg">
+        <div class="page-4-bottom">
+            <a href='http://www.infiniti.com.cn/shopping_tools/dealerlocator.html' class="page-4-left">
+                <img src="img/page-4-left.png">
+            </a>
+            <a class="page-4-center" id="page-4-center">
+                <img src="img/page-4-center.png">
+            </a>
+            <a href='http://www.infiniti.com.cn/owners/toe.html' class="page-4-right">
+                <img src="img/page-4-right.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="page" id="page-5">
+        <div class="page-5-top">
+            <img src="img/page-5-top.jpg">
+        </div>
+        <div class="shi-jia">
+            <img src="img/shi-jia.png">
+        </div>
+        <div class="shi-jia-form">
+            <form>
+                <div class="form-group">
+                    <span class="form-key">性别*</span>
+                    <span class="form-value">
+                        <span class="form-radio" data-radio="gender"></span>男
+                        <span style="margin-left: 50px;" class="form-radio" data-radio="gender"></span>女
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="form-key">姓名*</span>
+                    <input class="form-input">
+                </div>
+                <div class="form-group">
+                    <span class="form-key">手机*</span>
+                    <input class="form-input" type="number">
+                </div>
+                <div class="form-group">
+                    <span class="form-key">城市*</span>
+                    <input class="form-input" type="number">
+                </div>
+                <div class="form-group">
+                    <button class="form-submit" id="form-submit">
+                        <img src="img/form-submit.png">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="page" id="page-6" style="background: #1d2226;">
+        <div class="last-car" id="last-car">
+            <img src="img/last-car.jpg">
+        </div>
+        <div class="appoint-success">
+            <img src="img/success.png">
+        </div>
+    </div>
+</div>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!--<script src="../stockA/js/jquery-2.1.3.min.js"></script>-->
+<script src="jquery.mobile-events.min.js"></script>
 <script src="velocity.min.js"></script>
 <script>
+//    var isMoving = false;
+//    var pageIndex= 0;
+//    $('body').on('swipeup',function(){
+//        pageIndex++;
+//        if(pageIndex>6)return;
+//        if(isMoving) return;
+//        isMoving = true
+//        allPage.velocity({
+//            translateY:-pageIndex*pagePerHeight+'%'
+//        },{duration:800,
+//            complete:function(){
+//                isMoving=false;
+//            }
+//        })
+//    }).on('swipedown',function(){
+//        pageIndex--;
+//        if(isMoving) return;
+//        isMoving = true
+//        allPage.velocity({
+//            translateY:-pageIndex*pagePerHeight+'%'
+//        },{duration:800,
+//            complete:function(){
+//                isMoving=false;
+//            }
+//        })
+//    })
+
     var touch_event = 'click';
     if('ontouchstart' in window){
         touch_event = 'touchstart'
     }
+
+    var pagePerHeight = 16.6667;
+
+    var allPage = $('#all-page')
+
+    var loadingBar = $('#loading-white')
+    setTimeout(function(){
+        loadingBar.velocity({
+            width:'100%'
+        },{
+            duration:3000,
+            easing:'easeInQuad',
+            complete:function(){
+                setTimeout(function(){
+                    allPage.velocity({
+                        translateY:-1*pagePerHeight+'%'
+                    },{duration:800})
+                },100)
+
+            }
+        })
+    },100)
+
     $('#setOff').on(touch_event,function(){
         $('#car').velocity({
             top:'100%'
         },{
-            duration:1000,
-            easing:'easeInQuad'
+            duration:1500,
+            easing:'easeInQuad',
+            complete:function(){
+                setTimeout(function(){
+                    allPage.velocity({
+                        translateY:-2*pagePerHeight+'%'
+                    },{duration:800})
+                },100)
+
+            }
         })
     })
-    var loadingBar = $('#loading-white')
-//    setInterval(function(){
-//        loadingBar.css({
-//            width:'+=20'
-//        })
-//    },60)
+
+
+    $('#page-3-start-btn').on(touch_event,function(){
+        setTimeout(function(){
+            allPage.velocity({
+                translateY:-3*pagePerHeight+'%'
+            },{duration:800})
+        },100)
+    })
+
+    $('#page-4-center').on(touch_event,function(){
+        setTimeout(function(){
+            allPage.velocity({
+                translateY:-4*pagePerHeight+'%'
+            },{duration:800})
+        },100)
+    })
+
+
+    $('#form-submit').on(touch_event,function(e){
+        e.preventDefault()
+//        setTimeout(function(){
+            allPage.velocity({
+                translateY:-5*pagePerHeight+'%'
+            },{duration:800})
+//        },100)
+        setTimeout(function(){
+            $('#last-car').velocity({
+//            right:-(925-winWidth)
+                right:-(800-winWidth)
+            },{
+                duration:2000,
+                easing:'easeInQuad'
+            })
+        },900)
+    })
+    $("#double-down").on(touch_event,function(){
+        $('.page-2-text').addClass('hide');
+        $('.page-2-text-big').removeClass('hide').velocity({
+            height:250,
+            'margin-top':-125
+        })
+    })
+
+    var winWidth = $(window).width();
+
+
+    $('[data-arrow-to]').on(touch_event,function(){
+        var index = + ($(this).attr('data-arrow-to'));
+        $('#inner-container').velocity({
+            'margin-left':-index*100+'%'
+        })
+    })
+    $('.form-radio').on(touch_event,function(){
+        $('.form-radio').removeClass('active')
+        $(this).addClass('active')
+    })
 </script>
 
 <script>
