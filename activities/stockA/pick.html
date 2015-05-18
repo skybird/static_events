@@ -155,7 +155,7 @@ $(function(){
     });
 
     $('.closeBtn2').on("click", function(event) {
-        $('.success-container').addClass('bounceOutLeft');
+        $('.success-container').addClass('bounceOutLeft').removeClass('rubberBand');
     });
 
     $('.closeBtn3').on("click", function(event) {
@@ -174,7 +174,7 @@ $(function(){
     });
 
     $("#fullpage").on("click",'.last', function(event) {
-        
+       
         var n = /^1[34578][0-9]{9}$/;
         var phoneNum=$('#entry_field_1').val();
         if(!n.test(phoneNum)){
@@ -189,7 +189,7 @@ $(function(){
             return false;
         }
         if ($.cookie(phoneNum)) {
-             $('.hasPlayed').show();
+             $('.hasPlayed').show().removeClass('bounceOutLeft');
              return false;    
         }
         postForm();
@@ -213,14 +213,14 @@ $(function(){
             data: data,
             success: function(data) {
                 var pNum=$('.phoneNum').val();
-                 $('.success-container').addClass("rubberBand");
+                $('.success-container').removeClass('bounceOutLeft').addClass("rubberBand");
                 $('.smallEgg').addClass("swing");
                 $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
                 $.cookie( pNum,  'true',{ expires: 8 });
             },
             error: function(data) {
                 var pNum=$('.phoneNum').val();
-                 $('.success-container').addClass("rubberBand");
+                $('.success-container').removeClass('bounceOutLeft').addClass("rubberBand");
                 $('.smallEgg').addClass("swing");
                 $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
                 $.cookie( pNum,  'true',{ expires: 8 });
