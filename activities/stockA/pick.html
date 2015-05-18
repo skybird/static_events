@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <img id="share-icon" src="" alt="" />
+    <img id="share-icon" src="img/share-icon.jpg" alt="" />
     <div id="fullpage">
         <div class="section " id="section0">
             <div class="slide " id="slide0">
@@ -103,6 +103,7 @@ $(function(){
         controlArrows: false,
         verticalCentered: false,
         loopHorizontal:false,
+        scrollingSpeed: 500,
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
             var loadedSlide = $(this);
            
@@ -148,34 +149,34 @@ $(function(){
         tap_event='tap'
     }
    
-    $('.appointment').on("tap", function(event) {
+    $('.appointment').on("click", function(event) {
         $('.detail').addClass('zoomInDown').removeClass('zoomOut');
     });
 
-    $('.closeBtn').on("tap", function(event) {
+    $('.closeBtn').on("click", function(event) {
         $('.detail').addClass('zoomOut').removeClass('zoomInDown');
     });
 
-    $('.closeBtn2').on("tap", function(event) {
+    $('.closeBtn2').on("click", function(event) {
         $('.success-container').addClass('bounceOutLeft');
     });
 
-    $('.closeBtn3').on("tap", function(event) {
+    $('.closeBtn3').on("click", function(event) {
         $('.hasPlayed').addClass('bounceOutLeft');
     });
 
-    $("#fullpage").on("tap",'.try-btn', function(event) {
+    $("#fullpage").on("click",'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
             $('.try-btn').addClass('last');
             $('.nav-item').eq(4).addClass('active').siblings().removeClass('active');
     });
 
-    $('.back-btn').on("tap",function(event) {
+    $('.back-btn').on("click",function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 0);
             $('.success-container').hide();
     });
 
-    $("#fullpage").on("tap",'.last', function(event) {
+    $("#fullpage").on("click",'.last', function(event) {
         
         var n = /^1[34578][0-9]{9}$/;
         var phoneNum=$('#entry_field_1').val();
@@ -190,12 +191,10 @@ $(function(){
             $('.tooLate').show();
             return false;
         }
-        // if ($.cookie('hasPlayed')) {
-        //      $('.hasPlayed').show();
-        //      contole.log('p');
-        //      return false;    
-        // }
-        console.log($.cookie('hasPlayed'))
+        if ($.cookie('hasPlayed')) {
+             $('.hasPlayed').show();
+             return false;    
+        }
         postForm();
     });
 
@@ -222,10 +221,10 @@ $(function(){
                 $.cookie('hasPlayed', 'true',{ expires: 8 });
             },
             error: function() {
-                $('.success-container').addClass("rubberBand");
-                $('.smallEgg').addClass("swing");
-                 $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
-                $.cookie('hasPlayed', 'true',{ expires: 8 });
+                // $('.success-container').addClass("rubberBand");
+                // $('.smallEgg').addClass("swing");
+                //  $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
+                // $.cookie('hasPlayed', 'true',{ expires: 8 });
             }
         })
     }
