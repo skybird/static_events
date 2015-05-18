@@ -278,9 +278,14 @@ html,body{
     background: #000;
 }
 .last-car{
-    width: 925px;
+    /*width: 925px;*/
+    width: 100%;
+    height: 100%;
     position: absolute;
     right: 0;
+    height: 100%;
+    background: url(img/last-car.jpg) no-repeat 100%;
+    background-size: auto 100%;
 }
 .appoint-success{
     width: 160px;
@@ -296,4 +301,74 @@ html,body{
     width: 50%;
     float: left;
     position: relative;
+}
+
+#page-4-1{
+    /*background: #bababa;*/
+}
+.page-4-1-top{
+    height: 100%;
+    background: url(img/page-4-1-top.png) no-repeat center;
+    background-size: 100%;
+}
+.plusOrMinus{
+    width: 14px;
+    height: 20px;
+    background: url(img/district/plus.png) no-repeat center;
+    background-size: 100%;
+    float: left;
+
+}
+.active .plusOrMinus{
+    background: url(img/district/minus.png) no-repeat center;
+    background-size: 100%;
+}
+.dist-name{
+    height: 20px;
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+    color:#6a6a6a;
+}
+.dist-2-words{
+    /*width:26px;*/
+}
+.district{
+    position: absolute;
+    top:40%;
+    padding-left:15px;
+    /*width: 75px;*/
+    width: 100%;
+}
+.dist-area{
+    background: #dcdcdc;
+    height: 20px;
+    margin: 16px 0;
+    padding-left: 12px;
+    width: 72px;
+    overflow: hidden;
+}
+
+.detail-address{
+    display: none;
+    position: absolute;
+    left:120px;
+    width: 193px;
+}
+
+.dist-area.active {
+    background: #b5b5b5;
+}
+
+.page-4-inner{
+    height: 100%;
+}
+
+.page-4-cover{
+    background: RGBA(0,0,0,0.5);
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }

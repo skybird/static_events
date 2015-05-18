@@ -7,7 +7,7 @@
     <link href="main.css" rel="stylesheet" type="text/css">
     <!--<link href="animate.min.css" rel="stylesheet" type="text/css">-->
 </head>
-<body style="overflow:hidden;">
+<body style="overflow: hidden;">
 
 <div id="all-page" style="height: 600%;">
     <div id="loading-page" class="page">
@@ -16,7 +16,7 @@
                 <img src="img/car-key-bg.jpg">
             </div>
             <div id="lunzi">
-                <img src="img/lunzi.png">
+                <img src="img/lunzi-2.png">
             </div>
             <div id="lunzi-key">
                 <img src="img/key.png">
@@ -86,17 +86,63 @@
 
 
     <div class="page" id="page-4">
-        <img src="img/page-4-bg.jpg">
+        <div id="page-4-0" class="page-4-inner">
+            <img src="img/page-4-bg.jpg">
+        </div>
+        <div id="page-4-1" class="page-4-inner hide">
+            <div class="page-4-cover hide"></div>
+            <div class="page-4-1-top">
+                <div class="district">
+                    <div class="detail-address">
+                        <img src="img/district/addr-1.png">
+                    </div>
+
+                    <div class="dist-area">
+                        <div class="plusOrMinus"></div>
+                        <div class="dist-name dist-2-words">
+                            <!--<img src="img/district/111.png">-->
+                            上海
+                        </div>
+                    </div>
+                    <div class="dist-area">
+                        <div class="plusOrMinus"></div>
+                        <div class="dist-name dist-2-words">
+                            <!--<img src="img/district/222.png">-->
+                            江苏
+                        </div>
+                    </div>
+                    <div class="dist-area">
+                        <div class="plusOrMinus"></div>
+                        <div class="dist-name dist-2-words">
+                            <!--<img src="img/district/333.png">-->
+                            浙江
+                        </div>
+                    </div>
+                    <div class="dist-area">
+                        <div class="plusOrMinus"></div>
+                        <div class="dist-name dist-2-words">
+                            <!--<img src="img/district/444.png">-->
+                            安徽
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-4-2" class="page-4-inner hide">
+            <img src="img/page-4-2-bg.png">
+        </div>
+
         <div class="page-4-bottom">
-            <a href='http://www.infiniti.com.cn/shopping_tools/dealerlocator.html' class="page-4-left">
+            <div id="page-4-shop-address-btn" class="page-4-left">
                 <img src="img/page-4-left.png">
-            </a>
+            </div>
             <a class="page-4-center" id="page-4-center">
                 <img src="img/page-4-center.png">
             </a>
-            <a href='http://www.infiniti.com.cn/owners/toe.html' class="page-4-right">
+            <div id="car-intro-btn" class="page-4-right">
                 <img src="img/page-4-right.png">
-            </a>
+            </div>
         </div>
     </div>
 
@@ -140,7 +186,7 @@
 
     <div class="page" id="page-6" style="background: #1d2226;">
         <div class="last-car" id="last-car">
-            <img src="img/last-car.jpg">
+            <!--<img src="img/last-car.jpg">-->
         </div>
         <div class="appoint-success">
             <img src="img/success.png">
@@ -241,6 +287,26 @@
     })
 
 
+    $('#page-4-shop-address-btn').on(touch_event,function(){
+        $('.page-4-inner').addClass('hide');
+        $('#page-4-1').removeClass('hide');
+    })
+
+    $('#car-intro-btn').on(touch_event,function(){
+        $('.page-4-inner').addClass('hide');
+        $('#page-4-2').removeClass('hide');
+    })
+
+
+    $('.dist-area').on('click',function(){
+        $('.page-4-cover').removeClass('hide')
+        $('.detail-address').fadeOut(function(){
+            $('.detail-address').fadeIn();
+        });
+        $('.dist-area').removeClass('active')
+        $(this).addClass('active')
+    })
+
     $('#form-submit').on(touch_event,function(e){
         e.preventDefault()
 //        setTimeout(function(){
@@ -251,7 +317,8 @@
         setTimeout(function(){
             $('#last-car').velocity({
 //            right:-(925-winWidth)
-                right:-(800-winWidth)
+//                right:-(800-winWidth)
+                backgroundPositionX:15+'%'
             },{
                 duration:2000,
                 easing:'easeInQuad'
