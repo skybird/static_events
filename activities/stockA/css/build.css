@@ -330,6 +330,7 @@ form {
     margin: auto;
     z-index: 0;
 }
+
 .hasPlayed {
     width: 253px;
     height: 171px;
@@ -345,7 +346,9 @@ form {
     z-index: 99;
     display: none;
 }
-.closeBtn2 ,.closeBtn3{
+
+.closeBtn2,
+.closeBtn3 {
     width: 16px;
     height: 16px;
     background: url(../img/close.png);
@@ -374,10 +377,12 @@ form {
 .success-btn {
     position: relative;
 }
+
 .success-btn2 {
     margin-top: 110px;
     position: relative;
 }
+
 .back-btn {
     width: 91px;
     height: 29px;
@@ -899,6 +904,7 @@ form {
     }
     100% {
         opacity: 0;
+         z-index: 0;
     }
 }
 
@@ -913,14 +919,17 @@ form {
     }
     100% {
         opacity: 0;
+         z-index: 0;
     }
 }
 
 .zoomOut {
+    z-index: 99;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    opacity: 0;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     -webkit-animation-name: zoomOut;
     animation-name: zoomOut;
-    z-index: 0;
+   
 }
