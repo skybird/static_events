@@ -279,6 +279,7 @@
         $('#new_entry').submit(function(e){
             var $this = $(this);
             var url = $this.attr('action');
+            console.log(url)
             e.preventDefault();
             var formData = processFormData($this.serializeArray());
             $.ajax({

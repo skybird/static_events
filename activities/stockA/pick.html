@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="flexible" content="initial-dpr=2" />
+    <meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
     <link href="css/build.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/flexible.js"></script>
+    <script type="text/javascript" src="js/judgeScreenSize.js"></script>
     <title>新人炒股缺底气？来配资宝！我们出钱再出利！</title>
 </head>
 
@@ -16,35 +15,36 @@
     <div id="fullpage">
         <div class="section " id="section0">
             <div class="slide " id="slide0">
-                <div class="slide0-title"></div>
-                <div class="egg">
+                <div class="slide0-title bounceInDown"></div>
+                <div class="egg slideInDown">
                     <div class="egg-head swing"></div>
                     <div class="egg-body"></div>
                 </div>
-                <div class="slide0-title2"></div>
+                <div class="slide0-title2 slideInUp"></div>
             </div>
             <div class="slide" id="slide1">
-                <div class="slide1-img"></div>
-                <div class="minutes5"></div>
-                <div class="their"></div>
+                <div class="slide1-img fly4r"></div>
+                <div class="minutes5 fly4r"></div>
+                <div class="their fly4l"></div>
             </div>
             <div class="slide" id="slide2">
-                <div class="slide2-img"></div>
-                <div class="b100"></div>
-                <div class="their2"></div>
+                <div class="slide2-img fly4r"></div>
+                <div class="b100 fly4r"></div>
+                <div class="their2 fly4l"></div>
             </div>
             <div class="slide" id="slide3">
-                <div class="slide3-img"></div>
-                <div class="jihe"></div>
+                <div class="slide3-img fly4r"></div>
+                <div class="jihe fly4r"></div>
                 <div class="slideImg"></div>
-                <div class="their3"></div>
+                <div class="their3 fly4l"></div>
             </div>
             <div class="slide" id="slide4">
                 <div class="slide4-img"></div>
                 <div class="m1818"></div>
-                <div class="residue-num">剩余名额：<span id='num'>999<span></div>
-                <form role="form" action="/operation/lottery/result" method="get" id='l-form'>
-                    <input type="number" name="mobile" id="mobile" placeholder="填写手机号" class="phoneNum">
+                <div class="residue-num">剩余名额：<span id='num'>99<span></div>
+                <form role="form" action="../../app/form.php" method="get" id='new_entry'>
+                    <input type="hidden" name="form_id" value="NEXYZU">
+                    <input type="number" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
                 </form>
             </div>
             <ul class="nav">
@@ -61,7 +61,22 @@
             <div class="detail">
                 <div class="closeBtn"></div>
             </div>
-            <div class="success"></div>
+            <div class="success-container">
+                <div class="closeBtn2"></div>
+                <div class="success-title"></div>
+                <div class="success-title2"></div>
+                <div class="success-btn">
+                    <div class="back-btn"></div>
+                    <div class="join-btn">
+                        <div class="smallEgg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tooLate">
+                <div class="join-btn">
+                    <div class="smallEgg"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -77,11 +92,14 @@ $(document).ready(function() {
         loopHorizontal:false,
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
             var loadedSlide = $(this);
-
-            //first slide of the second sections
-            var a = $('.nav-item')[slideIndex];
+           
+            loadedSlide .find('.fly4r').addClass('zoomInRight');
+             setTimeout(function(){   
+                        loadedSlide .find('.fly4l').addClass('zoomInLeft');
+            },800)
+            
             $('.nav-item').eq(slideIndex).addClass('active').siblings().removeClass('active');
-            console.log(slideIndex)
+           
             if(slideIndex=='4'){
     
                 $('.try-btn').addClass('last');
@@ -90,6 +108,27 @@ $(document).ready(function() {
             }
         }
     });
+
+    var hasChanceUrl='http://wallstreetcn.com/operation/counter/get/1818?callback=_counter'
+     function hasChance(){
+            // get data
+            $.ajax({
+                url: hasChanceUrl,
+                type:'get',
+                dataType:'jsonp',
+                success: function (data) {
+                    $('#num').text(data);
+                },
+                error: function (xhr, textStatus) {
+                    // 
+                }
+            })
+        }
+        
+        ;(function judgeChance() {
+                hasChance()
+        })();
+
 
     var tap_event='click';
     if('ontouchstart' in window){
@@ -104,23 +143,65 @@ $(document).ready(function() {
         $('.detail').addClass('zoomOut').removeClass('zoomInDown');
     });
 
-     $(document).on(tap_event,'.try-btn', function(event) {
+     $('.closeBtn2').on(tap_event, function(event) {
+        $('.success-container').addClass('bounceOutLeft');
+    });
+
+    $(document).on(tap_event,'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
-            $('.try-btn').addClass('last')
-       
+            $('.try-btn').addClass('last');
+            $('.nav-item').eq(4).addClass('active').siblings().removeClass('active');
+    });
+
+    $('.back-btn').on(tap_event,function(event) {
+            $('#fullpage').fullpage.silentMoveTo(0, 0);
+            $('.success-container').hide();
     });
 
     $(document).on(tap_event,'.last', function(event) {
         
         var n = /^1[34578][0-9]{9}$/;
-        var phoneNum=$('#mobile').val();
+        var phoneNum=$('#entry_field_1').val();
         if(!n.test(phoneNum)){
-            $('#mobile').val('');
-            $('#mobile').attr('placeholder', '手机号错误');
+            $('#entry_field_1').val('');
+            $('#entry_field_1').attr('placeholder', '手机号错误');
             event.preventDefault();
             return false;
         }
+       
+        if($('#num').text()==0){
+            $('.tooLate').show();
+            return false;
+        }
+         postForm();
+        $.getScript("a.js")
     });
+
+
+    function postForm() {
+        // e.preventDefault();
+
+        var data = {};
+        var url=$('#new_entry').attr('action');
+
+        //提交具有name属性的元素内容
+        $('form').find('[name]').each(function() {
+            data[$(this).attr('name')] = $(this).val();
+        });
+        
+        $.ajax({
+            type: 'get',
+            url: url,
+            data: data,
+            success: function() {
+                console.log('a')
+            },
+            error: function() {
+                $('.success-container').addClass("rubberBand");
+                $('.smallEgg').addClass("swing");
+            }
+        })
+    }
 });
 </script>
 // <script>
