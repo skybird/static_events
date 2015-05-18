@@ -10,8 +10,9 @@ body,
 html {
     margin: 0;
     padding: 0;
-    height: 120%;
+    height: 100%;
     -webkit-tap-highlight-color: transparent;
+    background-color: #ffb345;
 }
 
 #share-icon {
@@ -48,7 +49,7 @@ html {
     background: url(../img/egg-body.png);
     background-size: 100%;
     margin: 0 auto;
-    margin-top: -0.67rem;
+    margin-top: -64px;
 }
 
 .egg-head {
@@ -248,7 +249,7 @@ html {
 
 .slideImg {
     width: 88px;
-    height: 22.5px;
+    height: 22px;
     background: url(../img/slideImg.png);
     background-size: 100%;
     margin: 0 auto;
@@ -329,8 +330,22 @@ form {
     margin: auto;
     z-index: 0;
 }
-
-.closeBtn2 {
+.hasPlayed {
+    width: 253px;
+    height: 171px;
+    opacity: 1;
+    background: url(../img/hasPlayed.png);
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0px;
+    margin: auto;
+    z-index: 99;
+    display: none;
+}
+.closeBtn2 ,.closeBtn3{
     width: 16px;
     height: 16px;
     background: url(../img/close.png);
@@ -359,7 +374,10 @@ form {
 .success-btn {
     position: relative;
 }
-
+.success-btn2 {
+    margin-top: 110px;
+    position: relative;
+}
 .back-btn {
     width: 91px;
     height: 29px;
