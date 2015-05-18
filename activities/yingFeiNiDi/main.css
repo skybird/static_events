@@ -9,19 +9,22 @@ img{
 img{
     width: 100%;
 }
-
 html,body{
     height: 100%;
 }
+.hide{
+    display: none!important;
+}
+
 .page{
-    height: 100%;
+    height: 16.6667%;
     position: relative;
     overflow: hidden;
 }
 #page-1{
     background: #000;
 }
-.start-btn{
+.set-off{
     width: 130px;
     height: 40px;
     border:1px solid #fff;
@@ -102,4 +105,195 @@ html,body{
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg);
     }
+}
+@keyframes lunzi {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+#page-car-inner{
+    /*background: url(img/car-inner-bg.jpg);*/
+    /*background-size: cover;*/
+}
+
+.arrow{
+    position: absolute;
+    width: 28px;
+    height: 49px;
+    top:50%;
+    margin-top:-24px;
+}
+.arrow-right-white {
+    background: url(img/arrow-white.png);
+    background-size: 100%;
+    right :10px;
+}
+
+.arrow-left-white{
+    background: url(img/arrow-white.png);
+    background-size: 100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform:rotate(180deg) ;
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left:10px;
+}
+.arrow-right-black{
+    background: url(img/arrow-black.png);
+    background-size: 100%;
+    right :10px;
+}
+.arrow-left-black{
+    background: url(img/arrow-black.png);
+    background-size: 100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform:rotate(180deg) ;
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left:10px;
+}
+
+.page-2-text{
+    position: absolute;
+    width: 240px;
+    height: 107px;
+    top:50%;
+    margin-top:-54px;
+    left:50%;
+    margin-left:-120px;
+}
+.page-2-2-text{
+    position: absolute;
+    width: 240px;
+    height: 132px;
+    top:50%;
+    margin-top:-66px;
+    left:50%;
+    margin-left:-120px;
+}
+
+.double-down{
+    width:12px;
+    height: 10px;
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+}
+.page-2-text-big{
+    position: absolute;
+    width: 240px;
+    height: 107px;
+    top:50%;
+    margin-top:-54px;
+    left:50%;
+    margin-left:-120px;
+    overflow: hidden;
+}
+.start-btn{
+    width:161px;
+    height: 44px;
+    position: absolute;
+    left:50%;
+    margin-left:-80px;
+    bottom:20px;
+}
+
+.page-4-left {
+    position: absolute;
+    bottom:0;
+    float:left;
+    width:35%;
+    display: block;
+}
+.page-4-right{
+    position: absolute;
+    bottom:0;
+    width: 35%;
+    right:0;
+    display: block;
+}
+.page-4-center{
+    position: absolute;
+    bottom:0;
+    left:35%;
+    width:30%;
+    display: block;
+}
+
+#page-5{
+    background: #1d1d1d;
+}
+.shi-jia{
+    width:152px;
+    height: 70px;
+    margin: 10px auto 0;
+}
+.form-submit{
+    width: 120px;
+    height: 34px;
+    display: block;
+    margin: 25px auto 0;
+    border:none;
+    background: none;
+}
+.form-group{
+    width: 210px;
+    margin: 15px auto 15px;
+}
+.form-key{
+    color:#fff;
+    margin-right:15px;
+}
+.form-value{
+    color:#fff;
+}
+
+.form-input{
+    background: #2b2b2b;
+    width:150px;
+    height: 24px;
+    border-radius: 6px;
+    border:1px solid #8d9193;
+}
+
+.form-radio{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border-radius: 80%;
+    border:5px solid #fff;
+    background: #fff;
+    vertical-align: -4px;
+    margin-right: 5px;
+}
+.form-radio.active{
+    background: #000;
+}
+.last-car{
+    width: 925px;
+    position: absolute;
+    right: 0;
+}
+.appoint-success{
+    width: 160px;
+    position: absolute;
+    top:75%;
+    left:50%;
+    margin-left:-80px;
+}
+.inner-container{
+    width:200%;
+}
+.inner{
+    width: 50%;
+    float: left;
+    position: relative;
 }
