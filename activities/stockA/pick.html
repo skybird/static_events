@@ -7,7 +7,7 @@
     <link href="css/build.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/judgeScreenSize.js"></script>
-    <script type="text/javascript" src="js/tap.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
     <title>新人炒股缺底气？来配资宝！我们出钱再出利！</title>
 </head>
 
@@ -98,7 +98,9 @@
 <script>
 $(function(){
 
-    var hasPlayed=0;
+    $(function() {
+        FastClick.attach(document.body);
+    });
     $('#fullpage').fullpage({
         controlArrows: false,
         verticalCentered: false,
@@ -143,11 +145,6 @@ $(function(){
                 hasChance()
         })();
 
-
-    var tap_event='click';
-    if('ontouchstart' in window){
-        tap_event='tap'
-    }
    
     $('.appointment').on("click", function(event) {
         $('.detail').addClass('zoomInDown').removeClass('zoomOut');
@@ -191,7 +188,7 @@ $(function(){
             $('.tooLate').show();
             return false;
         }
-        if ($.cookie('hasPlayed')) {
+        if ($.cookie(phoneNum)) {
              $('.hasPlayed').show();
              return false;    
         }
@@ -214,17 +211,19 @@ $(function(){
             type: 'get',
             url: url,
             data: data,
-            success: function() {
-                $('.success-container').addClass("rubberBand");
+            success: function(data) {
+                var pNum=$('.phoneNum').val();
+                 $('.success-container').addClass("rubberBand");
                 $('.smallEgg').addClass("swing");
                 $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
-                $.cookie('hasPlayed', 'true',{ expires: 8 });
+                $.cookie( pNum,  'true',{ expires: 8 });
             },
-            error: function() {
-                // $('.success-container').addClass("rubberBand");
-                // $('.smallEgg').addClass("swing");
-                //  $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
-                // $.cookie('hasPlayed', 'true',{ expires: 8 });
+            error: function(data) {
+                var pNum=$('.phoneNum').val();
+                 $('.success-container').addClass("rubberBand");
+                $('.smallEgg').addClass("swing");
+                $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
+                $.cookie( pNum,  'true',{ expires: 8 });
             }
         })
     }
