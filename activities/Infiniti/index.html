@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/fastclick.js"></script>
     <title>一颗神秘的选股产品，1818个预约名额快来抢！</title>
@@ -22,6 +22,7 @@ img {
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 html,
@@ -38,7 +39,8 @@ body {
 
 img {
     width: 100%;
-    height: 100%;
+    background-size: contain;
+    /*height: 100%;*/
 }
 
 .smallTitle {
@@ -61,6 +63,7 @@ img {
     left: 0;
     right: 0;
     bottom: 10%;
+    z-index: 99;
 }
 
 .left-arrow {
@@ -149,15 +152,22 @@ img {
    -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+.img1{
+    background: url(img/1.jpg);
+    width:100%;
+    height: 100%;
+    background-size: cover;
+}
 </style>
 
 <body>
     <!-- <img id="share-icon" src="img/share-icon.jpg" alt="" /> -->
     <div id="fullpage">
         <div class="section " id="section0">
-            <img class='section1-bg' src="img/1.jpg">
+            <!-- <img class='section1-bg' src="img/1.jpg"> -->
+            <div class="img1"></div>
             <div class="smallTitle"></div>
-            <div class="arrow1 arrow bounce"></div>
+            <div class="arrow bounce"></div>
         </div>
         <div class="section " id="section1">
             <div class="slide " id="slide0">
@@ -180,6 +190,7 @@ img {
             </div>
             <div class="left-arrow"></div>
             <div class="right-arrow"></div>
+            <div class="arrow bounce"></div>
         </div>
         <div class="section " id="section2">
             <img class='section1-bg' src="img/3.jpg">
