@@ -133,7 +133,18 @@ html {
     z-index: 10;
     width: 100%;
 }
-
+.common-bottom2 {
+    top: 4.4rem;
+    position: absolute;
+    height: 38px;
+    width: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    z-index: 10;
+    width: 100%;
+}
 .try-btn {
     width: 125px;
     height: 38px;
@@ -142,11 +153,20 @@ html {
     margin: 0 auto;
 }
 
-.try-btn.last {
+.last {
+    display: none;
+}
+.commit-btn{
     background: url(../img/nowSubmit.png);
     background-size: 100%;
+    width: 125px;
+    height: 38px;
+    margin: 0 auto;
+    border: none;
+    z-index: 11;
+   /* position: absolute;
+    left: 25px;*/
 }
-
 .appointment {
     width: 44px;
     height: 8px;

@@ -43,11 +43,16 @@
             <div class="slide" id="slide4">
                 <div class="slide4-img"></div>
                 <div class="m1818"></div>
-                <div class="residue-num">剩余名额：<span id='num'>99<span></div>
+                <div class="residue-num">剩余名额：<span id='num'>99</span></div>
                 <form role="form" action="../../app/form.php" method="get" id='new_entry'>
 
                     <input type="hidden" name="form_id" value="NEXYZU">
                     <input type="phone" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
+                    <button class='commit-btn'></button>
+                    <div class="common-bottom2">
+                        <div class="appointment"></div>
+                    </div>
+                    
                 </form>
             </div>
             <ul class="nav">
@@ -119,9 +124,9 @@ $(function(){
            
             if(slideIndex=='4'){
     
-                $('.try-btn').addClass('last');
+                $('.common-bottom').addClass('last');
             }else{
-                $('.try-btn').removeClass('last');
+                $('.common-bottom').removeClass('last');
             }
         }
     });
@@ -165,7 +170,7 @@ $(function(){
 
     $("#fullpage").on("click",'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
-            $('.try-btn').addClass('last');
+            $('.common-bottom').addClass('last');
             $('.nav-item').eq(4).addClass('active').siblings().removeClass('active');
     });
 
@@ -174,8 +179,8 @@ $(function(){
             $('.success-container').hide();
     });
 
-    $("#fullpage").on("click",'.last', function(event) {
-       
+    $("form").on("submit", function(event) {
+        event.preventDefault();
         var n = /^1[34578][0-9]{9}$/;
         var phoneNum=$('#entry_field_1').val();
         if(!n.test(phoneNum)){
