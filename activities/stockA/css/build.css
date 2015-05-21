@@ -14,7 +14,9 @@ html {
     -webkit-tap-highlight-color: transparent;
     background-color: #ffb345;
 }
-
+#fullpage{
+    background-color: #ffb345;
+}
 #share-icon {
     position: absolute;
     width: 0;
