@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <title>一颗神秘的选股产品，1818个预约名额快来抢！</title>
+    <meta name="description" content="最强选股势力对你说：别懵在“股”里">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.hide {
+    display: none!important;
+}
+
+.section1-bg {}
+
+img {
+    width: 100%;
+    background-size: contain;
+    /*height: 100%;*/
+}
+
+.smallTitle {
+    width: 126px;
+    height: 7px;
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: url(img/smallTitle.png);
+    background-size: 100%;
+}
+
+.arrow {
+    width: 17px;
+    height: 23px;
+    background: url(img/arrow.png);
+    background-size: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    z-index: 99;
+}
+
+.left-arrow {
+    width: 30px;
+    height: 47px;
+    background: url(img/left-arrow.png);
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    z-index: 9;
+}
+
+.right-arrow {
+    width: 30px;
+    height: 47px;
+    background: url(img/right-arrow.png);
+    background-size: 100%;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    z-index: 9;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -6px, 0);
+        transform: translate3d(0, -6px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -6px, 0);
+        transform: translate3d(0, -6px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+   -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.img1{
+    background: url(img/1.jpg);
+    width:100%;
+    height: 100%;
+    background-size: cover;
+}
+</style>
+
+<body>
+    <!-- <img id="share-icon" src="img/share-icon.jpg" alt="" /> -->
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <!-- <img class='section1-bg' src="img/1.jpg"> -->
+            <div class="img1"></div>
+            <div class="smallTitle"></div>
+            <div class="arrow bounce"></div>
+        </div>
+        <div class="section " id="section1">
+            <div class="slide " id="slide0">
+                <img class='section1-bg' src="img/2-1.jpg">
+            </div>
+            <div class="slide" id="slide1">
+                <img class='section1-bg' src="img/2-2.jpg">
+            </div>
+            <div class="slide" id="slide2">
+                <img class='section1-bg' src="img/2-3.jpg">
+            </div>
+            <div class="slide" id="slide3">
+                <img class='section1-bg' src="img/2-4.jpg">
+            </div>
+            <div class="slide" id="slide4">
+                <img class='section1-bg' src="img/2-5.jpg">
+            </div>
+            <div class="slide" id="slide5">
+                <img class='section1-bg' src="img/2-6.jpg">
+            </div>
+            <div class="left-arrow"></div>
+            <div class="right-arrow"></div>
+            <div class="arrow bounce"></div>
+        </div>
+        <div class="section " id="section2">
+            <img class='section1-bg' src="img/3.jpg">
+            <div class="arrow arrow2 bounce"></div>
+        </div>
+        <div class="section " id="section2">
+            <img class='section1-bg' src="img/4.jpg">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function() {
+
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
+    $('#fullpage').fullpage({
+        controlArrows: false,
+        verticalCentered: false,
+        loopHorizontal: false,
+        scrollingSpeed: 500,
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+
+        }
+    });
+
+    $('.arrow').on('click', function(event) {
+         $('#fullpage').fullpage.moveSectionDown();
+    });
+
+    $('.left-arrow').on('click', function(event) {
+        event.preventDefault();
+        $('#fullpage').fullpage.moveSlideLeft();
+    });
+    $('.right-arrow').on('click', function(event) {
+        event.preventDefault();
+        $('#fullpage').fullpage.moveSlideRight();
+    });
+});
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</html>
