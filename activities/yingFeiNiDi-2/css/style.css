@@ -128,7 +128,7 @@ img {
 
 
 .section2{
-	background-image: url(../images/final-bg.jpg);
+	/*background-image: url(../images/final-bg.jpg);*/
 }
 .section2 .word{
 	width: 59.21%;
@@ -641,7 +641,7 @@ table tr td{width:14.2%;height:45px;padding:5px;-webkit-box-sizing:border-box;-m
 
 /*轮播*/
 .focused{ position:relative; overflow:hidden;/*padding:0 7.5%;*/}
-.focused .hd{position:absolute; z-index:1;text-align:center; top:42%;left:50%;margin-left: -95px;}
+.focused .hd{position:absolute; z-index:1;text-align:center; top:45%;left:50%;margin-left: -95px;}
 .focused .hd ul{ overflow:hidden;text-align:center;margin:0 auto;}
 .focused .hd ul li{width:12px;height:12px; margin:3px;-webkit-box-shadow:1px 1px 0px #000;-moz-box-shadow:1px 1px 0px #000; box-shadow:1px 1px 0px #000;-moz-box-flex:1; -webkit-box-flex:1; box-flex:1;font-size:0; float:left; background:#575757; border-radius:100%; }
 .focused .hd ul .on{background:#fff;}
