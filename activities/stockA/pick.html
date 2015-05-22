@@ -7,8 +7,9 @@
     <link href="css/build.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/judgeScreenSize.js"></script>
-    <script type="text/javascript" src="js/tap.js"></script>
-    <title>新人炒股缺底气？来配资宝！我们出钱再出利！</title>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <title>一颗神秘的选股产品，1818个预约名额快来抢！</title>
+    <meta name="description" content="最强选股势力对你说：别懵在“股”里">
 </head>
 
 <body>
@@ -42,11 +43,16 @@
             <div class="slide" id="slide4">
                 <div class="slide4-img"></div>
                 <div class="m1818"></div>
-                <div class="residue-num">剩余名额：<span id='num'>99<span></div>
+                <div class="residue-num">剩余名额：<span id='num'>99</span></div>
                 <form role="form" action="../../app/form.php" method="get" id='new_entry'>
 
                     <input type="hidden" name="form_id" value="NEXYZU">
                     <input type="phone" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
+                    <button class='commit-btn'></button>
+                    <div class="common-bottom2">
+                        <div class="appointment"></div>
+                    </div>
+                    
                 </form>
             </div>
             <ul class="nav">
@@ -69,23 +75,23 @@
                 <div class="success-title2"></div>
                 <div class="success-btn">
                     <div class="back-btn"></div>
-                    <div class="join-btn">
+                    <a href='http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205350004&idx=1&sn=2046cf76c55512375237669d80187575#rd' class="join-btn">
                         <div class="smallEgg"></div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="tooLate">
-                <div class="join-btn">
-                    <div class="smallEgg"></div>
-                </div>
+                <a href='http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205350004&idx=1&sn=2046cf76c55512375237669d80187575#rd' class="join-btn">
+                        <div class="smallEgg"></div>
+                    </a>
             </div>
             <div class="hasPlayed">
                 <div class="closeBtn3"></div>
                 <div class="success-btn2">
                     <div class="back-btn"></div>
-                    <div class="join-btn">
+                    <a href='http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205350004&idx=1&sn=2046cf76c55512375237669d80187575#rd' class="join-btn">
                         <div class="smallEgg"></div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -98,7 +104,9 @@
 <script>
 $(function(){
 
-    var hasPlayed=0;
+    $(function() {
+        FastClick.attach(document.body);
+    });
     $('#fullpage').fullpage({
         controlArrows: false,
         verticalCentered: false,
@@ -116,9 +124,9 @@ $(function(){
            
             if(slideIndex=='4'){
     
-                $('.try-btn').addClass('last');
+                $('.common-bottom').addClass('last');
             }else{
-                $('.try-btn').removeClass('last');
+                $('.common-bottom').removeClass('last');
             }
         }
     });
@@ -143,11 +151,6 @@ $(function(){
                 hasChance()
         })();
 
-
-    var tap_event='click';
-    if('ontouchstart' in window){
-        tap_event='tap'
-    }
    
     $('.appointment').on("click", function(event) {
         $('.detail').addClass('zoomInDown').removeClass('zoomOut');
@@ -158,7 +161,7 @@ $(function(){
     });
 
     $('.closeBtn2').on("click", function(event) {
-        $('.success-container').addClass('bounceOutLeft');
+        $('.success-container').addClass('bounceOutLeft').removeClass('rubberBand');
     });
 
     $('.closeBtn3').on("click", function(event) {
@@ -167,7 +170,7 @@ $(function(){
 
     $("#fullpage").on("click",'.try-btn', function(event) {
             $('#fullpage').fullpage.silentMoveTo(0, 4);
-            $('.try-btn').addClass('last');
+            $('.common-bottom').addClass('last');
             $('.nav-item').eq(4).addClass('active').siblings().removeClass('active');
     });
 
@@ -176,8 +179,8 @@ $(function(){
             $('.success-container').hide();
     });
 
-    $("#fullpage").on("click",'.last', function(event) {
-        
+    $("form").on("submit", function(event) {
+        event.preventDefault();
         var n = /^1[34578][0-9]{9}$/;
         var phoneNum=$('#entry_field_1').val();
         if(!n.test(phoneNum)){
@@ -191,8 +194,8 @@ $(function(){
             $('.tooLate').show();
             return false;
         }
-        if ($.cookie('hasPlayed')) {
-             $('.hasPlayed').show();
+        if ($.cookie(phoneNum)) {
+             $('.hasPlayed').show().removeClass('bounceOutLeft');
              return false;    
         }
         postForm();
@@ -214,17 +217,19 @@ $(function(){
             type: 'get',
             url: url,
             data: data,
-            success: function() {
-                $('.success-container').addClass("rubberBand");
+            success: function(data) {
+                var pNum=$('.phoneNum').val();
+                $('.success-container').removeClass('bounceOutLeft').addClass("rubberBand");
                 $('.smallEgg').addClass("swing");
                 $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
-                $.cookie('hasPlayed', 'true',{ expires: 8 });
+                $.cookie( pNum,  'true',{ expires: 8 });
             },
-            error: function() {
-                // $('.success-container').addClass("rubberBand");
-                // $('.smallEgg').addClass("swing");
-                //  $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
-                // $.cookie('hasPlayed', 'true',{ expires: 8 });
+            error: function(data) {
+                var pNum=$('.phoneNum').val();
+                $('.success-container').removeClass('bounceOutLeft').addClass("rubberBand");
+                $('.smallEgg').addClass("swing");
+                $.getScript("http://wallstreetcn.com/operation/counter/decrease/1818");
+                $.cookie( pNum,  'true',{ expires: 8 });
             }
         })
     }
