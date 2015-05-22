@@ -112,9 +112,9 @@
 			alert('请填写正确姓名')
 			return;
 		}
-		//var i = /^1[34578][0-9]{9}$/;
-		//return i.test(n)
-		if($('#phone').val().length==0){
+		var i = /^1[34578][0-9]{9}$/;
+		var phoneStr = $('#phone').val().toString();
+		if(!i.test(phoneStr)){
 			alert('请填写正确手机号')
 			return;
 		}
