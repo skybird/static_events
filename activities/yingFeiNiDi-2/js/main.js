@@ -107,6 +107,13 @@
 	// 	});
 	// });
 	$('form').on('submit',  function(event) {
+		$.ajax({
+			urL:'http://a.irs01.com/hat?_t=r&_htsinfo=QyY2MSY2MzAmMTMzMCY5NDMwJiNy&_z=_&l=aHR0cDovL2FjdGl2aXR5LndhbGxzdHJlZXRjbi5jb20vYWN0aXZpdGllcy95aW5nRmVpTmlEaS0yL2luZmluaXR5Lmh0bWw=',
+			success:function(e){
+				console.log(e)
+			}
+
+		})
 		event.preventDefault();
 		if($('#name').val().length==0){
 			alert('请填写正确姓名')
