@@ -112,6 +112,8 @@
 			alert('请填写正确姓名')
 			return;
 		}
+		//var i = /^1[34578][0-9]{9}$/;
+		//return i.test(n)
 		if($('#phone').val().length==0){
 			alert('请填写正确手机号')
 			return;
@@ -124,6 +126,11 @@
 			alert('请选择城市')
 			return;
 		}
+		if(!$('#cbox-agree').is(':checked')){
+			alert('请勾选同意，才可以提交数据')
+			return;
+		}
+
 		alert('预约成功');
 		$('#slider').css({
 	 		'transform': 'translate(0px, 0%)'
