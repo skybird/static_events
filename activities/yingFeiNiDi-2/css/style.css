@@ -589,9 +589,11 @@ audio{
 
 /***新增***/
 .imgTop{width:66.7%;position:absolute;right:8px;top:10px;}
-
+.phoneNum::-webkit-input-placeholder{
+       color: #9b9b9b;
+    }
 h1.title{padding:10px 0 0 10px;}
-.formDiv{padding:0 8.5%;font-size:0.8em;color:#9b9b9b;position: absolute;top: 20%;}
+.formDiv{padding:0 8.5%;font-size:0.8em;color:#9b9b9b;position: absolute;top: 20%;left: 0;right: 0;margin: auto;}
 .logo{width:29.6%; margin:7% auto ;}
 .formDiv p{width:100%;margin-top:20px;padding:7px 0;display:block;border:1px solid #7d7d7d;border-radius:2px;}
 .formDiv p label{width:25%;height:30px;line-height:30px;padding-right:3%;text-align:left;text-indent:15px;display:inline-block;border-right:1px solid #d1d1d1;}

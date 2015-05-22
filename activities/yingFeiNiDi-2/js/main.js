@@ -102,7 +102,9 @@
 		$(this).find('span').toggleClass('table-arrow-up');
 	});
 	$('.btn-yuyue').click(function(){
-		$('.pop').show();
+		$('#slider').css({
+			'transform': 'translate(0px, 0%)'
+		});
 	});
 	$('.btn-close').click(function(){
 		$('.pop').hide();
