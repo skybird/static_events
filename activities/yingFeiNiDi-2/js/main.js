@@ -101,9 +101,31 @@
 		});
 		$(this).find('span').toggleClass('table-arrow-up');
 	});
-	$('.btn-yuyue').click(function(){
+	// $('.btn-yuyue').click(function(){
+	// 	$('#slider').css({
+	// 		'transform': 'translate(0px, 0%)'
+	// 	});
+	// });
+	$('form').on('submit',  function(event) {
+		event.preventDefault();
+		if($('#name').val().length==0){
+			alert('请填写正确姓名')
+			return;
+		}
+		if($('#phone').val().length==0){
+			alert('请填写正确手机号')
+			return;
+		}
+		if($('#sex input[type=radio]:checked').length==0){
+			alert('请选择称谓')
+			return;
+		}
+		if($('#Province').val()==0){
+			alert('请选择城市')
+			return;
+		}
 		$('#slider').css({
-			'transform': 'translate(0px, 0%)'
+	 		'transform': 'translate(0px, 0%)'
 		});
 	});
 	$('.btn-close').click(function(){

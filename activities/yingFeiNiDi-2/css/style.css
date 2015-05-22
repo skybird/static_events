@@ -680,3 +680,8 @@ table tr td{width:14.2%;height:45px;padding:5px;-webkit-box-sizing:border-box;-m
     font-size: 8px;
     color: #7d7d7d;
 }
+.smallImg{
+    width: 113px;
+    height: 8px;
+    margin-left: 20px;
+}
