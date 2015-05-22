@@ -1,0 +1,251 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    vertical-align: middle;
+}
+img{
+    width: 100%;
+}
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+.hide{
+    display: none!important;
+}
+.page{
+    height: 14.2857%;
+    position: relative;
+    overflow: hidden;
+}
+#page-2{
+    width: 100%;
+    overflow: hidden;
+}
+
+.abs{
+    position: absolute;
+}
+.img{
+    height: 100%;
+    position: relative;
+}
+.img-1{
+    background: url(img/1.jpg) no-repeat;
+    background-size: cover;
+}
+.img-22{
+    background: url(img/22.jpg) no-repeat;
+    background-size: cover;
+}
+.img-21{
+    background: url(img/21.jpg) no-repeat;
+    background-size: cover;
+}
+.img-19{
+    background: url(img/19.jpg) no-repeat;
+    background-size: cover;
+}
+.img-6{
+    background: url(img/6.jpg) no-repeat;
+    background-size: cover;
+}
+.img-25{
+    background: url(img/25.jpg) no-repeat;
+    background-size: cover;
+}
+.img-24{
+    background: url(img/24.jpg) no-repeat;
+    background-size: cover;
+}
+.img-23{
+    background: url(img/23.jpg) no-repeat;
+    background-size: cover;
+}
+
+.img-4{
+    background: url(img/4.png) no-repeat center;
+    background-size:auto 100%;
+    height: 37px;
+    width: 100%;
+}
+.img-7{
+    background: url(img/7.png) no-repeat center;
+    background-size:auto 100%;
+    height: 37px;
+    width: 100%;
+}
+#start{
+    position: absolute;
+    bottom:10%;
+}
+.set-off{
+    position: absolute;
+    bottom:10%;
+    background: url(img/2.png) no-repeat center;
+    background-size: auto 100%;
+    height: 21px;
+    width: 100%;
+}
+@media (max-height: 481px) {
+   .set-off{
+       bottom:3%;
+   }
+    #start{
+        bottom:3%;
+    }
+    .page-2-bottom{
+        bottom:3%;
+    }
+}
+
+.img-5{
+    width:261px;
+    height: 134px;
+    position: absolute;
+    left:50%;
+    margin-left: -130px;
+    top:55%;
+    margin-top:-67px;
+    opacity: 0;
+    background: url(img/5.png) no-repeat;
+    background-size: 100%;
+}
+.img-9{
+    width:263px;
+    height: 258px;
+    position: absolute;
+    left:50%;
+    margin-left: -132px;
+    top:50%;
+    margin-top:-129px;
+    /*opacity: 0;*/
+    background: url(img/9.png) no-repeat;
+    background-size: 100%;
+}
+.img-10{
+    width:240px;
+    height: 150px;
+    position: absolute;
+    left:50%;
+    margin-left: -120px;
+    top:50%;
+    margin-top:-75px;
+    /*opacity: 0;*/
+    background: url(img/10.png) no-repeat;
+    background-size: 100%;
+}
+.img-11{
+    width:270px;
+    height: 145px;
+    position: absolute;
+    left:50%;
+    margin-left: -135px;
+    top:50%;
+    margin-top:-72px;
+    /*opacity: 0;*/
+    background: url(img/11.png) no-repeat;
+    background-size: 100%;
+}
+
+
+.arrow{
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    top:50%;
+    margin-top:-17px;
+}
+
+.arrow-right-white {
+    background: url(img/arrow-white.png);
+    background-size: 100%;
+    right :10px;
+}
+
+.arrow-left-white{
+    background: url(img/arrow-white.png);
+    background-size: 100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform:rotate(180deg) ;
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left:10px;
+}
+.arrow-right-black{
+    background: url(img/arrow-black.png);
+    background-size: 100%;
+    right :10px;
+}
+.arrow-left-black{
+    background: url(img/arrow-black.png);
+    background-size: 100%;
+    -webkit-transform: rotate(180deg);
+    -moz-transform:rotate(180deg) ;
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left:10px;
+}
+.page-2-item{
+    position: relative;
+    float: left;
+    width: 25%;
+}
+#inner-container{
+    height: 100%;
+    width: 400%;
+}
+.page-2-bottom{
+    position: absolute;
+    bottom:8%;
+}
+
+.page-3-bottom{
+    position: absolute;
+    bottom:0;
+    height: 50px;
+    width: 100%;
+}
+
+.page-3-b-item{
+    float:left;
+}
+.b-5-words{
+    width: 40.6%;
+}
+.b-4-words{
+    width: 29.7%;
+}
+.page-3-bottom-text{
+    height: 50px;
+    background: #2a2b2c;
+}
+
+.page-3-bottom-text.active{
+    background: #575757;
+}
+
+.img-12 {
+    height: 50px;
+    background: url("img/12.png") no-repeat center;
+    background-size: 96px 18px;
+}
+
+.img-13{
+    height: 50px;
+
+    background: url("img/13.png") no-repeat center;
+    background-size: 64px 18px;
+}
+
+.img-14 {
+    height: 50px;
+
+    background: url("img/14.png") no-repeat center;
+    background-size: 64px 18px;
+}
