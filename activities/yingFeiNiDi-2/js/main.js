@@ -124,9 +124,11 @@
 			alert('请选择城市')
 			return;
 		}
+		alert('预约成功');
 		$('#slider').css({
 	 		'transform': 'translate(0px, 0%)'
 		});
+
 	});
 	$('.btn-close').click(function(){
 		$('.pop').hide();
