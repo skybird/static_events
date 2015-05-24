@@ -7,20 +7,30 @@
 	<title>新英菲尼迪Q70L</title>
 	<link rel="stylesheet" href="css/style.css?t=20">
     <style>
+        /*.fixed-title-bar{*/
+            /*z-index: 10000;*/
+            /*height: 6px;*/
+            /*top:0;*/
+            /*width: 100%;*/
+            /*/!*background: #b8bcbd;*!/*/
+            /*background: #2d2d2f;*/
+            /*position: fixed;*/
+        /*}*/
         .fixed-title{
-            height: 36px;
+            height: 48px;
             width: 100%;
             background: #2d2d2f;
             color:#fff;
-            line-height: 36px;
+            line-height: 48px;
             text-align: center;
             position: fixed;
             z-index: 10000;
             font-size: 18px;
-
+            top:0;
+            font-weight: bold;
         }
         #slider{
-            padding-top: 36px;
+            padding-top: 48px;
         }
         @media screen and (max-height: 481px) {
             .formDiv{
@@ -32,34 +42,36 @@
 
             @-webkit-keyframes arrow {
                 0% {
-                    bottom: 55px;
-
-                }
-                50% {
                     bottom: 50px;
 
                 }
+                50% {
+                    bottom: 45px;
+
+                }
                 100% {
-                    bottom: 55px;
+                    bottom: 50px;
                 }
             }
             @keyframes arrow {
                 0% {
-                    bottom: 55px;
-
-                }
-                50% {
                     bottom: 50px;
 
                 }
+                50% {
+                    bottom: 45px;
+
+                }
                 100% {
-                    bottom: 55px;
+                    bottom: 50px;
                 }
             }
         }
     </style>
 </head> 
 <body>
+    <!--<div class="fixed-title-bar"></div>-->
+
     <div class="fixed-title">新英菲尼迪Q70L</div>
 	<div id="wrap">
 		<div class="slider" id="slider" style="transform: translate(0px, -0px);">
