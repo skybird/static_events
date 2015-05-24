@@ -139,11 +139,12 @@
 		}
 		var _this = $(this)
 		var provinceTxt =$('#Province option:selected').text();
+		var cityTxt =$('#City option:selected').text();
 		var paramObj = {};
 		$.each(_this.serializeArray(), function(_, kv) {
 			paramObj[kv.name] = kv.value;
 		});
-		paramObj[$('#Province').attr('name')] = provinceTxt;
+		paramObj['field_5'] = provinceTxt+'-'+cityTxt;
 		$.ajax({
 			url:_this.attr('action'),
 			data:paramObj,
