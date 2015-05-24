@@ -138,9 +138,15 @@
 			return;
 		}
 		var _this = $(this)
+		var provinceTxt =$('#Province option:selected').text();
+		var paramObj = {};
+		$.each(_this.serializeArray(), function(_, kv) {
+			paramObj[kv.name] = kv.value;
+		});
+		paramObj[$('#Province').attr('name')] = provinceTxt;
 		$.ajax({
 			url:_this.attr('action'),
-			data:_this.serialize(),
+			data:paramObj,
 			success:function(e){
 				console.log(e);
 				alert('预约成功');
