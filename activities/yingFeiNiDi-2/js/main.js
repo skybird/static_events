@@ -115,12 +115,12 @@
 
 		})
 		event.preventDefault();
-		if($('#name').val().length==0){
+		if($('#UserName').val().length==0){
 			alert('请填写正确姓名')
 			return;
 		}
 		var i = /^1[34578][0-9]{9}$/;
-		var phoneStr = $('#phone').val().toString();
+		var phoneStr = $('#Mobile').val().toString();
 		if(!i.test(phoneStr)){
 			alert('请填写正确手机号')
 			return;
@@ -137,11 +137,18 @@
 			alert('请勾选同意，才可以提交数据')
 			return;
 		}
-
-		alert('预约成功');
-		$('#slider').css({
-	 		'transform': 'translate(0px, 0%)'
-		});
+		var _this = $(this)
+		$.ajax({
+			url:_this.attr('action'),
+			data:_this.serialize(),
+			success:function(e){
+				console.log(e);
+				alert('预约成功');
+				$('#slider').css({
+					'transform': 'translate(0px, 0%)'
+				});
+			}
+		})
 
 	});
 	$('.btn-close').click(function(){
