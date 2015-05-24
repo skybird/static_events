@@ -6,8 +6,61 @@
 	<meta charset="UTF-8">
 	<title>新英菲尼迪Q70L</title>
 	<link rel="stylesheet" href="css/style.css?t=20">
+    <style>
+        .fixed-title{
+            height: 36px;
+            width: 100%;
+            background: #2d2d2f;
+            color:#fff;
+            line-height: 36px;
+            text-align: center;
+            position: fixed;
+            z-index: 10000;
+            font-size: 15px;
+
+        }
+        #slider{
+            padding-top: 36px;
+        }
+        @media screen and (max-height: 481px) {
+            .formDiv{
+                margin-top: -20px;
+            }
+            .btn-yuyue{
+                margin-top: -10px;;
+            }
+
+            @-webkit-keyframes arrow {
+                0% {
+                    bottom: 55px;
+
+                }
+                50% {
+                    bottom: 50px;
+
+                }
+                100% {
+                    bottom: 55px;
+                }
+            }
+            @keyframes arrow {
+                0% {
+                    bottom: 55px;
+
+                }
+                50% {
+                    bottom: 50px;
+
+                }
+                100% {
+                    bottom: 55px;
+                }
+            }
+        }
+    </style>
 </head> 
 <body>
+    <div class="fixed-title">新英菲尼迪Q70L</div>
 	<div id="wrap">
 		<div class="slider" id="slider" style="transform: translate(0px, -0px);">
 			<section class="section section1">
