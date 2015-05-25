@@ -224,6 +224,7 @@ html {
     background: url(../img/minutes5.png);
     background-size: 100%;
     margin: 0 auto;
+    margin-top: -10px;
 }
 
 .their {
@@ -232,7 +233,7 @@ html {
     background: url(../img/their.png) no-repeat;
     background-size: 100%;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 34px;
 }
 
 .slide2-img {
@@ -241,7 +242,7 @@ html {
     background: url(../img/slide2-img.png);
     background-size: 100%;
     margin: 0 auto;
-    /*margin-top: 40px;*/
+    margin-top: -10px;
 }
 
 .b100 {
@@ -267,7 +268,7 @@ html {
     background: url(../img/slide3-img.png);
     background-size: 100%;
     margin: 0 auto;
-    /*margin-top: 40px;*/
+    margin-top: -25px;
 }
 
 .jihe {
@@ -782,6 +783,8 @@ form {
 }
 
 .bounceOutLeft {
+    opacity: 1;
+    z-index: 99;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-name: bounceOutLeft;

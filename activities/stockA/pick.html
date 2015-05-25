@@ -50,7 +50,6 @@
                 <form role="form" action="../../app/form.php" method="get" id='new_entry'>
                     <input type="hidden" name="form_id" value="NEXYZU">
                     <input type="phone" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
-                    
                     <div class="common-bottom2">
                         <button class='commit-btn'></button>
                         <div class="appointment"></div>
@@ -114,10 +113,10 @@ $(function() {
 
     $('#slide0-title2').attr('src', imgSrc + '?' + tamp)
     $('#slide0-title2').load(function() {
-       setTimeout(function(){
+        setTimeout(function() {
             egg.play();
-        },2000)
-        
+        }, 2000)
+
     });
 
     $('#fullpage').fullpage({
@@ -128,7 +127,7 @@ $(function() {
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
             var loadedSlide = $(this);
 
-            if(slideIndex == '1'){
+            if (slideIndex == '1') {
                 egg.pause();
             }
 
@@ -138,15 +137,15 @@ $(function() {
             }, 600)
 
             $('.nav-item').eq(slideIndex).addClass('active').siblings().removeClass('active');
-             if (slideIndex == '3'){
+            if (slideIndex == '3') {
                 $('.slideImg').addClass('fadeIn')
-             }
+            }
         },
-        onSlideLeave:function(anchorLink, index, slideIndex, direction){
-             if ((slideIndex == '3')&&(direction=='right')) {
+        onSlideLeave: function(anchorLink, index, slideIndex, direction) {
+            if ((slideIndex == '3') && (direction == 'right')) {
                 $('.common-bottom').addClass('last');
-            } 
-            if(slideIndex == '4') {
+            }
+            if (slideIndex == '4') {
                 $('.common-bottom').removeClass('last');
             }
         }
