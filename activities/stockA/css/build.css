@@ -510,6 +510,15 @@ form {
 .fly4l {
     opacity: 0;
 }
+.shareGuide{
+        width: 100px;
+        height: 82px;
+        background-image: url(../img/shareGuide.png);
+        background-size: 100%;
+        top: 1%;
+        right: 1%;
+        position: absolute;
+    }
 
 @-webkit-keyframes fadeIn {
     0% {
