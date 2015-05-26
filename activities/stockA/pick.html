@@ -104,9 +104,9 @@
 <script>
 $(function() {
 
-    $(function() {
-        FastClick.attach(document.body);
-    });
+    // $(function() {
+    //     FastClick.attach(document.body);
+    // });
 
     var egg = document.getElementById("egg");
     var imgSrc = $('#slide0-title2').attr('src');
@@ -122,10 +122,10 @@ $(function() {
 
      var ua = navigator.userAgent.toLowerCase();
      if(ua.indexOf("micromessenger") != -1 ){
-        
+        $('.weixinA').attr('href', 'http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205402366&idx=1&sn=fa8476d6cb806c90bb6556932a1832d1#rd');
      }
     else{
-        $('.weixinA').attr('href', 'http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205402366&idx=1&sn=fa8476d6cb806c90bb6556932a1832d1#rd');
+        $('.weixinA').attr('href', 'http://mp.weixin.qq.com/s?__biz=MzAwMjU1NDUwNw==&mid=205350004&idx=1&sn=2046cf76c55512375237669d80187575#rd');
     }
 
     $('#fullpage').fullpage({
