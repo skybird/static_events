@@ -14,9 +14,11 @@ html {
     -webkit-tap-highlight-color: transparent;
     background-color: #ffb345;
 }
-#fullpage{
+
+#fullpage {
     background-color: #ffb345;
 }
+
 #share-icon {
     position: absolute;
     width: 0;
@@ -34,11 +36,11 @@ html {
 }
 
 #slide2 {
-    background-color: #f97a7a;
+    background-color: #64aaeb;
 }
 
 #slide3 {
-    background-color: #38aa83;
+    background-color: #1eb8af;
 }
 
 #slide4 {
@@ -82,7 +84,9 @@ html {
 .slide0-title2 {
     width: 131px;
     height: 46px;
-    background: url(../img/slide0-title2.png);
+    /* background: url(../img/slide0-title2.png);*/
+    
+    display: block;
     background-size: 100%;
     margin: 0 auto;
     margin-top: 0.25rem;
@@ -133,18 +137,18 @@ html {
     z-index: 10;
     width: 100%;
 }
+
 .common-bottom2 {
-    top: 4.4rem;
-    position: absolute;
+    position: relative;
     height: 38px;
     width: 125px;
-    left: 0;
-    right: 0;
     margin: auto;
+    margin-top: 42px;
     padding: 0;
     z-index: 10;
     width: 100%;
 }
+
 .try-btn {
     width: 125px;
     height: 38px;
@@ -156,7 +160,8 @@ html {
 .last {
     display: none;
 }
-.commit-btn{
+
+.commit-btn {
     background: url(../img/nowSubmit.png);
     background-size: 100%;
     width: 125px;
@@ -164,9 +169,13 @@ html {
     margin: 0 auto;
     border: none;
     z-index: 11;
-   /* position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* position: absolute;
     left: 25px;*/
 }
+
 .appointment {
     width: 44px;
     height: 8px;
@@ -178,8 +187,8 @@ html {
 }
 
 .detail {
-    width: 260px;
-    height: 203px;
+    width: 258px;
+    height: 185px;
     opacity: 0;
     background: url(../img/detail.png);
     background-size: 100%;
@@ -215,15 +224,16 @@ html {
     background: url(../img/minutes5.png);
     background-size: 100%;
     margin: 0 auto;
+    margin-top: -10px;
 }
 
 .their {
     width: 200px;
-    height: 45px;
-    background: url(../img/their.png);
+    height: 46px;
+    background: url(../img/their.png) no-repeat;
     background-size: 100%;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 34px;
 }
 
 .slide2-img {
@@ -232,7 +242,7 @@ html {
     background: url(../img/slide2-img.png);
     background-size: 100%;
     margin: 0 auto;
-    /*margin-top: 40px;*/
+    margin-top: -10px;
 }
 
 .b100 {
@@ -245,8 +255,8 @@ html {
 
 .their2 {
     width: 238px;
-    height: 46px;
-    background: url(../img/their2.png);
+    height: 47px;
+    background: url(../img/their2.png) no-repeat;
     background-size: 100%;
     margin: 0 auto;
     margin-top: 40px;
@@ -258,24 +268,55 @@ html {
     background: url(../img/slide3-img.png);
     background-size: 100%;
     margin: 0 auto;
-    /*margin-top: 40px;*/
+    margin-top: -25px;
 }
 
 .jihe {
     width: 191px;
-    height: 15px;
-    background: url(../img/jihe.png);
+    height: 16px;
+    background: url(../img/jihe.png) no-repeat;
     background-size: 100%;
     margin: 0 auto;
 }
 
 .slideImg {
-    width: 88px;
-    height: 22px;
+    opacity: 0;
+}
+
+.slideImg1 {
+    width: 150px;
+    height: 16px;
     background: url(../img/slideImg.png);
     background-size: 100%;
+    background-position: 0 0;
     margin: 0 auto;
     margin-top: 0.11rem;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.slideImg2 {
+    width: 150px;
+    height: 16px;
+    background: url(../img/slideImg.png);
+    background-size: 100%;
+    background-position:  0 -25px;
+    margin: 0 auto;
+    margin-top: 0.11rem;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.slideImg3 {
+    width: 150px;
+    height: 16px;
+    background: url(../img/slideImg.png);
+    background-size: 100%;
+    background-position:  0 -51px;
+    margin: 0 auto;
+    margin-top: 0.11rem;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
 }
 
 .their3 {
@@ -284,7 +325,9 @@ html {
     background: url(../img/their3.png);
     background-size: 100%;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 10px;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
 }
 
 .slide4-img {
@@ -353,6 +396,10 @@ form {
     z-index: 0;
 }
 
+.success-btn {
+    margin-top: 120px;
+}
+
 .hasPlayed {
     width: 253px;
     height: 171px;
@@ -379,8 +426,7 @@ form {
     margin-left: 5px;
     margin-top: 5px;
 }
-
-.success-title {
+/*.success-title {
     width: 97px;
     height: 22px;
     background: url(../img/success-title.png);
@@ -395,6 +441,7 @@ form {
     background-size: 100%;
     margin: 30px auto;
 }
+*/
 
 .success-btn {
     position: relative;
@@ -462,6 +509,42 @@ form {
 .fly4r,
 .fly4l {
     opacity: 0;
+}
+.shareGuide{
+        width: 100px;
+        height: 82px;
+        background-image: url(../img/shareGuide.png);
+        background-size: 100%;
+        top: 1%;
+        right: 1%;
+        position: absolute;
+    }
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes bounceInDown {
@@ -709,6 +792,8 @@ form {
 }
 
 .bounceOutLeft {
+    opacity: 1;
+    z-index: 99;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-name: bounceOutLeft;
@@ -820,8 +905,8 @@ form {
     transform-origin: center center;
     -webkit-animation-name: swing;
     animation-name: swing;
-    animation-iteration-count: 10;
-    -webkit-animation-iteration-count: 10;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
@@ -926,7 +1011,7 @@ form {
     }
     100% {
         opacity: 0;
-         z-index: 0;
+        z-index: 0;
     }
 }
 
@@ -941,7 +1026,7 @@ form {
     }
     100% {
         opacity: 0;
-         z-index: 0;
+        z-index: 0;
     }
 }
 
@@ -953,5 +1038,4 @@ form {
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-name: zoomOut;
     animation-name: zoomOut;
-   
 }
