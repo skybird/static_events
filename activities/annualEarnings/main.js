@@ -20,10 +20,10 @@
         var pkStart = document.getElementById("pkStart");
         // var pkOver = document.getElementById("pkOver");
         var personJson = [
-            {name:'巴菲特',success:'hey！我每次买什么股票你跟一跟啊……',fail:'小子，告诉我你在哪家公司，还招人吗？'},
-            {name:'马云',success:'我又被工商局查了……你的年终奖不管多少，别逃税啊。',fail:'小子，告诉我你在哪家公司，还招人吗？'}, 
-            {name:'比尔盖茨',success:'发牌的是上帝，玩牌的是自己',fail:'小子，告诉我你在哪家公司，还招人吗？'}, 
-            {name:'扎克伯格',success:'很高兴和你打了一架',fail:'小子，告诉我你在哪家公司，还招人吗？'}
+            {name:'巴菲特',success:'我脑子里有些文件夹。如果有人提起某个企业或者某些证券，常常两三分钟内就能清楚自己有没有兴趣。你做得到吗？',fail:'小子，我想静静……'},
+            {name:'马云',success:'以我从屌丝逆袭为“外星人”的经历告诉你：大家都在埋怨啥机会都没有的时候，就是到处都是机会。',fail:'小子，我想静静……'}, 
+            {name:'比尔盖茨',success:'生活是不公平的，要去适应它。嘿嘿',fail:'小子，我想静静……'}, 
+            {name:'扎克伯格',success:'在这样一个急速变化的世界中，唯一的策略就是保证即使失败也不必承担风险。',fail:'小子，我想静静……'}
         ]
         $(".pk-bg").css('height', pkBgHeight);
 
@@ -79,7 +79,7 @@
                     },5800) 
                       $('.npc_name').html("你");
                       $('.npc_word').html("把"+personJson[whichHead-1].name+"踢飞");
-                      $('.npc_word2').html("小子，告诉我你在哪家公司，还招人吗？");
+                      $('.npc_word2').html("小子，我想静静……");
                      
 
                 }else{
