@@ -11,7 +11,14 @@
     <title>一颗神秘的选股产品，1818个预约名额快来抢！</title>
     <meta name="description" content="最强选股势力对你说：别懵在“股”里">
 </head>
-
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('android') != -1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone') != -1) {
+    }
+    else {
+        window.location.href = 'pick_pc.html'
+    }
+</script>
 <body>
     <img id="share-icon" src="img/share-icon.jpg" alt="" />
     <div id="fullpage">
@@ -49,7 +56,7 @@
                 <div class="residue-num">剩余名额：<span id='num'>99</span></div>
                 <form role="form" action="../../app/form.php" method="get" id='new_entry'>
                     <input type="hidden" name="form_id" value="NEXYZU">
-                    <input type="phone" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
+                    <input type="number" name="field_1" id="entry_field_1" placeholder="填写手机号" class="phoneNum">
                     <div class="common-bottom2">
                         <button class='commit-btn'></button>
                         <div class="appointment"></div>
