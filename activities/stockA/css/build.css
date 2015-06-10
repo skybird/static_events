@@ -116,7 +116,7 @@ html {
 }
 
 .nav-item:first-child {
-    margin-left: 0;
+    margin-left: 10px;
 }
 
 .nav-item.active {
@@ -413,7 +413,7 @@ form {
     bottom: 0px;
     margin: auto;
     z-index: 99;
-    display: none;
+    display: block;
 }
 
 .closeBtn2,
@@ -466,8 +466,9 @@ form {
     height: 29px;
     background: url(../img/join-btn.png);
     background-size: 100%;
-    float: right;
-    margin-right: 22px;
+    margin:0 auto;
+    margin-top: 0.6rem;
+    display:block;
     position: relative;
 }
 
@@ -1038,4 +1039,68 @@ form {
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-name: zoomOut;
     animation-name: zoomOut;
+}
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.shake {
+     -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+     -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+  -webkit-animation-name: tada;
+  animation-name: tada;
+  animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
