@@ -1288,19 +1288,19 @@ summary {
 }
 
 .download-a.a li.as a {
-    background: url(../images/download-as-b.png) -4px -4px no-repeat;
+    background: url(../images/download_ios_1.png) -4px -4px no-repeat;
 }
 
 .download-a.a li.gp a {
-    background: url(../images/download-gp-b.png) -4px -4px no-repeat;
+    background: url(../images/download_Android_1.png) -4px -4px no-repeat;
 }
 
 .download-a.a li.as a:hover {
-    background-image: url(../images/download-as-d.png);
+    background-image: url(../images/download_ios_2.png);
 }
 
 .download-a.a li.gp a:hover {
-    background-image: url(../images/download-gp-d.png);
+    background-image: url(../images/download_Android_2.png);
 }
 
 .gallery-a {
@@ -2007,8 +2007,6 @@ summary {
     margin-top: -41px;
     padding-top: 41px;
 }
-
-
 
 .lt-ie9 .heading-a.tw h1,
 .lt-ie9 .heading-a.tw h2,
@@ -6774,10 +6772,69 @@ svg:not(:root) {
     font-weight: bold!important;
     padding-right: 15px!important;
 }
-.fanzhuan{
-    cursor:pointer;
+
+.fanzhuan {
+    cursor: pointer;
 }
-.fanzhuan:hover{
-    color:#fff!important;
-    background:#ffa023;
+
+.fanzhuan:hover {
+    color: #fff!important;
+    background: #ffa023;
+}
+
+.c1 .no,
+.c2 .no,
+.c3 .no,
+.c4 .no {
+    width: 40px!important;
+    height: 40px!important;
+    background-repeat: no-repeat;
+    top:28%!important;
+}
+
+.c1,
+.c2,
+.c3,
+.c4 {
+    width: 230px!important;
+    line-height: 24px;
+}
+
+.c1 .no {
+    background: url('../img/strategy1.png')!important;
+}
+
+.c2 .no {
+    background: url('../img/strategy2.png')!important;
+}
+
+.c3 .no {
+    background: url('../img/strategy3.png')!important;
+}
+
+.c4 .no {
+    background: url('../img/strategy4.png')!important;
+}
+
+.wangwang {
+    display: block;
+    font-size: 18px;
+}
+
+.zilong {
+    font-size: 14px;
+    padding-top: 8px;
+    display: block;
+}
+
+.strong {
+    color: #333!important;
+}
+
+.title {
+    color: #333!important;
+}
+
+.list-b li {
+    /*width: 200px!important;*/
 }
