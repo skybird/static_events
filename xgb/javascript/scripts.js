@@ -3,6 +3,10 @@
  * https://github.com/jquery/jquery-migrate
  */
 (function(jQuery, window, undefined) {
+
+
+
+
     var warnedAbout = {};
     jQuery.migrateWarnings = [];
     if (!jQuery.migrateMute && window.console && window.console.log) {
@@ -5480,6 +5484,8 @@ if ($.browser.msie && parseInt($.browser.version, 10) < 9) {
  * https://github.com/davatron5000/Lettering.js
  */
 (function($) {
+
+
     function injector(t, splitter, klass, after) {
         var text = t.text(),
             a = text.split(splitter),
@@ -6848,6 +6854,8 @@ head.ready(function() {
         "use strict";
         globals.GLOB = {};
     }((1, eval)('this')));
+
+
     var Default = {
         utils: {
             links: function() {
@@ -7338,12 +7346,30 @@ head.ready(function() {
         }
     };
 
+    var countDown = 'http://wallstreetcn.com/operation/counter/get/50?callback=_counter';
+
+    function hasChance() {
+        // get data
+        $.ajax({
+            url: countDown,
+            type: 'get',
+            dataType: 'jsonp',
+            success: function(data) {
+                $('#num').text(data);
+                Default.utils.responsive();
+            },
+            error: function(xhr, textStatus) {
+                // 
+            }
+        })
+    };
+    hasChance()
     Default.utils.links();
     Default.utils.mails();
     Default.utils.forms();
     Default.utils.date();
     Default.utils.miscellaneous();
-    Default.utils.responsive();
+
     Default.ie.css();
     Default.ie.pie();
 
