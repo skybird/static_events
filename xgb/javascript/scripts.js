@@ -5500,7 +5500,7 @@ if ($.browser.msie && parseInt($.browser.version, 10) < 9) {
     var methods = {
         init: function() {
             return this.each(function() {
-                injector($(this), '', 'char', '')
+                injector($(this), '', 'ch', '')
             })
         },
         words: function() {
@@ -7129,7 +7129,7 @@ head.ready(function() {
                 $('.list-b').each(function() {
                     tn = 1;
                     $(this).children('li:not([class*=mobile])').each(function() {
-                        $(this).addClass('c' + tn).prepend('<span class="no">' + tn + '</span> ');
+                        $(this).addClass('c' + tn).prepend('<span class="no"></span> ');
                         tn++;
                     });
                 });
@@ -7346,7 +7346,7 @@ head.ready(function() {
         }
     };
 
-    var countDown = 'http://wallstreetcn.com/operation/counter/get/50?callback=_counter';
+    var countDown = 'http://wallstreetcn.com/operation/counter/get/16?callback=_counter';
 
     function hasChance() {
         // get data

@@ -6789,7 +6789,7 @@ svg:not(:root) {
     width: 40px!important;
     height: 40px!important;
     background-repeat: no-repeat;
-    top:28%!important;
+    top: 28%!important;
 }
 
 .c1,
@@ -6837,4 +6837,32 @@ svg:not(:root) {
 
 .list-b li {
     /*width: 200px!important;*/
+}
+
+.tara-size {
+    font-size: 32px;
+}
+
+.panContainer {
+    position: relative;
+}
+
+.panW {
+    position: absolute;
+    font-size: 24px;
+    padding-left: 240px;
+    padding-top: 48px;
+    color:#333;
+}
+
+.panT{
+     position: absolute;
+    font-size: 24px;
+    padding-left: 685px;
+    padding-top: 48px;
+    color:#333;
+}
+
+.yipai {
+    display: inline-block!important;
 }
