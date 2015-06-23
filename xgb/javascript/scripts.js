@@ -7108,7 +7108,7 @@ head.ready(function() {
                                         floored_number = floored_number.toString().replace('.', '');
                                         $(tween.elem).html(floored_number).lettering();
                                     }
-                                }, 4000).removeClass('v');
+                                }, 3000).removeClass('v');
                             });
                         }, {
                             offset: '75%'
