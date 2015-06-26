@@ -7286,9 +7286,9 @@ head.ready(function() {
                 $('.gallery-b li > div:not(.fit-a), .gallery-c ul li > div a, #top h1 a img, #clone h1 a img').each(function() {
                     $(this).css('margin-top', -$(this).outerHeight() * .5);
                 });
-                $('.slider-b').addClass('mobile-hide').after('<div class="slider-ba mobile-only"><div class="inner"></div></div>').children('li').each(function() {
-                    $(this).clone().removeAttr('style').appendTo($(this).parents('.slider-b').next('.slider-ba').children('.inner'));
-                });
+                // $('.slider-b').addClass('mobile-hide').after('<div class="slider-ba mobile-only"><div class="inner"></div></div>').children('li').each(function() {
+                //     $(this).clone().removeAttr('style').appendTo($(this).parents('.slider-b').next('.slider-ba').children('.inner'));
+                // });
                 $('.slider-ba > .inner, .slider-bb > .inner').each(function() {
                     $(this).bxSlider({
                         pager: false,
