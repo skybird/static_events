@@ -7346,7 +7346,7 @@ head.ready(function() {
         }
     };
 
-    var countDown = 'http://wallstreetcn.com/operation/counter/get/16?callback=_counter';
+    var countDown = 'http://wallstreetcn.com/operation/counter/get/14?callback=_counter';
 
     function hasChance() {
         // get data
