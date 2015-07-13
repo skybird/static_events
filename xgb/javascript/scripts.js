@@ -3,6 +3,10 @@
  * https://github.com/jquery/jquery-migrate
  */
 (function(jQuery, window, undefined) {
+
+
+
+
     var warnedAbout = {};
     jQuery.migrateWarnings = [];
     if (!jQuery.migrateMute && window.console && window.console.log) {
@@ -5480,6 +5484,8 @@ if ($.browser.msie && parseInt($.browser.version, 10) < 9) {
  * https://github.com/davatron5000/Lettering.js
  */
 (function($) {
+
+
     function injector(t, splitter, klass, after) {
         var text = t.text(),
             a = text.split(splitter),
@@ -5494,7 +5500,7 @@ if ($.browser.msie && parseInt($.browser.version, 10) < 9) {
     var methods = {
         init: function() {
             return this.each(function() {
-                injector($(this), '', 'char', '')
+                injector($(this), '', 'ch', '')
             })
         },
         words: function() {
@@ -6848,6 +6854,8 @@ head.ready(function() {
         "use strict";
         globals.GLOB = {};
     }((1, eval)('this')));
+
+
     var Default = {
         utils: {
             links: function() {
@@ -7100,7 +7108,7 @@ head.ready(function() {
                                         floored_number = floored_number.toString().replace('.', '');
                                         $(tween.elem).html(floored_number).lettering();
                                     }
-                                }, 4000).removeClass('v');
+                                }, 3000).removeClass('v');
                             });
                         }, {
                             offset: '75%'
@@ -7121,7 +7129,7 @@ head.ready(function() {
                 $('.list-b').each(function() {
                     tn = 1;
                     $(this).children('li:not([class*=mobile])').each(function() {
-                        $(this).addClass('c' + tn).prepend('<span class="no">' + tn + '</span> ');
+                        $(this).addClass('c' + tn).prepend('<span class="no"></span> ');
                         tn++;
                     });
                 });
@@ -7278,9 +7286,9 @@ head.ready(function() {
                 $('.gallery-b li > div:not(.fit-a), .gallery-c ul li > div a, #top h1 a img, #clone h1 a img').each(function() {
                     $(this).css('margin-top', -$(this).outerHeight() * .5);
                 });
-                $('.slider-b').addClass('mobile-hide').after('<div class="slider-ba mobile-only"><div class="inner"></div></div>').children('li').each(function() {
-                    $(this).clone().removeAttr('style').appendTo($(this).parents('.slider-b').next('.slider-ba').children('.inner'));
-                });
+                // $('.slider-b').addClass('mobile-hide').after('<div class="slider-ba mobile-only"><div class="inner"></div></div>').children('li').each(function() {
+                //     $(this).clone().removeAttr('style').appendTo($(this).parents('.slider-b').next('.slider-ba').children('.inner'));
+                // });
                 $('.slider-ba > .inner, .slider-bb > .inner').each(function() {
                     $(this).bxSlider({
                         pager: false,
@@ -7338,12 +7346,30 @@ head.ready(function() {
         }
     };
 
+    var countDown = 'http://wallstreetcn.com/operation/counter/get/14?callback=_counter';
+
+    function hasChance() {
+        // get data
+        $.ajax({
+            url: countDown,
+            type: 'get',
+            dataType: 'jsonp',
+            success: function(data) {
+                $('#num').text(data);
+                Default.utils.responsive();
+            },
+            error: function(xhr, textStatus) {
+                // 
+            }
+        })
+    };
+    hasChance()
     Default.utils.links();
     Default.utils.mails();
     Default.utils.forms();
     Default.utils.date();
     Default.utils.miscellaneous();
-    Default.utils.responsive();
+
     Default.ie.css();
     Default.ie.pie();
 

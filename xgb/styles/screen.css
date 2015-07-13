@@ -256,7 +256,7 @@ summary {
 #nav > ul > li.active > a,
 #nav > ul > li:hover > a {
     background: #fff;
-    color: #6f8188;
+    color: #ffa023;
 }
 
 #nav > ul > li.sub:hover > a {
@@ -520,7 +520,7 @@ summary {
 #welcome > figure {
     position: absolute;
     left: 50%;
-    top: 193px;
+    top: 200px;
     width: 297px;
     margin: 0 0 0 -550px;
 }
@@ -6711,6 +6711,9 @@ svg:not(:root) {
     .heading-a p {
         font-size: 1.6em;
     }
+    .panContainer{
+        display:none!important;
+    }
 }
 
 @media only screen and (max-width: 25em) {
@@ -6735,6 +6738,15 @@ svg:not(:root) {
         height: auto;
         padding: 0;
         background: none;
+    }
+    .mobile-a .fan {
+        background: url('../img/forMobile.png');
+    }
+    .mobile-b{
+        display:none!important;
+    }
+    .panContainer{
+        display:none!important;
     }
     #root #welcome [class*="mobile"] {
         padding: 0 12px;
@@ -6789,7 +6801,7 @@ svg:not(:root) {
     width: 40px!important;
     height: 40px!important;
     background-repeat: no-repeat;
-    top:28%!important;
+    top: 28%!important;
 }
 
 .c1,
@@ -6837,4 +6849,38 @@ svg:not(:root) {
 
 .list-b li {
     /*width: 200px!important;*/
+}
+
+.tara-size {
+    font-size: 32px;
+}
+
+.panContainer {
+    position: relative;
+}
+
+.panW {
+    position: absolute;
+    font-size: 24px;
+    padding-left: 240px;
+    padding-top: 48px;
+    color: #333;
+}
+
+.panT {
+    position: absolute;
+    font-size: 24px;
+    padding-left: 685px;
+    padding-top: 48px;
+    color: #333;
+}
+
+.yipai {
+    display: inline-block!important;
+}
+
+.fan {
+    width: 297px;
+    height: 527px;
+    background: url(../img/firsrtScreen.png);
 }
