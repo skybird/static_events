@@ -4,10 +4,10 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, maximum-scale=1" />
     <title></title>
     <link href="main.css" rel="stylesheet" type="text/css">
-    <link href="animate.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="animate.min.css" rel="stylesheet" type="text/css"> -->
 </head>
 
 <body>
@@ -28,32 +28,46 @@
         </div> -->
         <img class='lee-bg' src="img/first-screen/1p_bg.png">
         <img class='lee' src="img/first-screen/lee.png">
+        <img class='lee-title1' src="img/first-screen/lee-title1.png">
+        <img class='lee-title2' src="img/first-screen/lee-title2.png">
         <div style="text-align: center" id="div-start" class="hidden">
-            <div id="start-btn">START</div>
+            <div id="start-btn"></div>
         </div>
+        <img class='crash' src="img/crash.png">
     </div>
     <div class="pages-cover hidden">
         <div class="wscn-pages">
         </div>
     </div>
     <div class="result-page hidden">
-        <div class="result-header">
-            <div class="replay"></div>
-            <div id='share2friends' class="share2friends" style="display: none"></div>
-        </div>       
-        <div class="result-box">
-            <img src="img/result/result_1.png" width="132" height="105">
+        <div class="replay"></div>
+        <div id='share2friends' class="share2friends  swing">
         </div>
-    </div>
-    <div id="download-bottom" style="position: fixed;bottom: 0;left:0;right: 0;display: none;">
-        <a style="width:100%;" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721">
-            <img src="img/download-bottom.png" style="width:100%;vertical-align: middle;">
+        <img class='result-img'>
+        <div class="result-content"></div>
+        <a class='download-btn' href="">
+            <img src="img/result/download.png">
         </a>
     </div>
     <script src="jquery-2.1.3.min.js"></script>
     <script src="model.js"></script>
     <script src="fastclick.js"></script>
     <script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+            };
+
+        // Abort if browser does not support addEventListener
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
     $(function() {
         FastClick.attach(document.body);
     });
@@ -64,24 +78,41 @@
         music.play();
     }
     var touch_start = 'click';
-    //        if('ontouchstart' in window){
-    //            touch_start = 'touchstart';
-    //        }
+
     var transform = 'webkitTransform';
-    //transition_end = 'webkitTransitionEnd';
+
     if (typeof document.body.style.transform === 'string') {
         transform = 'transform';
-        //transition_end='transitionend'
+
     };
 
     function firstScreen() {
         $('#div-start').removeClass('hidden').addClass('animated fadeIn');
-        $('#start-btn').on(touch_start, function() {
-            $('.first-page').addClass('hidden');
-            $('.pages-cover').removeClass('hidden');
-        })
+        setTimeout(function() {
+            $('.lee').addClass('bounceIn');
+        }, 500)
+        setTimeout(function() {
+            $('.lee-title1').addClass('zoomInRight');
+        }, 1500)
+        setTimeout(function() {
+            $('.lee-title2').addClass('zoomInRight');
+        }, 2600)
+        setTimeout(function() {
+            $('.crash').addClass('active');
+        }, 4000)
+        setTimeout(function() {
+            $('#start-btn').addClass('rubberBand');
+        }, 4000)
+        setTimeout(function() {
+            $('#start-btn').addClass('active');
+        }, 400)
     }
-    
+
+    $('#start-btn').on(touch_start, function() {
+        $('.first-page').addClass('hidden');
+        $('.pages-cover').removeClass('hidden');
+    })
+
     firstScreen();
 
     var pageNum = models.length;
@@ -89,125 +120,73 @@
         width: pageNum * 100 + '%'
     });
     var pageWidth = 100 / pageNum;
-    var imgIndex = 2;
+    var imgIndex = 1;
     for (var i = 0; i < models.length; i++) {
         var model = models[i];
-        var html = '<div class="wscn-page" style="width:' + pageWidth +'%; ' + '"data-page-index="' + i + '">' + 
-                        '<img class="question-img" src="img/question/q' + imgIndex + '.png">' + 
-                        '<div class="choices">' + 
-                            '<div class="question-content">' + model.question+'</div>'+
-                            '<div class="btn-choice btn-choice-1" data-q-index="1">A ' + model.answer1.qtext + '</div>' + 
-                            '<div class="btn-choice btn-choice-2" data-q-index="2">B ' + model.answer2.qtext + '</div>' + 
-                            '<div class="btn-choice btn-choice-3" data-q-index="3">C ' + model.answer3.qtext + '</div>' + 
-                        '</div>'
+        var html = '<div class="wscn-page" style="width:' + pageWidth + '%; ' + '"data-page-index="' + i + '">' +
+            '<img class="question-img fadeIn" src="img/question/q' + imgIndex + '.png">' +
+            '<div class="choices">' +
+            '<div class="question-content">' + model.question + '</div>' +
+            '<div class="btn-choice btn-choice-1" data-q-index="1">A ' + model.answer1.qtext + '</div>' +
+            '<div class="btn-choice btn-choice-2" data-q-index="2">B ' + model.answer2.qtext + '</div>' +
+            '<div class="btn-choice btn-choice-3" data-q-index="3">C ' + model.answer3.qtext + '</div>' +
+            '</div>'
         pagesDom.append(html);
         imgIndex++;
     }
 
     var curIndex = 0;
     var profit = 0;
+
     function moveNext() {
+
         var tranlateX = 'translateX(-' + pageWidth * (++curIndex) + '%)';
         pagesDom.css(transform, tranlateX);
+        $('.wscn-page[data-page-index="' + curIndex + '"]').addClass('curentPage');
+
     }
+
     $('.wscn-pages').on(touch_start, '.btn-choice', function() {
-        $(this).addClass('btn-choice-select');
-        
+        $(this).addClass('btn-choice-select').siblings().removeClass('btn-choice-select');
+
         var model = models[curIndex];
         var qIndex = $(this).attr('data-q-index');
-        
+
         if (qIndex == '1') {
-            profit += model.answer1.value;
-        } else if (qIndex == '2'){
-            profit += model.answer2.value;
-        }else{
-            profit += model.answer3.value;
+            profit += +model.answer1.value;
+        } else if (qIndex == '2') {
+            profit += +model.answer2.value;
+        } else {
+            profit += +model.answer3.value;
         }
-       
+
         if (curIndex >= pageNum - 1) {
             $('.pages-cover').addClass('hidden');
             $('.result-page').removeClass('hidden');
             preResult();
         }
-        moveNext();
+        setTimeout(function() {
+            moveNext()
+        }, 500)
     })
 
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
     function preResult() {
-        
-        var profitLevel = getProfitLevel(totalProfit);
-        var totalMoney = totalProfit * 10;
-        totalProfit = totalProfit / 100;
-        var html = '你打败了全球<span style="font-size: 18px;font-weight: bold"> ' + overPercent(totalProfit) + '% </span>的人<br/>';
-        html += profitLevel.title;
-        if (profitLevel.img) {
-            html += '<img src="img/result/' + profitLevel.img + '" width=' + profitLevel.width + ' height:' + profitLevel.height + '>'
-        }
-        $('.result-box').html(html)
-            //            $('')
-        var finalNum = Math.abs(totalMoney);
-        var step = Math.round(finalNum / 15);
-        var moneyDom = $('.profit-money');
-        var moneyChangeNum = 1;
-        moneyDom.text(numberWithCommas(step))
-        var interHandler = setInterval(function() {
-            moneyChangeNum++;
-            if (moneyChangeNum == 15) {
-                moneyDom.text(numberWithCommas(finalNum))
-                clearInterval(interHandler);
-                $('#share2friends').fadeIn();
-                return;
-            }
-            moneyDom.text(step * moneyChangeNum);
-        }, 1000 / 15)
 
-        $('#download-bottom').show();
-        $('.profit-percent').text(totalProfit + '%');
-        if (totalProfit < 0) {
-            $('.profit-money').css({
-                color: '#52b54f'
-            })
-            $('.profit-percent').css({
-                color: '#52b54f'
-            })
-            $('#result-msg-img').attr({
-                src: 'img/result/result-msg-loss.png'
-            })
-        }
-    }
+        var profitLevel = getProfitLevel(profit);
+        $('.result-img').attr('src', 'img/result/' + profitLevel.img);
+        $.each(profitLevel.contents, function(index, el) {
+            var $contents = $('<div class="fadeInDown delay-' + index + '">' + el + '</div>')
+            $('.result-content').append($contents)
+        });
 
-    function overPercent(profit) {
-        //            var max = 156.16,
-        //                    mix = -126.12;
-        var percent = Math.round((profit + 126.12) * 100 / (156.16 + 126.12));
-        if (percent >= 99) {
-            percent = 99;
-        }
-        var shareMsg = '我用白拿的10万元穿越去2014年，取得' + profit + '%的收益，打败全球' + percent + '%的人。你也去试试吧。'
-        $('title').text(shareMsg);
-        var data = {
-            app: '',
-            img: 'http://activity.wallstreetcn.com/activities/wscn-static/img/wx-share.png',
-            link: window.location.href,
-            desc: shareMsg,
-            title: '万万没想到的2014年'
-        };
-        wechat('friend', data, function() {})
-        wechat('timeline', data, function() {})
-        return percent;
+        setTimeout(function() {
+            $('.download-btn img').addClass('bounce');
+        }, 2600)
     }
 
     $('.replay').click(function() {
         window.location.reload()
     })
-    setInterval(function() {
-        $('#share2friends').removeClass().addClass('animated swing').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-    }, 1500)
     </script>
     <script>
     var _hmt = _hmt || [];
