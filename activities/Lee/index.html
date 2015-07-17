@@ -71,6 +71,12 @@ $(function() {
     FastClick.attach(document.body);
 });
 
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf('android') == 1) {
+    $('.download-btn').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+} else {
+    $('.download-btn').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+}
 
 var music = document.getElementById("music");
 var imgSrc = $('.lee-bg').attr('src');
@@ -186,6 +192,9 @@ function preResult() {
     setTimeout(function() {
         $('.download-btn img').addClass('bounce');
     }, 2600)
+
+    $('title').html(profitLevel .title)
+
 }
 
 $('.replay').click(function() {
