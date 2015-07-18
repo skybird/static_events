@@ -83,7 +83,7 @@ body {
     margin: 16px 0 0 15px;
     position: relative;
     z-index: 1;
-    line-height: 24px;
+    line-height: 0.24rem;
 }
 
 .question-content {
@@ -227,6 +227,9 @@ body {
     height: 3.14rem;
     top: 0.33rem;
     left: 0.17rem;
+    webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
     position: absolute;
 }
 

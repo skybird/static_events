@@ -5,24 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, maximum-scale=1" />
-    <title></title>
+    <title>李小龙逝世 42 周年，寻找真正功夫传人！</title>
     <link href="main.css" rel="stylesheet" type="text/css">
-    <!-- <link href="animate.min.css" rel="stylesheet" type="text/css"> -->
 </head>
 
 <body>
-    <script>
-    var ua = navigator.userAgent.toLowerCase();
-    if (ua.indexOf('android') != -1 || ua.indexOf("micromessenger") != -1 || ua.indexOf('iphone') != -1) {} else {
-        window.location.href = '2014_pc.html'
-    }
-    </script>
     <img id="share-icon" src="img/share-icon.png" alt="" />
     <div class="first-page">
         <div class="logo"></div>
-        <!-- <div class="first-lee">
-        
-        </div> -->
         <img class='lee-bg' src="img/first-screen/1p_bg.png">
         <img class='lee' src="img/first-screen/lee.png">
         <img class='lee-title1' src="img/first-screen/lee-title1.png">
@@ -71,11 +61,14 @@ $(function() {
     FastClick.attach(document.body);
 });
 
+
 var ua = navigator.userAgent.toLowerCase();
-if (ua.indexOf('android') == 1) {
-    $('.download-btn').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
-} else {
-    $('.download-btn').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+if (/micromessenger/.test(ua)) {
+    $('.download-btn').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
+} else if (/iphone|ipad|ipod/.test(ua)) {
+    $('.download-btn').attr('href','https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+} else if (/android/.test(ua)) {
+    $('.download-btn').attr('href','http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
 }
 
 var music = document.getElementById("music");
@@ -109,7 +102,7 @@ function firstScreen() {
     }, 2600)
     setTimeout(function() {
         $('.crash').addClass('active');
-    }, 5400)
+    }, 5300)
     setTimeout(function() {
         $('#start-btn').addClass('rubberBand');
     }, 4000)
@@ -177,7 +170,7 @@ $('.wscn-pages').on(touch_start, '.btn-choice', function() {
     }
     setTimeout(function() {
         moveNext()
-    }, 500)
+    }, 400)
 })
 
 function preResult() {
@@ -193,7 +186,7 @@ function preResult() {
         $('.download-btn img').addClass('bounce');
     }, 2600)
 
-    $('title').html(profitLevel .title)
+    $('title').html(profitLevel.title)
 
 }
 
