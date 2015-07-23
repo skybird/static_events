@@ -26,22 +26,19 @@
 }
 
 #wscn .related-articles-item-container {
-    margin: 20px 10px 0;
+    margin: 20px auto 0;
     padding: 15px 10px;
     background-color: #323339;
     position: relative;
     display: table;
     text-decoration: none;
+    width: 93.75%;
 }
 
 #wscn .related-articles-img {
     width: 100px;
     height: 80px;
     display: inline-block;
-    border: 1px solid #aaa;
-}
-
-#wscn .related-articles-img {
     border: 1px solid #434343;
 }
 
@@ -51,6 +48,6 @@
     color: #aaa;
     padding-left: 10px;
     vertical-align: middle;
-    display: inline-block;
     display: table-cell;
+    width: 75%;
 }
