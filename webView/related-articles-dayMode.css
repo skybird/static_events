@@ -31,16 +31,13 @@
     background-color: #ededed;
     position: relative;
     display: table;
-}
-
-#wscn .related-articles-img,
-#wscn .related-articles-img img {
-    width: 100px;
-    height: 80px;
-    display: inline-block;
+    text-decoration: none;
 }
 
 #wscn .related-articles-img {
+    width: 100px;
+    height: 80px;
+    display: inline-block;
     border: 1px solid #aaa;
 }
 

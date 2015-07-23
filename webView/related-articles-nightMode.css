@@ -31,13 +31,14 @@
     background-color: #323339;
     position: relative;
     display: table;
+    text-decoration: none;
 }
 
-#wscn .related-articles-img,
-#wscn .related-articles-img img {
+#wscn .related-articles-img {
     width: 100px;
     height: 80px;
     display: inline-block;
+    border: 1px solid #aaa;
 }
 
 #wscn .related-articles-img {
