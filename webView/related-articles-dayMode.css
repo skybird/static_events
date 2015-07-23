@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SimHei", Tahoma, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.related-articles {
+    margin-top: 40px;
+}
+
+.related-articles-title {
+    font-size: 17px;
+    color: #333;
+}
+
+.related-articles-title:before {
+    content: '';
+    border-right: 5px solid #f6a45c;
+    margin-right: 10px;
+    display: inline-block;
+    height: 18px;
+    vertical-align: -3px;
+}
+
+.related-articles-item-container {
+    margin: 20px 10px 0;
+    padding: 15px 10px;
+    background-color: #ededed;
+    position: relative;
+    display: table;
+}
+
+.related-articles-img,
+.related-articles-img img {
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+}
+
+.related-articles-img {
+    border: 1px solid #aaa;
+}
+
+.related-articles-item-title {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    padding-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    display: table-cell;
+}
