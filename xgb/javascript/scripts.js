@@ -7348,22 +7348,23 @@ head.ready(function() {
 
     var countDown = 'http://wallstreetcn.com/operation/counter/get/14?callback=_counter';
 
-    function hasChance() {
-        // get data
-        $.ajax({
-            url: countDown,
-            type: 'get',
-            dataType: 'jsonp',
-            success: function(data) {
-                $('#num').text(data);
-                Default.utils.responsive();
-            },
-            error: function(xhr, textStatus) {
-                // 
-            }
-        })
-    };
-    hasChance()
+    // function hasChance() {
+    //     // get data
+    //     $.ajax({
+    //         url: countDown,
+    //         type: 'get',
+    //         dataType: 'jsonp',
+    //         success: function(data) {
+    //             $('#num').text(data);
+    //             D
+    //         },
+    //         error: function(xhr, textStatus) {
+    //             // 
+    //         }
+    //     })
+    // };
+    // hasChance()
+    Default.utils.responsive();
     Default.utils.links();
     Default.utils.mails();
     Default.utils.forms();

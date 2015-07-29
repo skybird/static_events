@@ -1272,14 +1272,7 @@ summary {
     background-image: url(../images/download-gp-b.png);
 }
 
-.download-a.a {
-    background: url(../images/download-as-d.png) -3000em -3000em no-repeat;
-    z-index: 99;
-}
 
-.download-a.a li {
-    background: url(../images/download-gp-d.png) -3000em -3000em no-repeat;
-}
 
 .download-a.a li a {
     width: 196px;
