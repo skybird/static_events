@@ -16,8 +16,26 @@
     <link rel="stylesheet" media="print" href="styles/print.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
-
+<style>
+    #wechat-tip {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 9999;
+      }
+      #wechat-tip img {
+        max-width: 100%;
+        float: right;
+      }
+</style>
 <body style="  letter-spacing: 2px;">
+    <div id="wechat-tip">
+      <img src="img/wechat-tip.png" alt="">
+    </div>
     <div id="root">
         <header id="top">
             <h1><a href="javascript:;" accesskey="h"><img src="img/logo.png" alt="Placeholder" width="257" height="81"></a></h1>
@@ -41,8 +59,8 @@
             <figure class="mobile-a"><div class='fan'></div></figure>
             <h2>选股宝，选到就赚到</h2>
             <ul class="download-a a">
-                <li class="as"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
-                <li class="gp"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
+                <li class="as icon1"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
+                <li class="gp icon1"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
             </ul>
             <div class="qr-code">
                 <img src="img/qr-code.png" height="150" width="150">
@@ -155,8 +173,8 @@
                     <p>史上最强选股势力，即将登陆！</p>
                 </header>
                 <ul class="download-a a">
-                    <li class="as yipai"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
-                    <li class="gp yipai"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
+                    <li class="as yipai icon1"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
+                    <li class="gp yipai icon1"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
                 </ul>
                 <figure class="sticky-c"><img src="img/xgb.png" alt="Placeholder" width="678" height="585"></figure>
                 <!-- <div class="panContainer">
@@ -175,6 +193,7 @@
     </div>
     <script>
     head.load('javascript/jquery.js', 'javascript/scripts.js', 'javascript/mobile.js')
+    
     </script>
 </body>
 <script>
