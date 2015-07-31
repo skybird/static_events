@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>选股宝</title>
+    <title>10000人抢破头！神器治愈选股纠结症</title>
     <meta name="description" content="选股宝、选到就赚到！ 选股宝是砖块金融出品的一款简单易用的选股、炒股软件，最快速获知市场投资热点，洞悉热点背后的驱动事件及与其相关的个股；100多位顶级分析师为您制定策略，精选买卖点……选股，就是那么简单。">
     <meta name="keywords" content="选股宝，股票，分析师、推票、股市，炒股，炒股软件，股票软件，大盘，股票行情，股票入门，股票怎么玩，炒股入门知识，赚钱，炒股软件哪个好，新手炒股快速入门">
     <meta name="HandheldFriendly" content="true">
@@ -17,24 +17,35 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <style>
-    #wechat-tip {
-        display: none;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 9999;
-      }
-      #wechat-tip img {
-        max-width: 100%;
-        float: right;
-      }
+#wechat-tip {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#wechat-tip img {
+    max-width: 100%;
+    float: right;
+}
+
+#share-icon {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -1000px;
+    z-index: -1;
+}
 </style>
+
 <body style="  letter-spacing: 2px;">
+    <img id="share-icon" src="img/share.png" alt="" />
     <div id="wechat-tip">
-      <img src="img/wechat-tip.png" alt="">
+        <img src="img/wechat-tip.png" alt="">
     </div>
     <div id="root">
         <header id="top">
@@ -56,11 +67,17 @@
             </nav>
         </header>
         <article id="welcome">
-            <figure class="mobile-a"><div class='fan'></div></figure>
+            <figure class="mobile-a">
+                <div class='fan'></div>
+            </figure>
             <h2>选股宝，选到就赚到</h2>
             <ul class="download-a a">
-                <li class="as icon1"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
-                <li class="gp icon1"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
+                <li class="as icon1">
+                    <a href="https://itunes.apple.com/app/id993530278"></a>
+                </li>
+                <li class="gp icon1">
+                    <a href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a>
+                </li>
             </ul>
             <div class="qr-code">
                 <img src="img/qr-code.png" height="150" width="150">
@@ -97,7 +114,7 @@
                 </header>
                 <figure class="sticky-b"><img src="img/phone.png" alt="Placeholder" width="529" height="738"></figure>
             </article>
-            <article >
+            <article>
                 <header class="heading-a">
                     <h3><span class="small">FEATURES</span> <span class="strong">策略</span> — 懵在 “股” 里，也能炒得嚣张</h3>
                 </header>
@@ -173,8 +190,12 @@
                     <p>史上最强选股势力，即将登陆！</p>
                 </header>
                 <ul class="download-a a">
-                    <li class="as yipai icon1"><a  href="https://itunes.apple.com/app/id993530278"></a></li>
-                    <li class="gp yipai icon1"><a  href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a></li>
+                    <li class="as yipai icon1">
+                        <a href="https://itunes.apple.com/app/id993530278"></a>
+                    </li>
+                    <li class="gp yipai icon1">
+                        <a href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"></a>
+                    </li>
                 </ul>
                 <figure class="sticky-c"><img src="img/xgb.png" alt="Placeholder" width="678" height="585"></figure>
                 <!-- <div class="panContainer">
@@ -193,7 +214,6 @@
     </div>
     <script>
     head.load('javascript/jquery.js', 'javascript/scripts.js', 'javascript/mobile.js')
-    
     </script>
 </body>
 <script>
