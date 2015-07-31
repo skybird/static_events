@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SimHei", Tahoma, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#wscn .related-articles {
+    margin-top: 40px;
+}
+
+#wscn .related-articles-title {
+    font-size: 17px;
+}
+
+#wscn .related-articles-title:before {
+    content: '';
+    border-right: 5px solid #f6a45c;
+    margin-right: 10px;
+    display: inline-block;
+    height: 18px;
+    vertical-align: -3px;
+}
+
+#wscn .related-articles-item-container {
+    margin: 20px auto 0;
+    padding: 15px 10px;
+    display: table;
+    text-decoration: none;
+    width: 93.75%;
+    position: relative;
+}
+
+#wscn .related-articles-img {
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+    
+}
+
+#wscn .related-articles-item-title {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 10px;
+    vertical-align: middle;
+    display: table-cell;
+    width: 75%;
+}
