@@ -206,7 +206,8 @@
             <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
             <!-- Include all compiled plugins (below), or include individual files as needed -->
             <script src="new/js/bootstrap.min.js"></script>
-            // <script type="text/javascript">
+            //
+            <script type="text/javascript">
             // var ua = navigator.userAgent.toLowerCase();
 
             // $(".icon1").click(function() {
@@ -220,7 +221,8 @@
             //         $("#wechat-tip").fadeIn()
             //     };
             // });
-            // </script>
+            //
+            </script>
             <script>
             var _hmt = _hmt || [];
             (function() {
@@ -258,36 +260,48 @@
                 var ua = navigator.userAgent.toLowerCase();
 
                 var fromChannel;
-                var channelMap = [
-                    'ngsem1',
-                    'ngsem2',
-                    'ngsem3',
-                    'ngsem4',
-                    'ngsem5'
-                ];
+                var channelMap = {
+                    'ngsem30': '30',
+                    'ngsem31': '31',
+                    'ngsem32': '32',
+                    'ngsem33': '33',
+                    'ngsem34': '34'
+                };
 
 
-                if ($.inArray(channelName, channelMap) >= 0) {
+                // if ($.inArray(channelName, channelMap) >= 0) {
+                //     _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
+                //     fromChannel=channelName;
+                // }
+                if (channelName in channelMap) {
+                    channelName = channelMap[channelName];
                     _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
-                    fromChannel=channelName;
+                    fromChannel = channelName;
                 }
 
-                fromChannel?fromChannel='?'+fromChannel:fromChannel='';
+                fromChannel ? fromChannel = fromChannel : fromChannel = '';
                 if (/micromessenger/.test(ua)) {
                     $('.moblie-android').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
                     $('.moblie-app').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
                 } else if (/iphone|ipad|ipod/.test(ua)) {
-                   $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+                    $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
                 } else if (/android/.test(ua)) {
-                    $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk'+fromChannel);
-                    $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk'+fromChannel);
-                } 
+                    if (!fromChannel) {
+                        $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+                        $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+
+                    } else {
+                        $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
+                        $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
+                    }
+
+                }
 
                 $('.moblie-app').on('click', function(event) {
-                  _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
+                    _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
                 });
                 $('.moblie-android').on('click', function(event) {
-                  _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
+                    _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
                 });
             })
 
