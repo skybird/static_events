@@ -272,15 +272,15 @@
                     fromChannel=channelName;
                 }
 
-
+                fromChannel?fromChannel='?'+fromChannel:fromChannel='';
                 if (/micromessenger/.test(ua)) {
                     $('.moblie-android').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
                     $('.moblie-app').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
                 } else if (/iphone|ipad|ipod/.test(ua)) {
                    $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
                 } else if (/android/.test(ua)) {
-                    $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk?'+fromChannel);
-                    $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk?'+fromChannel);
+                    $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk'+fromChannel);
+                    $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk'+fromChannel);
                 } 
 
                 $('.moblie-app').on('click', function(event) {
