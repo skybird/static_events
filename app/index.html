@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,260 +12,299 @@
     <link href="new/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="new/css/style.css">
     <style type="text/css">
-      #wechat-tip {
+    #wechat-tip {
         display: none;
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0,0,0,0.5);
-      }
-      #wechat-tip img {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #wechat-tip img {
         max-width: 100%;
         float: right;
-      }
-      #C{
+    }
+    
+    #C {
         position: absolute;
         top: 170px;
         right: 43%;
-      }
-      .carousel-caption{
+    }
+    
+    .carousel-caption {
         padding-bottom: 0px;
-      }
+    }
     </style>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-  <div class=" bigbox">
+</head>
 
-    <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://wallstreetcn.com/">
-        <img src="new/img/logo@2x.png" alt="">
-      </a>
-    </div>
+<body>
+    <div class=" bigbox">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://wallstreetcn.com/">
+                        <img src="new/img/logo@2x.png" alt="">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">华尔街见闻APP</a></li>
+                        <li class="noact"><a href="http://wallstreetcn.com/app/livenews.html">实时新闻APP</a></li>
+                        <li><a href="http://wallstreetcn.com/app/gold.html">黄金头条APP</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="http://wallstreetcn.com/">回到首页</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="visible-xs-block back">
+            <div class="icon"></div>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="bottom:-5px">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div id="A" class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="bigbanner1">
+                        <div class="phone1 facet_sidebar">
+                            <div id="B" class="link hidden-xs">
+                                <a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
+                                <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="bigbanner2">
+                        <div class="phone2 facet_sidebar">
+                            <div id="B" class="link hidden-xs">
+                                <a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8">
+                                    <img src="new/img/iphone.png" alt="" width="" />
+                                </a>
+                                <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="bigbanner3">
+                        <div class="phone3 facet_sidebar">
+                            <div id="B" class="link hidden-xs">
+                                <a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
+                                <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="bigbanner4">
+                        <div class="phone4 facet_sidebar">
+                            <div id="C" class="link hidden-xs">
+                                <a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
+                                <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <div class="leftarrow"><img src="new/img/left.png" alt="" width="" /></div>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <div class="leftarrow"><img src="new/img/right.png" alt="" width="" /></div>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="longbar container visible-xs-block">
+            <a href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8" class="btn btn-primary btn-lg1 moblie-app " role="button">
+                <div class="icon1"></div>
+            </a>
+            <a href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk" class="btn btn-primary btn-lg2 moblie-android " role="button">
+                <div class="icon2"></div>
+            </a>
+        </div>
+        <div class="bar">
+            <div class="container">
+                <h3>APP专享福利不容错过:</h3></div>
+        </div>
+        <div class="container">
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="box">
+                        <div class="custom-img1"></div>
+                        <h4>每月非农数据竞猜，见闻喊你来拿奖 [常规活动]</h4>
+                        <p>每月的月末，美国非农数据发布的前一周，我们都会向你发出邀请，来竞猜这一全球瞩目的经济数据，为我们的“见闻非农指数”添砖加瓦。</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="box">
+                        <div class="custom-img2"></div>
+                        <h4>华尔街见闻线下沙龙活动火热报名中 [常规活动]</h4>
+                        <p>华尔街见闻俱乐部会员有机会优先参加每月一次的由海际会与华尔街见闻联合主办的主题沙龙，对话中国最顶尖、最权威的财经意见领袖。</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="box">
+                        <div class="custom-img3"></div>
+                        <h4>华尔街之狼巡讲2800元门票0元抢 [非定期福利]</h4>
+                        <p>华尔街之狼来沪巡讲，2800元的门票回馈App用户，10位幸运者在7月亲历这位华尔街巨骗在台上的激情。更多机会，只在见闻App客户端.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="box">
+                        <div class="custom-img4"></div>
+                        <h4>上海吃货周，霸王餐吃到顶级餐厅 [非定期福利]</h4>
+                        <p>带你格调带你飞，带你征服最性感吃货妞儿，上海餐厅周向App用户免费送顶级餐厅券,拥有见闻App，在投资赚钱之余，享受生活big滋味。</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="longbar2">
+                    <div class=" grid">下载APP参与最新活动</div>
+                </div>
+            </div>
+            <div id="wechat-tip">
+                <img src="img/wechat-tip.png?v=1.10" alt="">
+            </div>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="new/js/bootstrap.min.js"></script>
+            // <script type="text/javascript">
+            // var ua = navigator.userAgent.toLowerCase();
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">华尔街见闻APP</a></li>
-        <li class="noact"><a href="http://wallstreetcn.com/app/livenews.html">实时新闻APP</a></li>
-        <li><a href="http://wallstreetcn.com/app/gold.html">黄金头条APP</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://wallstreetcn.com/">回到首页</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+            // $(".icon1").click(function() {
+            //     if (/micromessenger/.test(ua)) {
+            //         $("#wechat-tip").fadeIn()
+            //     };
+            // });
 
- <div class="visible-xs-block back"><div class="icon"></div></div>
+            // $(".icon2").click(function() {
+            //     if (/micromessenger/.test(ua)) {
+            //         $("#wechat-tip").fadeIn()
+            //     };
+            // });
+            // </script>
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+            <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-19303398-2', 'auto');
+            ga('send', 'pageview');
+            </script>
+            <p style="text-align:center">
+                <script type="text/javascript">
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1253878554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253878554%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+            </p>
+            <script>
+            $(function() {
+                var url = window.location.href;
+                var channelName = url.split('=')[1];
+                var ua = navigator.userAgent.toLowerCase();
 
-<div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators" style="bottom:-5px">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div  id="A" class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div   class="bigbanner1"><div  class="phone1 facet_sidebar">
-      <div id="B"class="link hidden-xs"><a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
-       <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a> </div>
-      </div></div>
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-    <div class="item">
-      <div class="bigbanner2"><div class="phone2 facet_sidebar">
-      <div id="B"class="link hidden-xs">
-      <a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8">
-        <img src="new/img/iphone.png" alt="" width="" />
-        </a>
-       <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a>
-       </div>
-      </div></div>
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-    <div class="item">
-      <div class="bigbanner3"><div class="phone3 facet_sidebar">
-      <div id="B"class="link hidden-xs"><a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
-       <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a> </div>
-      </div></div>
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-    <div class="item">
-      <div class="bigbanner4"><div class="phone4 facet_sidebar">
-        <div id="C"class="link hidden-xs"><a class="iphonebtn" href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8"><img src="new/img/iphone.png" alt="" width="" /></a>
-       <a class="androidbtn" href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk"><img src="new/img/android.png" alt="" width="" /></a> </div>
-      </div></div>
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-
-    
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <div class="leftarrow"><img src="new/img/left.png" alt="" width="" /></div>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <div class="leftarrow"><img src="new/img/right.png" alt="" width="" /></div>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+                var fromChannel;
+                var channelMap = [
+                    'ngsem1',
+                    'ngsem2',
+                    'ngsem3',
+                    'ngsem4',
+                    'ngsem5'
+                ];
 
 
- <div class="longbar container visible-xs-block">
-    <a href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8" class="btn btn-primary btn-lg1 moblie-app " role="button">
-      <div class="icon1"></div>
-      </a>
-    <a href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk" class="btn btn-primary btn-lg2 moblie-android " role="button">
-      <div class="icon2"></div>
-      </a>
-
-  </div>
-
-    <div class="bar">
-      <div class="container"><h3>APP专享福利不容错过:</h3></div>
-    </div>
+                if ($.inArray(channelName, channelMap) >= 0) {
+                    _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
+                    fromChannel=channelName;
+                }
 
 
+                if (/micromessenger/.test(ua)) {
+                    $('.moblie-android').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
+                    $('.moblie-app').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
+                } else if (/iphone|ipad|ipod/.test(ua)) {
+                   $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+                } else if (/android/.test(ua)) {
+                    $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk?'+fromChannel);
+                    $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk?'+fromChannel);
+                } 
 
-  <div  class="container">
-    <!-- Columns are always 50% wide, on mobile and desktop -->
-    <div class="row">
-  <div class="col-sm-6 col-md-3">
-    <div class="box">
-      <div class="custom-img1"></div>
-      <h4>每月非农数据竞猜，见闻喊你来拿奖 [常规活动]</h4>
-      <p>每月的月末，美国非农数据发布的前一周，我们都会向你发出邀请，来竞猜这一全球瞩目的经济数据，为我们的“见闻非农指数”添砖加瓦。</p>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="box">
-      <div class="custom-img2"></div>
-      <h4>华尔街见闻线下沙龙活动火热报名中 [常规活动]</h4>
-      <p>华尔街见闻俱乐部会员有机会优先参加每月一次的由海际会与华尔街见闻联合主办的主题沙龙，对话中国最顶尖、最权威的财经意见领袖。</p>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="box">
-      <div class="custom-img3"></div>
-      <h4>华尔街之狼巡讲2800元门票0元抢 [非定期福利]</h4>
-      <p>华尔街之狼来沪巡讲，2800元的门票回馈App用户，10位幸运者在7月亲历这位华尔街巨骗在台上的激情。更多机会，只在见闻App客户端.</p>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-3">
-    <div class="box">
-      <div class="custom-img4"></div>
-      <h4>上海吃货周，霸王餐吃到顶级餐厅 [非定期福利]</h4>
-      <p>带你格调带你飞，带你征服最性感吃货妞儿，上海餐厅周向App用户免费送顶级餐厅券,拥有见闻App，在投资赚钱之余，享受生活big滋味。</p>
-    </div>
-  </div>
-    </div>
-  <div>
-
-    <div class="longbar2">
-      <div class=" grid">下载APP参与最新活动</div>
-    </div>
-  </div>
-
-    <div id="wechat-tip">
-      <img src="img/wechat-tip.png?v=1.10" alt="">
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="new/js/bootstrap.min.js"></script>
+                $('.moblie-app').on('click', function(event) {
+                  _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
+                });
+                $('.moblie-android').on('click', function(event) {
+                  _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
+                });
+            })
 
 
-    <script type="text/javascript">
-      var ua = navigator.userAgent.toLowerCase();
-      
-      $(".icon1").click(function(){
-          if (/micromessenger/.test(ua)) {
-               $("#wechat-tip").fadeIn()
-          };
-      });
+            // function fBrowserRedirect() {
+            //     var sUserAgent = navigator.userAgent.toLowerCase();
+            //     var isIphone = sUserAgent.match(/iphone/i) == "iphone";
+            //     var isAndroid = sUserAgent.match(/android/i) == "android";
+            //     if (isIphone) {
+            //         $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
+            //     }
+            //     if (isAndroid) {
+            //         $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+            //     }
+            // }
+            // fBrowserRedirect();
+            </script>
+</body>
 
-      $(".icon2").click(function(){
-          if (/micromessenger/.test(ua)) {
-               $("#wechat-tip").fadeIn()
-          };
-      });
-
-    </script>
-
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <script>
-          (function (i, s, o, g, r, a, m) {
-              i['GoogleAnalyticsObject'] = r;
-              i[r] = i[r] || function () {
-                  (i[r].q = i[r].q || []).push(arguments)
-              }, i[r].l = 1 * new Date();
-              a = s.createElement(o),
-                  m = s.getElementsByTagName(o)[0];
-              a.async = 1;
-              a.src = g;
-              m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-          ga('create', 'UA-19303398-2', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <p style="text-align:center">
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253878554'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253878554%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    </p>
-    <script>
-        function fBrowserRedirect(){
-         var sUserAgent = navigator.userAgent.toLowerCase();
-         var isIphone = sUserAgent.match(/iphone/i) == "iphone";
-         var isAndroid = sUserAgent.match(/android/i) == "android";
-         if(isIphone){ 
-              $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
-           }
-         if(isAndroid){
-              $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
-          }
-        }
-        fBrowserRedirect();
-</script>
-  </body>
 </html>
