@@ -285,16 +285,16 @@
                     $('.moblie-app').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721');
                 } else if (/iphone|ipad|ipod/.test(ua)) {
                     $('.moblie-android').attr('href', 'https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8');
-                } else if (/android/.test(ua)) {
+                } else {
                     if (!fromChannel) {
-                        $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
+                        // $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
                         $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk');
-
+                        $('.androidbtn').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk')
                     } else {
-                        $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
+                        // $('.moblie-app').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
                         $('.moblie-android').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
+                        $('.androidbtn').attr('href', 'http://wscn-download.qiniudn.com/wallstreetcn_3.4.2_' + fromChannel + '.apk');
                     }
-
                 }
 
                 $('.moblie-app').on('click', function(event) {
