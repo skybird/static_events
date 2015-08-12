@@ -275,16 +275,16 @@
                 // }
                 if (channelName in channelMap) {
                     channelName = channelMap[channelName];
-                    _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
-                    _gaq.push(['_trackEvent', 'view0load', 'app-landing-page', channelName]);
+                    // _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
+                    // _gaq.push(['_trackEvent', 'view0load', 'app-landing-page', channelName]);
                     $('.moblie-app').on('click', function(event) {
-                    _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
-                    _gaq.push(['_trackEvent', 'click.ios', 'app-landing-page', channelName]);
-                });
-                $('.moblie-android').on('click', function(event) {
-                    _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
-                    _gaq.push(['_trackEvent', 'click.android', 'app-landing-page',channelName]);
-                });
+                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
+                        _gaq.push(['_trackEvent', 'click.ios', 'app-landing-page', channelName]);
+                    });
+                    $('.moblie-android').on('click', function(event) {
+                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
+                        _gaq.push(['_trackEvent', 'click.android', 'app-landing-page', channelName]);
+                    });
                     fromChannel = channelName;
                 }
 
