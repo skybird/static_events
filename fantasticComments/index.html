@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no" />
+    <title>华尔街见闻</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SimHei", Tahoma, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.fantasticLogo {
+    width: 113px;
+    height: 78px;
+    margin: 50px auto 30px;
+    display: block;
+}
+
+.wscnLogo {
+    width: 80px;
+    height: 80px;
+    margin: 30px auto;
+    display: block;
+}
+
+.content {
+    color: rgb(85, 85, 85);
+    font-family: Tahoma, Arial, Helvetica, 'Microsoft Yahei', 微软雅黑, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.longbar {
+    margin-top: 30px;
+    height: 72px;
+    background-color: #ffffff;
+}
+
+.btn-lg1 {
+    width: 39%;
+    height: 48px;
+    background-color: #DD443E;
+    margin: 18px 0px 18px 30px;
+}
+
+.btn-lg2 {
+    width: 39%;
+    height: 48px;
+    background-color: #1982CF;
+    margin: 18px 30px 18px 0px;
+    float: right;
+}
+
+.icon2 {
+    background: url("img/android@2x.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    background-size: 100px 30px;
+    float: left;
+    height: 50px;
+    width: 100%;
+}
+
+.icon1 {
+    background: url("img/iphone@2x.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    background-position: center center;
+    background-size: 100px 30px;
+    float: left;
+    height: 50px;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+    color: #fff;
+    border: 0px;
+    font-size: 23px;
+    padding-top: 0px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <img class='fantasticLogo' src="img/fantastic-logo.png">
+        <div class="content">您的华尔街见闻APP版本
+            <br/>太旧了
+            <br/>想看更多神评论请升级</div>
+        <div class="longbar container visible-xs-block">
+            <a id='iosBtn' href="https://itunes.apple.com/cn/app/hua-er-jie-jian-wen/id738227477?mt=8" class="btn btn-lg1 " role="button">
+                <div class="icon1"></div>
+            </a>
+            <a id='androidBtn' href="http://wscn-download.qiniudn.com/wallstreetcn_wscn.apk" class="btn btn-lg2  " role="button">
+                <div class="icon2"></div>
+            </a>
+        </div>
+        <img class='wscnLogo' src="img/wscn-logo.png">
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?c9477ef9d8ebaa27c94f86cc3f505fa5";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+(function() {
+    var ua = navigator.userAgent.toLowerCase();
+    var ios = document.getElementById('iosBtn');
+    var android = document.getElementById('androidBtn');
+    if (/micromessenger/.test(ua)) {
+        ios.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721';
+        android.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.news&g_f=992721';
+    }
+})();
+</script>
+
+</html>
