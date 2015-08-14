@@ -279,11 +279,19 @@
                     // _gaq.push(['_trackEvent', 'view0load', 'app-landing-page', channelName]);
                     $('.moblie-app').on('click', function(event) {
                         _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
-                        _gaq.push(['_trackEvent', 'click.ios', 'app-landing-page', channelName]);
+                        ga('send', 'iosClick', {
+                            eventCategory: 'click.ios',
+                            eventAction: 'app-landing-page',
+                            eventLabel: channelName,
+                        });
                     });
                     $('.moblie-android').on('click', function(event) {
                         _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
-                        _gaq.push(['_trackEvent', 'click.android', 'app-landing-page', channelName]);
+                        ga('send', 'androidClick', {
+                            eventCategory: 'click.android',
+                            eventAction: 'app-landing-page',
+                            eventLabel: channelName,
+                        });
                     });
                     fromChannel = channelName;
                 }
