@@ -268,29 +268,27 @@
                     'ngsem34': '34'
                 };
 
-
                 // if ($.inArray(channelName, channelMap) >= 0) {
                 //     _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
                 //     fromChannel=channelName;
                 // }
                 if (channelName in channelMap) {
                     channelName = channelMap[channelName];
-                    // _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'view', channelName]);
-                    // _gaq.push(['_trackEvent', 'view0load', 'app-landing-page', channelName]);
+                    // _hmt.push(['_trackEvent', 'app-landing-page', 'load', 'pageview']);
                     $('.moblie-app').on('click', function(event) {
-                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.ios', channelName]);
-                        ga('send', 'iosClick', {
-                            eventCategory: 'click.ios',
-                            eventAction: 'app-landing-page',
-                            eventLabel: channelName,
+                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'channelName']);
+                        ga('send', 'event', {
+                            eventCategory: 'app-landing-page',
+                            eventAction: 'click',
+                            eventLabel: 'channelName',
                         });
                     });
                     $('.moblie-android').on('click', function(event) {
-                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'click.android', channelName]);
-                        ga('send', 'androidClick', {
-                            eventCategory: 'click.android',
-                            eventAction: 'app-landing-page',
-                            eventLabel: channelName,
+                        _hmt.push(['_trackEvent', 'app-landing-page', 'click', 'channelName']);
+                        ga('send', 'event', {
+                            eventCategory: 'app-landing-page',
+                            eventAction: 'click',
+                            eventLabel: 'channelName',
                         });
                     });
                     fromChannel = channelName;
