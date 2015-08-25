@@ -6,32 +6,37 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <link href="styles/xgb.css" rel="stylesheet" >
-    <!-- <link href="styles/animate.min.css" rel="stylesheet"> -->
+     <link href="styles/animate.min.css" rel="stylesheet">
     <title>找到十倍股 致敬彼得·林奇</title>
 </head>
 <body>
     <div id="fullpage">
         <div class="section" id="section0">
-            <h2 class="title-firstline">顶级基金经理投资策略分享</h2>
-            <h2 class="title-secondline">找到十倍股 致敬彼得·林奇</h2>
-            <div class="address-time">
-                <div class="data">2015.08.30</div>
-                <div class="time">13:00 - 17:00</div>
-                <address class="road">上海市闸北区彭江路602号</address>
-                <address class="detail">大宁德必易园E座2F 蒲公英会议中心</address>
-            </div>
+            <h2 class="title-firstline">W Club年度巨献</h2>
+            <h2 class="title-secondline">顶级基金经理投资策略分享会</h2>
+            <div class="peter-lynch-first"></div>
             <div class="wallst-logo">
                 <img src="imgs/wallstlogo.png" alt="" width="40%"/>
             </div>
             <div class="arrow">
-                <img src="imgs/arrow.png" alt="" width="45px" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section1">
-            <div class="peter-lynch"></div>
+            <div class="voice">
+                <p class="voice-p1">TENBAGGER画外音:<br /></p>
+                <p class="voice-p2">"熊市中视我如草芥？No No No！<br />我可以在乱世中助你成为大股神！"<br /></p>
+            </div>
+            <div class="content-wrap">
+                <p class="content">
+                    2015年的股市起伏不定，财富版图时刻都在重新划分。
+                    上半年“闭着眼睛随便买一只股票都能翻倍”的策略，已经成为流星划过天际消失不见了。在“危机”中，有人看到“危”，也有人看到“机”。
+                    我们请来四位顶级基金经理来分享他们的策略和经验，看看谁能找到下一支“十倍股”……
+                </p>
+            </div>
             <div class="peter-face"></div>
             <div class="arrow">
-                <img src="imgs/arrow.png" width="45px" alt="" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section2">
@@ -46,7 +51,7 @@
                 <p class="w-club">W Club</p>
             </div>
             <div class="arrow">
-                <img src="imgs/arrow.png" width="45px" alt="" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section3">
@@ -61,7 +66,7 @@
                 <p class="w-club">W Club</p>
             </div>
             <div class="arrow">
-                <img src="imgs/arrow.png" width="45px" alt="" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section4">
@@ -76,7 +81,7 @@
                 <p class="w-club">W Club</p>
             </div>
             <div class="arrow">
-                <img src="imgs/arrow.png" width="45px" alt="" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section5">
@@ -91,7 +96,7 @@
                 <p class="w-club">W Club</p>
             </div>
             <div class="arrow">
-                <img src="imgs/arrow.png" width="45px" alt="" class="arrow-img"/>
+                <img src="imgs/nextpage.gif" alt="" width="35px" class="arrow-img"/>
             </div>
         </div>
         <div class="section" id="section6">
@@ -101,6 +106,12 @@
                 <div class="sign-up-text">W Club<br />年度顶级基金经理投资策略分享会</div>
                 <div class="btn">
                     <a href="http://event.31huiyi.com/117599207/index">我要报名</a>
+                </div>
+                <div class="address-time">
+                    <div class="data">2015.08.30</div>
+                    <div class="time">13:00 - 17:00</div>
+                    <address class="road">上海市闸北区彭江路602号</address>
+                    <address class="detail">大宁德必易园E座2F 蒲公英会议中心</address>
                 </div>
             </div>
         </div>
@@ -114,8 +125,21 @@
             verticalCentered: false,
             loopHorizontal: false,
             scrollingSpeed: 700,
+            afterLoad:function(anchorLink, index){
+                var loadedSection = $(this);
+                if(index==2){
+                    $(".voice").fadeIn('fast').addClass('animated bounceIn');
+                    setTimeout(function(){
+                        $('.voice').addClass('bounceOut');
+                    },2500);
+                    setTimeout(function(){
+                        $('.content-wrap').fadeIn('fast').addClass('animated rollIn');
+                    },3200)
+                }
+            }
         });
-       $('.arrow-img').addClass('animated infinite bounce');
+       //$('.arrow-img').addClass('animated infinite bounce');
+        //$(".voice").addClass('animated bounceIn')
 </script>
 </body>
 </html>
