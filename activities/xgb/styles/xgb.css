@@ -84,7 +84,7 @@ h2,address,img,body,p{
     font-size: 12px;
 }
 .date,.time,address{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .address-time{
     margin-top: 25px;
@@ -169,7 +169,7 @@ h2,address,img,body,p{
 }
 .peter{
     position: absolute;
-    top: 29%;
+    top: 30%;
     left: 20%;
     background: url("../imgs/peter.png") no-repeat;
     -webkit-background-size: contain;
@@ -179,7 +179,7 @@ h2,address,img,body,p{
 }
 .sign-up{
     position: absolute;
-    top: 45%;
+    top: 46%;
     font-size: 15px;
     left: 50%;
     margin-left: -90px;
