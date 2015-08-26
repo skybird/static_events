@@ -46,7 +46,7 @@ h2,address,img,body,p{
 .title-secondline{
     position: absolute;
     text-align: center;
-    top: 58%;
+    top: 59%;
     font-size: 15px;
     left: 50%;
     margin-left: -75px;
@@ -87,10 +87,7 @@ h2,address,img,body,p{
     margin-top: 15px;
 }
 .address-time{
-    position: absolute;
-    bottom: -80%;
-    left: 50%;
-    margin-left: -100px;
+    margin-top: 25px;
 }
 .wallst-logo img{
     position: absolute;
@@ -192,7 +189,7 @@ h2,address,img,body,p{
     line-height: 25px;
 }
 .btn{
-    margin-top: 20px;
+    margin-top: 25px;
     width: 100%;
 }
 .btn a{
