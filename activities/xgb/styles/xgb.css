@@ -49,12 +49,12 @@ h2,address,img,body,p{
     top: 58%;
     font-size: 15px;
     left: 50%;
-    margin-left: -98px;
+    margin-left: -75px;
 }
 .voice{
     display: none;
     position: absolute;
-    top: 15%;
+    top: 12%;
     left: 50%;
     margin-left: -115px;
 }
@@ -76,7 +76,7 @@ h2,address,img,body,p{
     padding: 0 30px;
     line-height: 16px;
     max-width: 320px;
-    top: 15%;
+    top: 12%;
     margin: 0 auto;
     display: none;
 }
@@ -88,9 +88,9 @@ h2,address,img,body,p{
 }
 .address-time{
     position: absolute;
-    bottom: -75%;
+    bottom: -80%;
     left: 50%;
-    margin-left: -95px;
+    margin-left: -100px;
 }
 .wallst-logo img{
     position: absolute;
@@ -185,14 +185,14 @@ h2,address,img,body,p{
     top: 45%;
     font-size: 15px;
     left: 50%;
-    margin-left: -118px;
+    margin-left: -90px;
 }
 .sign-up-text{
     margin: 10px 0;
     line-height: 25px;
 }
 .btn{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
 }
 .btn a{
