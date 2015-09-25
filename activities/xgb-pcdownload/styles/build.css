@@ -10,7 +10,7 @@ h1,h3,h2{
     color: #ffffff;
     font-weight: normal;
 }
-ul{
+ul,ol{
     list-style-type: none;
 }
 .container{
@@ -221,4 +221,141 @@ ul{
     position: absolute;
     left: 80px;
     bottom: 120px;
+}
+.page-five{
+    background: rgb(240,242,245);
+}
+.strategy{
+    text-align: center;
+    padding-top: 155px;
+}
+.strategy-title{
+    font-size: 60px;
+    padding-bottom: 52px;
+}
+.strategy-title-h3{
+    font-size: 18px;
+    padding-bottom: 106px;
+}
+.term{
+    margin-left: 180px;
+    padding-bottom: 248px;
+}
+.second-term{
+    margin: 0 15px;
+}
+.first-term,.second-term,.third-term{
+    float: left;
+    background: #ffffff;
+    height: 400px;
+    width: 30%;
+}
+.page-five h4{
+    height: 70px;
+    line-height: 70px;
+    background: rgb(160, 170, 180);
+    padding-left: 24px;
+    color: #ffffff;
+    font-weight: normal;
+}
+.term-topic{
+    font-size: 24px;
+    margin: 64px 40px 74px 40px;
+}
+.main-speaker{
+    font-size: 18px;
+}
+.main-speaker-title,.topic{
+    color: #999999;
+    font-size: 12px;
+}
+.page-six h2,.page-six h3{
+    color: #333;
+}
+.user{
+    text-align: center;
+    margin-bottom: 110px;
+}
+.user-say{
+    font-size: 60px;
+    margin-top: 110px;
+    margin-bottom: 51px;
+}
+.user-num{
+    margin-bottom: 110px;
+}
+.slider-list li{
+    float: left;
+    width: 900px;
+    background: rgb(240,242,245);
+    margin-top: 50px;
+}
+.slider-list li img,.user-info{
+    float: left;
+}
+.slider{
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    height: 250px;
+    overflow: hidden;
+}
+.slider-list{
+    width: 4800px;
+    height: 250px;
+    background: rgb(240,242,245);
+}
+.user-info{
+    width: 500px;
+    text-align: left;
+}
+.slider-list img{
+    margin-left: 100px;
+}
+.arrow-left,.arrow-right{
+    color: #ffa023;
+    font-size: 80px;
+    text-decoration: none;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+    font-weight: lighter;
+}
+.user-name{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-bottom: 43px;
+}
+.evaluation{
+    font-size: 18px;
+    margin-left: 20px;
+    line-height: 30px;
+}
+.arrow-left{
+    left: 20px;
+    top: 90px;
+}
+.arrow-right{
+    top: 90px;
+    right: 20px;
+}
+.dot-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -105px;
+}
+.dot-btn-li{
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    background: #ffffff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.active{
+    background: #ffa023;
 }
