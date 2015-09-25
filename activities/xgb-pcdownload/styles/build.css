@@ -56,22 +56,22 @@ ul{
 .navigator a{
     color: #ffffff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
 }
 .main-title{
-    font-size: 36px;
+    font-size: 72px;
 }
 .main-title-line-two{
     margin-top: 20px;
 }
 .num{
-    font-size: 60px;
+    font-size: 120px;
 }
 .sub-title{
     margin-top: 54px;
 }
 .subtitle-right,.subtitle-left{
-    font-size: 8px;
+    font-size: 16px;
     float: left;
     margin-top: 80px;
 }
@@ -85,11 +85,11 @@ ul{
     left: 50%;
     top: 215px;
     text-align: center;
-    margin-left: -308px;
+    margin-left: -372px;
 }
 .download-btn{
     text-align: center;
-    margin-left: 60px;
+    margin-left: 120px;
 }
 .download-btn a{
     display: block;
@@ -97,6 +97,7 @@ ul{
     float: left;
     height: 50px;
     margin-left: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: #ffa023;
     border: 1px solid #ffa023;
@@ -115,12 +116,12 @@ ul{
     position: relative;
 }
 .page-two-title h2{
-    font-size: 30px;
+    font-size: 60px;
     color: #333;
 }
 .page-two-title h3{
-    color: #000;
-    font-size: 9px;
+    color: #333;
+    font-size: 18px;
     margin-top: 56px;
 }
 .analyst{
@@ -139,8 +140,85 @@ ul{
     margin-left: 20px;
     margin-right: 20px;
 }
+.name{
+    font-size:24px;
+}
+.job-title{
+    font-size: 14px;
+    margin-top:15px;
+}
 .person-one-info,.person-two-info,.person-three-info{
     color: #ffffff;
     position: absolute;
     bottom: 26px;
+}
+.person-one-info{
+    margin-left: 99px;
+}
+.person-two-info,.person-three-info{
+    margin-left: 113px;
+}
+.container-sm{
+    width: 1280px;
+    margin: 0 auto;
+    height: 660px;
+    position: relative;
+}
+.page-three{
+    background: url("../images/bg2.jpg") no-repeat center center;
+    height: 660px;
+}
+.text{
+    position: absolute;
+    top: 87px;
+    right: 100px;
+}
+.text-title-one,.page-four h2{
+    font-size: 40px;
+}
+.text-title-two{
+    font-size: 18px;
+    margin-top: 22px;
+}
+.phone{
+    position: absolute;
+    top: 226px;
+    right: 100px;
+}
+.container-lg{
+    width: 1280px;
+    margin: 0 auto;
+}
+.introduce-one-text,.introduce-two-text{
+    text-align: left;
+}
+.introduce-one-text{
+    position: absolute;
+    right: 150px;
+    bottom: 180px;
+}
+.introduce-one,.introduce-two{
+    position: relative;
+}
+.introduce-one img{
+    margin-left: 50px;
+}
+.introduce-one{
+    margin-top: 80px;
+}
+.page-four h2,.page-four h3,.page-five h2,.page-five h3{
+    color: #333;
+}
+.page-four h3{
+    font-size: 18px;
+    margin-top: 29px;
+}
+.introduce-two{
+    text-align: right;
+    margin-bottom: 154px;
+}
+.introduce-two-text{
+    position: absolute;
+    left: 80px;
+    bottom: 120px;
 }
