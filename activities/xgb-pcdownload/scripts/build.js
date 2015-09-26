@@ -2,7 +2,7 @@
  * Created by zhangbin on 15/9/25.
  */
 (function(){
-    var index=0;
+    var index= 0,timer;
     function Slider(){
         this.cfg={
             speed:600,
@@ -10,12 +10,15 @@
     }
     Slider.prototype={
         hover:function(){
+            var that=this;
             $(".slider").hover(function(){
                 $("#slider-left").fadeIn('normal');
                 $("#slider-right").fadeIn('normal');
+                clearTimeout(timer);
             },function(){
                 $("#slider-right").fadeOut('normal');
                 $("#slider-left").fadeOut('normal');
+                that.autoPlay();
             })
         },
         moveLeft:function(slider,offset){
@@ -68,8 +71,8 @@
         },
         moveBtn:function(){
             var that=this;
-            var sliders=$("#slider-content")
-          $(".dot-btn-li").each(function(){
+            var sliders=$("#slider-content");
+            $(".dot-btn-li").each(function(){
               $(this).click(function(){
                   if($(this).attr('class')=='active dot-btn-li'){
                       return false;
@@ -85,10 +88,18 @@
               })
           })
         },
+        autoPlay:function(){
+            var that=this;
+            timer=setTimeout(function(){
+                $("#slider-right").click();
+                that.autoPlay();
+          },3000)
+        },
         render:function(){
             this.hover();
             this.arrowBtn();
             this.moveBtn();
+            this.autoPlay();
         }
     }
 
