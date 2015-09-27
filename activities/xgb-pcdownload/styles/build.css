@@ -50,6 +50,9 @@ ul,ol{
 .wechat{
     margin: 20px 0 0 80px;
 }
+.wechat:hover,.weibo:hover{
+    background: #ffa023;
+}
 .weibo{
     margin: 20px 100px 0 40px;
 }
@@ -57,6 +60,9 @@ ul,ol{
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
+}
+.navigator a:hover{
+    color: #ffa023;
 }
 .main-title{
     font-size: 72px;
@@ -105,6 +111,9 @@ ul,ol{
     -moz-border-radius: 3px;
     border-radius: 3px;
     margin-top: 64px;
+}
+.download-btn a:hover{
+    background: rgba(255,255,255,0.8);
 }
 .download-btn a img{
     margin-top: 5px;
@@ -261,6 +270,7 @@ ul,ol{
 .term-topic{
     font-size: 24px;
     margin: 64px 40px 74px 40px;
+    line-height: 35px;
 }
 .main-speaker{
     font-size: 18px;
@@ -283,6 +293,11 @@ ul,ol{
 }
 .user-num{
     margin-bottom: 110px;
+    font-size: 18px;
+
+}
+#user-count{
+    font-size: 42px;
 }
 .slider-list li{
     float: left;
@@ -362,4 +377,15 @@ ul,ol{
 }
 .active{
     background: #ffa023;
+}
+.page-seven{
+    background: url("../images/bg3.jpg") no-repeat center center;
+    height: 500px;
+    position: relative;
+}
+.footer-download{
+    padding-top: 80px;
+    position: absolute;
+    left: 50%;
+    margin-left: -340px;
 }
