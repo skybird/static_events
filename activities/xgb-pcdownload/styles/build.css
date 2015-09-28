@@ -120,7 +120,7 @@ ul,ol{
     margin-top: 64px;
 }
 .download-btn a:hover{
-    background: rgba(255,255,255,0.8);
+    background: #ffffff;
 }
 .download-btn a img{
     margin-top: 5px;
@@ -285,6 +285,21 @@ ul,ol{
 .main-speaker-title,.topic{
     color: #999999;
     font-size: 12px;
+    line-height: 15px;
+}
+.topic-only{
+    padding-top: 36px;
+}
+.speaker{
+    border-top: 1px solid #dddddd;
+    padding: 20px 20px 0 20px;
+}
+.avatar{
+    float: left;
+    padding-right: 24px;
+}
+.main-speaker-title{
+    padding: 12px 0;
 }
 .page-six h2,.page-six h3{
     color: #333;
