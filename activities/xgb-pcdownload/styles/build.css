@@ -17,6 +17,7 @@ ul,ol{
     width: 1280px;
     height: 860px;
     margin: 0 auto;
+    position: relative;
 }
 .clr{
     clear: both;
@@ -63,6 +64,12 @@ ul,ol{
 }
 .navigator a:hover{
     color: #ffa023;
+}
+.nav-qrcode{
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    display: none;
 }
 .main-title{
     font-size: 72px;

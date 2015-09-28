@@ -16,10 +16,13 @@
                     <li class="nav-btn"><a href="http://activity.wallstreetcn.com/activities/xgb-download/mobile.html">移动Web</a></li>
                     <li class="nav-btn"><a href="#about">关于我们</a></li>
                     <li class="nav-btn"><a href="#download-app">下载App</a></li>
-                    <li class="wechat"><a href="javascript:void(0);"><img src="images/wechat.png" /></a></li>
-                    <li class="weibo"><a href="http://weibo.com/jianwenclub"><img src="images/weibo.png" /></a></li>
+                    <li class="wechat" id="wechat" title="关注微信"><a href="javascript:void(0);"><img src="images/wechat.png" /></a></li>
+                    <li class="weibo" title="关注微博"><a href="http://weibo.com/jianwenclub"><img src="images/weibo.png" /></a></li>
                 </ul>
             </nav>
+            <div class="nav-qrcode" id="wechat-qrcode">
+                <img src="images/wechat-qrcode.jpg" alt="" width="215px"/>
+            </div>
             <div class="download">
                 <div class="title">
                     <h1 class="main-title"><span class="num timer">500</span>+顶级分析师</h1>
@@ -229,7 +232,7 @@
                     </div>
                     <h3 class="subtitle-right">还等什么？快扫描左侧二维码！</h3>
                 </div>
-                <div class="download-btn clr">
+                <div class="download-btn clr" style="margin-left: 90px;">
                     <a href="http://7xkr3p.com2.z0.glb.qiniucdn.com/xgb-wallstreetcn.apk"><img src="images/android.png" alt=""/><span>Android 下载</span></a>
                     <a href="https://itunes.apple.com/app/id993530278"><img src="images/apple.png" alt=""/><span>iPhone 下载</span></a>
                 </div>
@@ -246,6 +249,11 @@
         to: 500,
         speed: 2000,
         refreshInterval:50,
+    });
+    $("#wechat").hover(function(){
+        $("#wechat-qrcode").fadeIn('fast');
+    },function(){
+        $("#wechat-qrcode").fadeOut('fast');
     });
     $(window).scroll(function(){
         var top=$("html").scrollTop()||$("body").scrollTop();
