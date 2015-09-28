@@ -272,5 +272,19 @@
     });
     new Slider().render();
 </script>
+<script type="text/javascript">
+    (function(){
+            var href;
+            var ua = navigator.userAgent.toLowerCase();
+            if (/micromessenger/.test(ua)) {
+                href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.wallstreetcn.meepo&from=xgbDownload';
+            } else if (/iphone|ipod/.test(ua)||/android/.test(ua)) {
+                href = 'http://activity.wallstreetcn.com/activities/xgb-download/mobile.html';
+            }
+            if (href) {
+                location.href = href;
+            }
+    })();
+</script>
 </body>
 </html>
