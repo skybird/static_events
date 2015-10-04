@@ -96,7 +96,7 @@ ul,ol{
 .download{
     position: absolute;
     left: 50%;
-    top: 215px;
+    bottom: 10%;
     text-align: center;
     margin-left: -372px;
 }
