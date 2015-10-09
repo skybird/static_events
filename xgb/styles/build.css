@@ -175,9 +175,12 @@ ul,ol{
     bottom: 26px;
 }
 .person-one-info{
+    margin-left: 127px;
+}
+.person-three-info{
     margin-left: 99px;
 }
-.person-two-info,.person-three-info{
+.person-two-info{
     margin-left: 113px;
 }
 .container-sm{
