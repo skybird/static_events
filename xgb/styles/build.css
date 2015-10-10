@@ -368,12 +368,8 @@ ul,ol{
     margin-left: 100px;
 }
 .arrow-left,.arrow-right{
-    color: #ffa023;
-    font-size: 80px;
-    text-decoration: none;
     position: absolute;
     bottom: 0;
-    font-weight: lighter;
 }
 .user-name{
     font-size: 24px;
